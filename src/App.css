@@ -1,0 +1,208 @@
+/* ============================================================
+   APP.CSS — Global Design System | R&R Tree Service
+   Exact live-site palette: Olive Green #4a6b24 + Orange #e8611a
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap');
+
+:root {
+  /* ── PRIMARY: Olive Green (exact navbar/brand color from live site) ── */
+  --green-darkest:  #1e2d0e;
+  --green-dark:     #2e4415;
+  --green-primary:  #4a6b24;
+  --green-mid:      #567c2a;
+  --green-light:    #6b9535;
+  --green-pale:     #d4e8ba;
+  --green-tint:     #f0f5e9;
+
+  /* ── ACCENT: Orange (exact CTA button color from live site) ── */
+  --orange-primary: #e8611a;
+  --orange-dark:    #c94e0e;
+  --orange-light:   #f07535;
+  --orange-pale:    #fdeee6;
+
+  /* ── NEUTRALS ── */
+  --white:          #ffffff;
+  --off-white:      #fafafa;
+  --gray-lightest:  #f5f5f5;
+  --gray-light:     #ebebeb;
+  --gray-border:    #dddddd;
+  --gray-mid:       #999999;
+  --gray-text:      #666666;
+  --charcoal:       #333333;
+  --near-black:     #1a1a1a;
+
+  /* ── Overlays ── */
+  --green-overlay:        rgba(30, 45, 14, 0.80);
+  --green-overlay-light:  rgba(74, 107, 36, 0.70);
+  --dark-overlay:         rgba(10, 15, 5, 0.75);
+
+  /* ── Typography — matches live site weight/feel ── */
+  --font-heading: 'Oswald', 'Arial Black', sans-serif;
+  --font-body:    'Lato', 'Helvetica Neue', Arial, sans-serif;
+
+  /* ── Spacing ── */
+  --sp-xs:  0.5rem;
+  --sp-sm:  1rem;
+  --sp-md:  1.5rem;
+  --sp-lg:  2rem;
+  --sp-xl:  3rem;
+  --sp-2xl: 4.5rem;
+  --sp-3xl: 6rem;
+  --sp-4xl: 8rem;
+
+  /* ── Radius ── */
+  --r-sm:   4px;
+  --r-md:   6px;
+  --r-lg:   12px;
+  --r-xl:   20px;
+  --r-pill: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm:     0 2px 8px rgba(0,0,0,0.09);
+  --shadow-md:     0 6px 24px rgba(0,0,0,0.13);
+  --shadow-lg:     0 18px 50px rgba(0,0,0,0.20);
+  --shadow-orange: 0 6px 22px rgba(232,97,26,0.38);
+  --shadow-green:  0 6px 22px rgba(74,107,36,0.32);
+
+  /* ── Transitions ── */
+  --ease:      cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out:  cubic-bezier(0.0, 0.0, 0.2, 1);
+  --t:         all 0.28s var(--ease);
+  --t-slow:    all 0.55s var(--ease);
+
+  /* ── Layout ── */
+  --max-w:    1240px;
+  --header-h: 82px;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--font-body);
+  color: var(--charcoal);
+  background: var(--white);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+body.menu-open { overflow: hidden; }
+
+/* ── Container ── */
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--sp-lg);
+}
+@media (max-width: 768px) { .container { padding: 0 var(--sp-md); } }
+
+/* ── Eyebrow label ── */
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--orange-primary);
+  margin-bottom: 8px;
+}
+
+/* ── Section Title ── */
+.section-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  color: var(--green-dark);
+}
+.section-title--lg   { font-size: clamp(1.9rem, 3.2vw, 2.6rem); }
+.section-title--xl   { font-size: clamp(2.4rem, 4.5vw, 3.6rem); }
+.section-title--white{ color: var(--white); }
+
+/* ── Orange bar accent ── */
+.orange-bar {
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: var(--orange-primary);
+  border-radius: var(--r-pill);
+  margin: 14px 0 var(--sp-lg);
+}
+.orange-bar--center { margin: 14px auto var(--sp-lg); }
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 14px 34px;
+  border-radius: var(--r-md);
+  transition: var(--t);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-orange {
+  background: var(--orange-primary);
+  color: var(--white);
+  box-shadow: var(--shadow-orange);
+}
+.btn-orange:hover {
+  background: var(--orange-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(232,97,26,0.48);
+}
+
+.btn-green {
+  background: var(--green-primary);
+  color: var(--white);
+  box-shadow: var(--shadow-green);
+}
+.btn-green:hover {
+  background: var(--green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(74,107,36,0.42);
+}
+
+.btn-outline-white {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255,255,255,0.65);
+}
+.btn-outline-white:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-outline-green {
+  background: transparent;
+  color: var(--green-primary);
+  border: 2px solid var(--green-primary);
+}
+.btn-outline-green:hover {
+  background: var(--green-primary);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* ── Divider ── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--gray-border);
+  margin: var(--sp-xl) 0;
+}
