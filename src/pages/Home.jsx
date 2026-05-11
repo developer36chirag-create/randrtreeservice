@@ -187,7 +187,7 @@ export default function Home() {
                 </motion.a>
                 <motion.a href="tel:678-482-9994" className="btn btn-outline-white"
                   whileHover={{ scale:1.04 }} whileTap={{ scale:0.97 }}>
-                  📞 678-482-9994
+                  <img alt="" className='phone-icon' src="/phone-call.png" /> 678-482-9994
                 </motion.a>
               </motion.div>
 
