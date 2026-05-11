@@ -1,24 +1,17 @@
 // Footer.jsx | R&R Tree Service
 import './Footer.css';
 
-const SERVICES = [
-  'Tree Trimming','Tree Removal','Land Clearing','Stump Grinding',
-  'Crane Tree Service','Firewood Delivery','Mulch Delivery','Retention Pond Maintenance',
-];
-const AREAS = [
-  'Alpharetta','Atlanta','Avondale Estates','Buford','Cumming','Decatur',
-  'Duluth','Flowery Branch','Gainesville','Grayson','Lawrenceville',
-  'Lilburn','Norcross','Roswell','Snellville','Stone Mountain','Sugar Hill','Suwanee',
-];
+const SERVICES = ['Tree Trimming','Tree Removal','Land Clearing','Stump Grinding','Crane Tree Removal','Firewood Delivery','Mulch Delivery','Retention Pond Maintenance'];
+const AREAS = ['Alpharetta','Atlanta','Avondale Estates','Buford','Cumming','Decatur','Duluth','Flowery Branch','Gainesville','Grayson','Lawrenceville','Lilburn','Norcross','Roswell','Snellville','Stone Mountain','Sugar Hill','Suwanee'];
+const goto = href => document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
 
 export default function Footer() {
   return (
-    <footer className="footer" id="contact-info">
+    <footer className="footer">
       <div className="footer__main">
         <div className="container">
           <div className="footer__grid">
 
-            {/* Brand */}
             <div>
               <div className="footer__brand-name">R&amp;R Tree Service</div>
               <div className="footer__brand-tag">Est. 1986 · Buford, Georgia</div>
@@ -30,7 +23,7 @@ export default function Footer() {
               <div className="footer__badges">
                 <span className="footer__badge">✓ ISA Certified</span>
                 <span className="footer__badge">✓ Licensed &amp; Insured</span>
-                <span className="footer__badge">✓ 39 Yrs Experience</span>
+                <span className="footer__badge">✓ 39 Yrs</span>
               </div>
               <div className="footer__social">
                 <a href="https://www.facebook.com/R-R-Tree-Service-136691577377"
@@ -39,80 +32,57 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Services */}
             <div>
               <span className="footer__col-head">Our Services</span>
               <ul className="footer__links">
                 {SERVICES.map(s => (
                   <li key={s}>
                     <a href="#services" className="footer__link"
-                       onClick={e => { e.preventDefault(); document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' }); }}>
-                      {s}
-                    </a>
+                       onClick={e => { e.preventDefault(); goto('#services'); }}>{s}</a>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Areas */}
             <div>
               <span className="footer__col-head">Service Areas</span>
               <ul className="footer__links">
                 {AREAS.map(a => (
                   <li key={a}>
                     <a href="#areas" className="footer__link"
-                       onClick={e => { e.preventDefault(); document.querySelector('#areas')?.scrollIntoView({ behavior: 'smooth' }); }}>
-                      {a}
-                    </a>
+                       onClick={e => { e.preventDefault(); goto('#areas'); }}>{a}</a>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Contact */}
             <div>
               <span className="footer__col-head">Contact Us</span>
               <div className="footer__contact-list">
-                <a href="tel:678-482-9994" className="footer__contact-row">
-                  <div className="footer__contact-icon">📞</div>
-                  <div>
-                    <div className="footer__contact-label">Phone</div>
-                    <div className="footer__contact-value">678-482-9994</div>
-                  </div>
-                </a>
-                <a href="tel:678-482-9996" className="footer__contact-row">
-                  <div className="footer__contact-icon">📠</div>
-                  <div>
-                    <div className="footer__contact-label">Fax</div>
-                    <div className="footer__contact-value">678-482-9996</div>
-                  </div>
-                </a>
-                <a href="mailto:sally@randrtreeservice.com" className="footer__contact-row">
-                  <div className="footer__contact-icon">✉</div>
-                  <div>
-                    <div className="footer__contact-label">Email</div>
-                    <div className="footer__contact-value">sally@randrtreeservice.com</div>
-                  </div>
-                </a>
-                <div className="footer__contact-row" style={{ cursor: 'default' }}>
-                  <div className="footer__contact-icon">📍</div>
-                  <div>
-                    <div className="footer__contact-label">Address</div>
-                    <div className="footer__contact-value">1381 Buford Hwy, Buford GA 30518</div>
-                  </div>
-                </div>
-                <div className="footer__contact-row" style={{ cursor: 'default' }}>
-                  <div className="footer__contact-icon">⏰</div>
-                  <div>
-                    <div className="footer__contact-label">Emergency</div>
-                    <div className="footer__contact-value">24/7 Available</div>
-                  </div>
-                </div>
+                {[
+                  { img:'/phone-call.png', label: 'Phone', val: '678-482-9994', href: 'tel:678-482-9994' },
+                  { img:'/printer.png', label: 'Fax', val: '678-482-9996', href: 'tel:678-482-9996' },
+                  { img:'/mail.png', label: 'Email', val: 'sally@randrtreeservice.com', href: 'mailto:sally@randrtreeservice.com' },
+                  { img:'/location-pin.png', label: 'Address', val: '1381 Buford Hwy, Buford GA 30518', href: null },
+                  { img:'/time.png', label: 'Emergency', val: '24/7 Available', href: null },
+                ].map(c => (
+                  <a key={c.label} href={c.href || '#'} className="footer__contact-row"
+                     style={!c.href ? { cursor: 'default', pointerEvents: 'none' } : {}}
+                     onClick={c.href ? undefined : e => e.preventDefault()}>
+                    <div className="footer__contact-icon">
+                      <img src={c.img} alt={c.label} />
+                    </div>
+                    <div>
+                      <div className="footer__contact-label">{c.label}</div>
+                      <div className="footer__contact-value">{c.val}</div>
+                    </div>
+                  </a>
+                ))}
               </div>
               <div style={{ marginTop: 'var(--sp-lg)' }}>
-                <a href="#contact" className="btn btn-orange"
+                <a href="#contact" className="btn btn-red"
                    style={{ width: '100%', justifyContent: 'center' }}
-                   onClick={e => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
+                   onClick={e => { e.preventDefault(); goto('#contact'); }}>
                   Get a Free Quote
                 </a>
               </div>
@@ -128,8 +98,7 @@ export default function Footer() {
         <div className="container">
           <div className="footer__bottom-inner">
             <p className="footer__copy">
-              © {new Date().getFullYear()} R&amp;R Tree Service. All rights reserved.
-              Serving North Georgia since 1986.
+              © {new Date().getFullYear()} R&amp;R Tree Service. All rights reserved. Serving North Georgia since 1986.
             </p>
             <div className="footer__bottom-links">
               <a href="/privacy-policy" className="footer__bottom-link">Privacy Policy</a>

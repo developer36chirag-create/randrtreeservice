@@ -1,5 +1,4 @@
-// Header.jsx | R&R Tree Service
-// Olive green navbar + orange CTA matching live site color scheme
+// Header.jsx | R&R Tree Service — #D92227 Red + #000000 Black
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Header.css';
@@ -13,7 +12,7 @@ const NAV = [
       { label: 'Tree Removal', href: '#services' },
       { label: 'Land Clearing', href: '#services' },
       { label: 'Stump Grinding', href: '#services' },
-      { label: 'Crane Tree Service', href: '#services' },
+      { label: 'Crane Tree Removal', href: '#services' },
       { label: 'Firewood Delivery', href: '#services' },
       { label: 'Mulch Delivery', href: '#services' },
       { label: 'Retention Pond Maintenance', href: '#services' },
@@ -22,12 +21,9 @@ const NAV = [
   {
     label: 'Areas We Serve', href: '#areas',
     sub: [
-      { label: 'Alpharetta', href: '#areas' }, { label: 'Atlanta', href: '#areas' },
-      { label: 'Buford', href: '#areas' }, { label: 'Cumming', href: '#areas' },
-      { label: 'Duluth', href: '#areas' }, { label: 'Gainesville', href: '#areas' },
-      { label: 'Lawrenceville', href: '#areas' }, { label: 'Roswell', href: '#areas' },
-      { label: 'Suwanee', href: '#areas' },
-    ],
+      'Alpharetta','Atlanta','Buford','Cumming','Duluth',
+      'Gainesville','Lawrenceville','Roswell','Suwanee','Norcross',
+    ].map(a => ({ label: a, href: '#areas' })),
   },
   { label: 'Gallery', href: '#gallery' },
   { label: 'Testimonials', href: '#testimonials' },
@@ -35,18 +31,24 @@ const NAV = [
   { label: 'Contact Us', href: '#contact' },
 ];
 
-function scrollTo(href) {
-  const el = document.querySelector(href);
-  if (el) el.scrollIntoView({ behavior: 'smooth' });
+function goto(href) {
+  document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
 }
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [topbarHidden, setTopbarHidden] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [openSub, setOpenSub] = useState(null);
 
   useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 40);
+    let last = 0;
+    const fn = () => {
+      const y = window.scrollY;
+      setScrolled(y > 40);
+      setTopbarHidden(y > 60);
+      last = y;
+    };
     window.addEventListener('scroll', fn, { passive: true });
     return () => window.removeEventListener('scroll', fn);
   }, []);
@@ -57,26 +59,23 @@ export default function Header() {
   }, [menuOpen]);
 
   const close = () => { setMenuOpen(false); setOpenSub(null); };
-  const nav = (href) => { close(); scrollTo(href); };
+  const nav = (href) => { close(); goto(href); };
 
   return (
     <>
-      {/* Top utility bar */}
-      <div className="header__topbar" style={{ position: 'relative', zIndex: 1001 }}>
+      {/* Red top bar */}
+      <div className={`header__topbar ${topbarHidden ? 'header__topbar--hidden' : ''}`}>
         <div className="container">
           <div className="header__topbar-inner">
             <div className="header__topbar-left">
-              <a href="tel:678-482-9994" className="header__topbar-item">
-                <span className="header__topbar-icon">📞</span>
-                678-482-9994
+              <a href="tel:678-482-9994" className="header__topbar-item"> 
+                <span className="header__topbar-icon"><img src="/phone-call.png" alt="" /></span> 678-482-9994
               </a>
               <a href="tel:678-482-9996" className="header__topbar-item">
-                <span className="header__topbar-icon">📠</span>
-                Fax: 678-482-9996
+                <span className="header__topbar-icon"><img src="/printer.png" alt="" /></span> Fax: 678-482-9996
               </a>
               <a href="mailto:sally@randrtreeservice.com" className="header__topbar-item">
-                <span className="header__topbar-icon">✉</span>
-                sally@randrtreeservice.com
+                <span className="header__topbar-icon"><img src="/mail.png" alt="" /></span> sally@randrtreeservice.com
               </a>
             </div>
             <div className="header__topbar-right">
@@ -88,7 +87,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Main header */}
+      {/* Black main header */}
       <header className={`header ${scrolled ? 'header--scrolled' : ''}`}>
         <div className="header__main">
           <div className="container">
@@ -97,14 +96,11 @@ export default function Header() {
               {/* Logo */}
               <a href="#home" className="header__logo"
                  onClick={e => { e.preventDefault(); nav('#home'); }}>
-                <div className="header__logo-text-wrap">
-                  <span className="header__logo-name">R&amp;R Tree Service</span>
-                  <span className="header__logo-tag">Buford, GA · Est. 1986</span>
-                </div>
+                <img src="/randr-logo.png" alt="" />
               </a>
 
               {/* Desktop nav */}
-              <nav className="header__nav" aria-label="Main">
+              <nav className="header__nav" aria-label="Main navigation">
                 {NAV.map(item => (
                   <div key={item.label} className="header__nav-item">
                     <a href={item.href} className="header__nav-link"
@@ -126,14 +122,14 @@ export default function Header() {
                 ))}
               </nav>
 
-              {/* CTA */}
-              <div className="header__cta-wrap">
-                <a href="tel:678-482-9994" className="header__phone-link">
-                  <span className="header__phone-icon">📞</span>
+              {/* Actions */}
+              <div className="header__actions">
+                <a href="tel:678-482-9994" className="header__phone">
+                  <span className="header__phone-icon"><img src="/phone-call.png" alt="" /></span>
                   <span>678-482-9994</span>
                 </a>
-                <a href="#contact" className="btn btn-orange"
-                   style={{ padding: '10px 22px', fontSize: '0.78rem' }}
+                <a href="#contact" className="btn btn-red"
+                   style={{ padding: '10px 20px', fontSize: '0.76rem' }}
                    onClick={e => { e.preventDefault(); nav('#contact'); }}>
                   Free Quote
                 </a>
@@ -156,9 +152,8 @@ export default function Header() {
         {menuOpen && (
           <motion.div className="header__mobile"
             initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }}
-            transition={{ type: 'tween', duration: 0.3, ease: [0.25,0.46,0.45,0.94] }}
-            role="dialog" aria-modal="true">
-
+            transition={{ type: 'tween', duration: 0.28, ease: [0.25,0.46,0.45,0.94] }}
+            role="dialog" aria-modal="true" aria-label="Mobile menu">
             <nav className="header__mobile-nav">
               {NAV.map(item => (
                 <div key={item.label}>
@@ -169,16 +164,19 @@ export default function Header() {
                        else nav(item.href);
                      }}>
                     {item.label}
-                    {item.sub && <span style={{ fontSize: '0.8rem', color: 'var(--orange-primary)' }}>
-                      {openSub === item.label ? '−' : '+'}
-                    </span>}
+                    {item.sub && (
+                      <span style={{ color: 'var(--red)', fontSize: '0.8rem' }}>
+                        {openSub === item.label ? '−' : '+'}
+                      </span>
+                    )}
                   </a>
                   <AnimatePresence>
                     {item.sub && openSub === item.label && (
-                      <motion.div initial={{ height: 0, opacity: 0 }}
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.25 }}
+                        transition={{ duration: 0.22 }}
                         style={{ overflow: 'hidden' }}>
                         {item.sub.map(s => (
                           <a key={s.label} href={s.href} className="header__mobile-sub-link"
@@ -192,17 +190,15 @@ export default function Header() {
                 </div>
               ))}
             </nav>
-
             <div className="header__mobile-actions">
-              <a href="tel:678-482-9994" className="btn btn-green" onClick={close}>
+              <a href="tel:678-482-9994" className="btn btn-black" onClick={close}>
                 📞 678-482-9994
               </a>
-              <a href="#contact" className="btn btn-orange"
+              <a href="#contact" className="btn btn-red"
                  onClick={e => { e.preventDefault(); nav('#contact'); }}>
                 Get a Free Quote
               </a>
             </div>
-
           </motion.div>
         )}
       </AnimatePresence>

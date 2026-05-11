@@ -1,45 +1,43 @@
 /* ============================================================
    APP.CSS — Global Design System | R&R Tree Service
-   Exact live-site palette: Olive Green #4a6b24 + Orange #e8611a
+   Brand Colors: #D92227 (Red) + #000000 (Black)
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
 
 :root {
-  /* ── PRIMARY: Olive Green (exact navbar/brand color from live site) ── */
-  --green-darkest:  #1e2d0e;
-  --green-dark:     #2e4415;
-  --green-primary:  #4a6b24;
-  --green-mid:      #567c2a;
-  --green-light:    #6b9535;
-  --green-pale:     #d4e8ba;
-  --green-tint:     #f0f5e9;
+  /* ── EXACT BRAND COLORS ── */
+  --red:          #D92227;
+  --red-dark:     #b51a1e;
+  --red-darker:   #8e1316;
+  --red-light:    #e84448;
+  --red-pale:     #fce8e8;
+  --red-tint:     #fff5f5;
 
-  /* ── ACCENT: Orange (exact CTA button color from live site) ── */
-  --orange-primary: #e8611a;
-  --orange-dark:    #c94e0e;
-  --orange-light:   #f07535;
-  --orange-pale:    #fdeee6;
+  --black:        #000000;
+  --black-90:     #1a1a1a;
+  --black-80:     #2a2a2a;
+  --black-70:     #333333;
+  --black-60:     #444444;
 
   /* ── NEUTRALS ── */
-  --white:          #ffffff;
-  --off-white:      #fafafa;
-  --gray-lightest:  #f5f5f5;
-  --gray-light:     #ebebeb;
-  --gray-border:    #dddddd;
-  --gray-mid:       #999999;
-  --gray-text:      #666666;
-  --charcoal:       #333333;
-  --near-black:     #1a1a1a;
+  --white:        #ffffff;
+  --off-white:    #fafafa;
+  --gray-lightest:#f5f5f5;
+  --gray-light:   #ebebeb;
+  --gray-border:  #dddddd;
+  --gray-mid:     #aaaaaa;
+  --gray-text:    #666666;
+  --gray-dark:    #444444;
 
   /* ── Overlays ── */
-  --green-overlay:        rgba(30, 45, 14, 0.80);
-  --green-overlay-light:  rgba(74, 107, 36, 0.70);
-  --dark-overlay:         rgba(10, 15, 5, 0.75);
+  --red-overlay:    rgba(217, 34, 39, 0.80);
+  --black-overlay:  rgba(0, 0, 0, 0.75);
+  --black-overlay-light: rgba(0, 0, 0, 0.55);
 
-  /* ── Typography — matches live site weight/feel ── */
+  /* ── Typography ── */
   --font-heading: 'Oswald', 'Arial Black', sans-serif;
-  --font-body:    'Lato', 'Helvetica Neue', Arial, sans-serif;
+  --font-body:    'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 
   /* ── Spacing ── */
   --sp-xs:  0.5rem;
@@ -50,30 +48,29 @@
   --sp-2xl: 4.5rem;
   --sp-3xl: 6rem;
   --sp-4xl: 8rem;
+  --sp-5xl: 4rem;
 
   /* ── Radius ── */
-  --r-sm:   4px;
+  --r-sm:   3px;
   --r-md:   6px;
-  --r-lg:   12px;
-  --r-xl:   20px;
+  --r-lg:   10px;
+  --r-xl:   18px;
   --r-pill: 9999px;
 
   /* ── Shadows ── */
-  --shadow-sm:     0 2px 8px rgba(0,0,0,0.09);
-  --shadow-md:     0 6px 24px rgba(0,0,0,0.13);
-  --shadow-lg:     0 18px 50px rgba(0,0,0,0.20);
-  --shadow-orange: 0 6px 22px rgba(232,97,26,0.38);
-  --shadow-green:  0 6px 22px rgba(74,107,36,0.32);
+  --shadow-sm:  0 2px 8px rgba(0,0,0,0.10);
+  --shadow-md:  0 6px 24px rgba(0,0,0,0.15);
+  --shadow-lg:  0 16px 48px rgba(0,0,0,0.22);
+  --shadow-red: 0 6px 22px rgba(217,34,39,0.35);
 
   /* ── Transitions ── */
-  --ease:      cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --ease-out:  cubic-bezier(0.0, 0.0, 0.2, 1);
-  --t:         all 0.28s var(--ease);
-  --t-slow:    all 0.55s var(--ease);
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --t:    all 0.27s var(--ease);
+  --t-slow: all 0.5s var(--ease);
 
   /* ── Layout ── */
   --max-w:    1240px;
-  --header-h: 82px;
+  --header-h: 140px;
 }
 
 /* ── Reset ── */
@@ -81,7 +78,7 @@
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
   font-family: var(--font-body);
-  color: var(--charcoal);
+  color: var(--black-70);
   background: var(--white);
   line-height: 1.65;
   overflow-x: hidden;
@@ -102,7 +99,7 @@ body.menu-open { overflow: hidden; }
 }
 @media (max-width: 768px) { .container { padding: 0 var(--sp-md); } }
 
-/* ── Eyebrow label ── */
+/* ── Eyebrow ── */
 .eyebrow {
   display: inline-block;
   font-family: var(--font-body);
@@ -110,7 +107,7 @@ body.menu-open { overflow: hidden; }
   font-weight: 700;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--orange-primary);
+  color: var(--red);
   margin-bottom: 8px;
 }
 
@@ -120,23 +117,23 @@ body.menu-open { overflow: hidden; }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  line-height: 1.1;
-  color: var(--green-dark);
+  line-height: 1.08;
+  color: var(--black);
 }
-.section-title--lg   { font-size: clamp(1.9rem, 3.2vw, 2.6rem); }
-.section-title--xl   { font-size: clamp(2.4rem, 4.5vw, 3.6rem); }
-.section-title--white{ color: var(--white); }
+.section-title--lg  { font-size: clamp(1.9rem, 3.2vw, 2.6rem); }
+.section-title--xl  { font-size: clamp(2.4rem, 4.5vw, 3.6rem); }
+.section-title--white { color: var(--white); }
 
-/* ── Orange bar accent ── */
-.orange-bar {
+/* ── Red bar accent ── */
+.red-bar {
   display: block;
   width: 50px;
   height: 4px;
-  background: var(--orange-primary);
+  background: var(--red);
   border-radius: var(--r-pill);
-  margin: 14px 0 var(--sp-lg);
+  margin: 12px 0 var(--sp-lg);
 }
-.orange-bar--center { margin: 14px auto var(--sp-lg); }
+.red-bar--center { margin: 12px auto var(--sp-lg); }
 
 /* ── Buttons ── */
 .btn {
@@ -150,34 +147,40 @@ body.menu-open { overflow: hidden; }
   letter-spacing: 0.14em;
   text-transform: uppercase;
   padding: 14px 34px;
-  border-radius: var(--r-md);
+  border-radius: var(--r-sm);
   transition: var(--t);
   cursor: pointer;
   white-space: nowrap;
 }
 
-.btn-orange {
-  background: var(--orange-primary);
-  color: var(--white);
-  box-shadow: var(--shadow-orange);
-}
-.btn-orange:hover {
-  background: var(--orange-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 32px rgba(232,97,26,0.48);
+.btn .phone-icon {
+  width: 20px;
 }
 
-.btn-green {
-  background: var(--green-primary);
+/* Red — primary CTA */
+.btn-red {
+  background: var(--red);
   color: var(--white);
-  box-shadow: var(--shadow-green);
+  box-shadow: var(--shadow-red);
 }
-.btn-green:hover {
-  background: var(--green-dark);
+.btn-red:hover {
+  background: var(--red-dark);
   transform: translateY(-2px);
-  box-shadow: 0 10px 32px rgba(74,107,36,0.42);
+  box-shadow: 0 10px 30px rgba(217,34,39,0.45);
 }
 
+/* Black — secondary */
+.btn-black {
+  background: var(--black);
+  color: var(--white);
+}
+.btn-black:hover {
+  background: var(--black-80);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Outline white */
 .btn-outline-white {
   background: transparent;
   color: var(--white);
@@ -189,20 +192,29 @@ body.menu-open { overflow: hidden; }
   transform: translateY(-2px);
 }
 
-.btn-outline-green {
+/* Outline black */
+.btn-outline-black {
   background: transparent;
-  color: var(--green-primary);
-  border: 2px solid var(--green-primary);
+  color: var(--black);
+  border: 2px solid var(--black);
 }
-.btn-outline-green:hover {
-  background: var(--green-primary);
+.btn-outline-black:hover {
+  background: var(--black);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* Outline red */
+.btn-outline-red {
+  background: transparent;
+  color: var(--red);
+  border: 2px solid var(--red);
+}
+.btn-outline-red:hover {
+  background: var(--red);
   color: var(--white);
   transform: translateY(-2px);
 }
 
 /* ── Divider ── */
-.divider {
-  border: none;
-  border-top: 1px solid var(--gray-border);
-  margin: var(--sp-xl) 0;
-}
+.divider { border: none; border-top: 1px solid var(--gray-border); }
