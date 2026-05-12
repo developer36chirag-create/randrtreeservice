@@ -5,7 +5,7 @@
 
 import { useState, useRef } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
-import './TreeTrimming.css';
+import './Treetrimming.css';
 
 /* ── Shared animation variants ── */
 const fadeUp = {
