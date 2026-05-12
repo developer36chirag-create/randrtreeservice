@@ -6,13 +6,14 @@ import './Header.css';
 
 const NAV = [
   { label: 'Home', href: '/' },
+  { label: 'About Us', href: '/about-us' },
 
   {
     label: 'Services',
     href: '/services',
     sub: [
-      { label: 'Tree Trimming', href: '/services' },
-      { label: 'Tree Removal', href: '/services' },
+      { label: 'Tree Trimming', href: '/tree-trimming-in-atlanta' },
+      { label: 'Tree Removal', href: '/tree-removal-in-atlanta' },
       { label: 'Land Clearing', href: '/services' },
       { label: 'Stump Grinding', href: '/services' },
       { label: 'Crane Tree Removal', href: '/services' },
@@ -24,7 +25,6 @@ const NAV = [
 
   { label: 'Gallery', href: '#gallery' },
   { label: 'Testimonials', href: '#testimonials' },
-  { label: 'About Us', href: '#about' },
   { label: 'Contact Us', href: '#contact' },
 ];
 

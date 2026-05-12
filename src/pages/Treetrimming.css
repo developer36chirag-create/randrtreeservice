@@ -1,0 +1,745 @@
+/* ============================================================
+   TREETRIMMING.CSS | R&R Tree Service
+   Matches homepage design system: #D92227 + #000000
+   ============================================================ */
+
+/* ================================================================
+   1. PAGE HERO
+   ================================================================ */
+.tt-hero {
+  position: relative;
+  min-height: 62vh;
+  display: flex;
+  align-items: center;
+  background: var(--black);
+  overflow: hidden;
+  padding-top: calc(var(--header-h) + 37px);
+  /* background-image: url(/my-app/public/Tree-Removal-Transparent.jpg); */
+}
+.tt-hero__bg { position: absolute; inset: 0; z-index: 0; }
+.tt-hero__bg img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 30%;
+  animation: ttHeroZoom 16s ease-out forwards;
+}
+@keyframes ttHeroZoom { from { transform: scale(1.07); } to { transform: scale(1); } }
+.tt-hero__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(0,0,0,0.90) 0%,
+    rgba(0,0,0,0.75) 48%,
+    rgba(0,0,0,0.45) 100%
+  );
+}
+.tt-hero__red-strip {
+  position: absolute; top: 0; left: 0; bottom: 0;
+  width: 5px; background: var(--red); z-index: 3;
+}
+
+.tt-hero__content {
+  position: relative; z-index: 2;
+  padding: var(--sp-2xl) 0;
+  max-width: 720px;
+}
+.tt-hero__breadcrumb {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 0.7rem; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,0.4); margin-bottom: var(--sp-md);
+}
+.tt-hero__breadcrumb a { color: rgba(255,255,255,0.4); text-decoration: none; transition: var(--t); }
+.tt-hero__breadcrumb a:hover { color: var(--red-light); }
+.tt-hero__breadcrumb-sep { color: var(--red); font-size: 0.65rem; }
+.tt-hero__breadcrumb-cur { color: var(--red-light); }
+
+.tt-hero__eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--red-light); margin-bottom: var(--sp-md);
+}
+.tt-hero__eyebrow-line { display: inline-block; width: 28px; height: 2px; background: var(--red); }
+
+.tt-hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 700; line-height: 1.05;
+  text-transform: uppercase; letter-spacing: 0.02em;
+  color: var(--white); margin-bottom: var(--sp-md);
+}
+.tt-hero__title-red { color: var(--red); display: inline; }
+
+.tt-hero__subtitle {
+  font-size: 1.05rem; font-weight: 300;
+  color: rgba(255,255,255,0.68);
+  line-height: 1.75; margin-bottom: var(--sp-xl);
+}
+.tt-hero__ctas { display: flex; gap: var(--sp-sm); flex-wrap: wrap; }
+
+@media (max-width: 640px) {
+  .tt-hero { padding-top: var(--header-h); min-height: 50vh; }
+  .tt-hero__title { font-size: 2rem; }
+  .tt-hero__ctas { flex-direction: column; }
+}
+
+/* ================================================================
+   2. STATS BAR — reused from homepage
+   ================================================================ */
+/* .stats-bar already defined in Home.css */
+
+/* ================================================================
+   3. INTRO SECTION
+   ================================================================ */
+.tt-intro {
+  background: var(--white);
+  padding: var(--sp-3xl) 0 var(--sp-2xl);
+}
+.tt-intro__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3xl);
+  align-items: center;
+}
+.tt-intro__text {}
+.tt-intro__lead {
+  font-size: 1.08rem; font-weight: 400;
+  color: var(--gray-text); line-height: 1.8;
+  margin-bottom: var(--sp-md);
+}
+.tt-intro__lead strong { color: var(--black); font-weight: 700; }
+.tt-intro__ctas { display: flex; gap: var(--sp-sm); flex-wrap: wrap; margin-top: var(--sp-xl); }
+
+.tt-intro__img-wrap {
+  position: relative;
+  border-radius: var(--r-lg); overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.tt-intro__img-wrap img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.8s var(--ease);
+}
+.tt-intro__img-wrap:hover img { transform: scale(1.04); }
+.tt-intro__img-badge {
+  position: absolute; bottom: var(--sp-lg); left: var(--sp-lg);
+  background: var(--red); color: var(--white);
+  font-family: var(--font-heading); font-size: 0.72rem;
+  font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 7px 14px; border-radius: var(--r-sm);
+}
+
+@media (max-width: 900px) { .tt-intro__grid { grid-template-columns: 1fr; } }
+
+/* ================================================================
+   4. SERVICES TYPE CARDS — "What We Offer"
+   ================================================================ */
+.tt-services {
+  background: var(--gray-lightest);
+  padding: var(--sp-4xl) 0;
+}
+.tt-services__header {
+  text-align: center;
+  max-width: 640px; margin: 0 auto var(--sp-3xl);
+}
+.tt-services__desc { font-size: 1rem; color: var(--gray-text); line-height: 1.75; }
+
+.tt-services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-md);
+}
+
+.tt-svc-card {
+  background: var(--white);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--t-slow);
+  display: flex; flex-direction: column;
+  position: relative;
+  cursor: default;
+}
+.tt-svc-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 3px; background: var(--red);
+  transform: scaleX(0); transition: transform var(--t-slow);
+  transform-origin: left;
+}
+.tt-svc-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.tt-svc-card:hover::before { transform: scaleX(1); }
+
+.tt-svc-card__img-wrap {
+  position: relative; height: 200px; overflow: hidden; flex-shrink: 0;
+}
+.tt-svc-card__img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.65s var(--ease);
+}
+.tt-svc-card:hover .tt-svc-card__img { transform: scale(1.07); }
+.tt-svc-card__img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 55%);
+}
+.tt-svc-card__num {
+  position: absolute; top: var(--sp-md); left: var(--sp-md);
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--red); color: var(--white);
+  font-family: var(--font-heading); font-size: 0.85rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.tt-svc-card__icon-wrap {
+  position: absolute; bottom: var(--sp-md); right: var(--sp-md);
+  width: 42px; height: 42px; border-radius: 50%;
+  background: var(--red); display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; box-shadow: 0 4px 16px rgba(217,34,39,0.4);
+}
+.tt-svc-card__body { padding: var(--sp-lg); flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.tt-svc-card__title {
+  font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.04em; color: var(--black);
+}
+.tt-svc-card__desc {
+  font-size: 0.87rem; color: var(--gray-text); line-height: 1.7; flex: 1;
+}
+
+@media (max-width: 900px) { .tt-services__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .tt-services__grid { grid-template-columns: 1fr; } }
+
+/* ================================================================
+   5. WHY TRIMMING MATTERS — Split layout
+   ================================================================ */
+.tt-why {
+  background: var(--white);
+  padding: var(--sp-4xl) 0;
+}
+.tt-why__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3xl);
+  align-items: center;
+}
+.tt-why__img-stack {
+  position: relative; height: 676px;
+}
+.tt-why__img-main {
+  position: absolute; top: 0; left: 0;
+  width: 90%;
+  border-radius: var(--r-lg); overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.tt-why__img-main img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease); }
+.tt-why__img-main:hover img { transform: scale(1.04); }
+.tt-why__img-sec {
+  position: absolute; bottom: 0; right: 0;
+  width: 50%; height: 40%;
+  border-radius: var(--r-lg); overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 5px solid var(--white);
+}
+.tt-why__img-sec img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease); }
+.tt-why__img-sec:hover img { transform: scale(1.06); }
+.tt-why__badge {
+  position: absolute; top: 60%; right: 25%;
+  transform: translate(50%, -50%); z-index: 3;
+  width: 96px; height: 96px; border-radius: 50%;
+  background: var(--red);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; box-shadow: 0 8px 28px rgba(217,34,39,0.45);
+}
+.tt-why__badge-num { font-family: var(--font-heading); font-size: 1.7rem; font-weight: 700; color: var(--white); line-height: 1; }
+.tt-why__badge-lbl { font-size: 0.52rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-top: 2px; }
+
+.tt-why__points {
+  display: flex; flex-direction: column; gap: var(--sp-md);
+  margin: var(--sp-xl) 0;
+}
+.tt-why__point {
+  display: flex; align-items: flex-start; gap: var(--sp-md);
+  padding: var(--sp-md);
+  border-radius: var(--r-md);
+  border: 1px solid var(--gray-light);
+  transition: var(--t);
+}
+.tt-why__point:hover { border-color: rgba(217,34,39,0.3); background: var(--red-tint); transform: translateX(6px); }
+.tt-why__point-icon {
+  width: 40px; height: 40px; background: var(--red); border-radius: var(--r-md);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; flex-shrink: 0;
+}
+.tt-why__point-title { font-size: 0.9rem; font-weight: 700; color: var(--black); margin-bottom: 2px; }
+.tt-why__point-desc { font-size: 0.82rem; color: var(--gray-text); line-height: 1.55; }
+.tt-why__ctas { display: flex; gap: var(--sp-sm); flex-wrap: wrap; }
+
+@media (max-width: 900px) {
+  .tt-why__grid { grid-template-columns: 1fr; }
+  .tt-why__img-stack { height: auto; }
+}
+@media (max-width: 580px) { .tt-why__img-stack { height: auto; } }
+
+/* ================================================================
+   6. SIGNS ALERT SECTION — Red bg, dark
+   ================================================================ */
+.tt-signs {
+  background: var(--black-90);
+  padding: var(--sp-4xl) 0;
+  position: relative; overflow: hidden;
+}
+.tt-signs::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 4px; background: var(--red);
+}
+.tt-signs__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3xl);
+  align-items: center;
+}
+.tt-signs__content {}
+.tt-signs__intro {
+  font-size: 1rem; color: rgba(255,255,255,0.6); line-height: 1.8;
+  margin-bottom: var(--sp-xl);
+}
+.tt-signs__list {
+  display: flex; flex-direction: column; gap: var(--sp-sm);
+  margin-bottom: var(--sp-xl);
+}
+.tt-signs__item {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: var(--sp-md);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--r-md);
+  border-left: 3px solid var(--red);
+  transition: var(--t);
+}
+.tt-signs__item:hover { background: rgba(217,34,39,0.08); border-left-color: var(--red); transform: translateX(5px); }
+.tt-signs__item-icon {
+  width: 36px; height: 36px; background: var(--red); border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; flex-shrink: 0;
+}
+.tt-signs__item-title { font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 2px; }
+.tt-signs__item-desc { font-size: 0.8rem; color: rgba(255,255,255,0.55); line-height: 1.5; }
+.tt-signs__ctas { display: flex; gap: var(--sp-sm); flex-wrap: wrap; }
+
+.tt-signs__img-wrap {
+  position: relative; border-radius: var(--r-lg); overflow: hidden;
+box-shadow: var(--shadow-lg);
+}
+.tt-signs__img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.tt-signs__img-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%); }
+.tt-signs__img-label {
+  position: absolute; bottom: var(--sp-lg); left: var(--sp-lg); right: var(--sp-lg);
+  font-family: var(--font-heading); font-size: 1rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.06em; color: var(--white);
+}
+
+@media (max-width: 900px) {
+  .tt-signs__grid { grid-template-columns: 1fr; }
+  .tt-signs__img-wrap { aspect-ratio: 16/9; max-width: 500px; }
+}
+
+/* ================================================================
+   7. PROCESS SECTION — Numbered steps
+   ================================================================ */
+.tt-process {
+  background: var(--white);
+  padding: var(--sp-4xl) 0;
+}
+.tt-process__header { text-align: center; max-width: 620px; margin: 0 auto var(--sp-3xl); }
+
+.tt-process__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3xl);
+  align-items: center;
+}
+
+.tt-process__steps {
+  display: flex; flex-direction: column; gap: var(--sp-lg);
+}
+.tt-process__step {
+  display: flex; align-items: flex-start; gap: var(--sp-md);
+  padding: var(--sp-md);
+  border-radius: var(--r-md);
+  border: 1px solid var(--gray-light);
+  transition: var(--t);
+  position: relative;
+}
+.tt-process__step:hover { border-color: rgba(217,34,39,0.3); background: var(--red-tint); }
+.tt-process__step:not(:last-child)::after {
+  content: '';
+  position: absolute; left: 32px; top: 100%;
+  width: 2px; height: var(--sp-lg);
+  background: linear-gradient(to bottom, var(--red), transparent);
+}
+.tt-process__step-num {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--red); color: var(--white);
+  font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; box-shadow: 0 4px 14px rgba(217,34,39,0.35);
+  transition: var(--t);
+}
+.tt-process__step:hover .tt-process__step-num { transform: scale(1.1); }
+.tt-process__step-title { font-family: var(--font-heading); font-size: 0.95rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--black); margin-bottom: 4px; }
+.tt-process__step-desc { font-size: 0.85rem; color: var(--gray-text); line-height: 1.65; }
+
+.tt-process__img-wrap {
+  position: relative; border-radius: var(--r-lg); overflow: hidden;
+  height: 100%; min-height: 440px;
+  box-shadow: var(--shadow-lg);
+}
+.tt-process__img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.tt-process__img-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 50%); }
+.tt-process__img-tag {
+  position: absolute; bottom: var(--sp-lg); left: 0; right: 0;
+  text-align: center;
+}
+.tt-process__img-tag span {
+  display: inline-block;
+  background: var(--red); color: var(--white);
+  font-family: var(--font-heading); font-size: 0.8rem;
+  font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 8px 20px; border-radius: var(--r-sm);
+}
+
+@media (max-width: 900px) {
+  .tt-process__grid { grid-template-columns: 1fr; }
+  .tt-process__img-wrap { min-height: 300px; }
+  .tt-process__step:not(:last-child)::after { display: none; }
+}
+
+/* ================================================================
+   8. TESTIMONIAL HIGHLIGHT STRIP
+   ================================================================ */
+.tt-social-proof {
+  background: var(--red);
+  padding: var(--sp-3xl) 0;
+  position: relative; overflow: hidden;
+}
+.tt-social-proof::before {
+  content: '"';
+  position: absolute; top: -60px; right: 4%;
+  font-family: var(--font-heading); font-size: 22rem;
+  font-weight: 700; color: rgba(0,0,0,0.1);
+  line-height: 1; pointer-events: none;
+}
+.tt-social-proof__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-xl);
+}
+
+.tt-social-proof__inner:has(> div:only-child) {
+    grid-template-columns: 1fr;
+}
+
+.tt-review-card {
+  background: rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--r-lg); padding: var(--sp-xl);
+  display: flex; flex-direction: column; gap: var(--sp-md);
+  transition: var(--t);
+}
+.tt-review-card:hover { background: rgba(0,0,0,0.22); transform: translateY(-4px); }
+.tt-review-card__stars { display: flex; gap: 3px; color: var(--white); font-size: 0.9rem; }
+.tt-review-card__text {
+  font-style: italic; font-size: 0.9rem;
+  color: rgba(255,255,255,0.9); line-height: 1.8; flex: 1;
+}
+.tt-review-card__author {
+  display: flex; align-items: center; gap: var(--sp-sm);
+  padding-top: var(--sp-sm); border-top: 1px solid rgba(255,255,255,0.2);
+}
+.tt-review-card__avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--black); color: var(--white);
+  font-family: var(--font-heading); font-size: 1rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.tt-review-card__name { font-size: 0.88rem; font-weight: 700; color: var(--white); }
+.tt-review-card__loc { font-size: 0.75rem; color: rgba(255,255,255,0.65); }
+
+@media (max-width: 768px) { .tt-social-proof__inner { grid-template-columns: 1fr; } }
+
+/* ================================================================
+   9. ARBORISTS + EQUIPMENT — Two-tone split
+   ================================================================ */
+.tt-experts {
+  background: var(--white);
+  padding: var(--sp-4xl) 0;
+}
+.tt-experts__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.tt-experts__panel {
+  padding: var(--sp-2xl) var(--sp-2xl);
+  display: flex; flex-direction: column; gap: var(--sp-md);
+}
+.tt-experts__panel--dark {
+  background: var(--black);
+}
+.tt-experts__panel--light {
+  background: var(--gray-lightest);
+}
+.tt-experts__panel-icon {
+  font-size: 2.2rem;
+}
+.tt-experts__panel-title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+.tt-experts__panel--dark .tt-experts__panel-title { color: var(--white); }
+.tt-experts__panel--light .tt-experts__panel-title { color: var(--black); }
+
+.tt-experts__panel-points { display: flex; flex-direction: column; gap: var(--sp-sm); flex: 1; }
+.tt-experts__panel-point {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 0.87rem; line-height: 1.6;
+}
+.tt-experts__panel--dark .tt-experts__panel-point { color: rgba(255,255,255,0.7); }
+.tt-experts__panel--light .tt-experts__panel-point { color: var(--gray-text); }
+.tt-experts__panel-point strong { display: block; font-weight: 700; margin-bottom: 1px; }
+.tt-experts__panel--dark .tt-experts__panel-point strong { color: var(--white); }
+.tt-experts__panel--light .tt-experts__panel-point strong { color: var(--black); }
+
+.tt-experts__check {
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--red); display: flex; align-items: center; justify-content: center;
+  font-size: 0.6rem; color: var(--white); flex-shrink: 0; margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .tt-experts__grid { grid-template-columns: 1fr; }
+  .tt-experts__panel { padding: var(--sp-xl); }
+}
+
+/* ================================================================
+   10. PRICING SECTION
+   ================================================================ */
+.tt-pricing {
+  background: var(--black-90);
+  padding: var(--sp-4xl) 0;
+  position: relative; overflow: hidden;
+}
+.tt-pricing::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 4px; background: var(--red);
+}
+.tt-pricing__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3xl);
+  align-items: center;
+}
+.tt-pricing__content {}
+.tt-pricing__desc {
+  font-size: 1rem; color: rgba(255,255,255,0.6); line-height: 1.8;
+  margin-bottom: var(--sp-xl);
+}
+.tt-pricing__points {
+  display: flex; flex-direction: column; gap: var(--sp-sm);
+  margin-bottom: var(--sp-xl);
+}
+.tt-pricing__point {
+  display: flex; align-items: center; gap: 12px;
+  padding: var(--sp-md);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--r-md); transition: var(--t);
+}
+.tt-pricing__point:hover { border-color: rgba(217,34,39,0.4); background: rgba(217,34,39,0.07); }
+.tt-pricing__point-icon {
+  width: 40px; height: 40px; background: var(--red); border-radius: var(--r-md);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; flex-shrink: 0;
+}
+
+.tt-pricing__point-icon img {
+    width: 20px;
+}
+
+.tt-pricing__point-title { font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 2px; }
+.tt-pricing__point-desc { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+.tt-pricing__ctas { display: flex; gap: var(--sp-sm); flex-wrap: wrap; }
+
+.tt-pricing__img-wrap {
+  position: relative; border-radius: var(--r-lg); overflow: hidden;
+   box-shadow: var(--shadow-lg);
+}
+.tt-pricing__img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.tt-pricing__img-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 60%); }
+
+@media (max-width: 900px) {
+  .tt-pricing__grid { grid-template-columns: 1fr; }
+}
+
+/* ================================================================
+   11. FAQ SECTION
+   ================================================================ */
+.tt-faq {
+  background: var(--white);
+  padding: var(--sp-4xl) 0;
+}
+.tt-faq__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--sp-3xl);
+  align-items: start;
+}
+.tt-faq__list {}
+.tt-faq__sidebar {}
+.tt-faq__sidebar-card {
+  background: var(--black);
+  border-radius: var(--r-lg); padding: var(--sp-xl);
+  position: sticky; top: calc(var(--header-h) + var(--sp-lg));
+}
+.tt-faq__sidebar-title {
+  font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--white); margin-bottom: 6px;
+}
+.tt-faq__sidebar-sub { font-size: 0.83rem; color: rgba(255,255,255,0.5); margin-bottom: var(--sp-lg); }
+.tt-faq__sidebar-phone {
+  display: flex; align-items: center; gap: 12px;
+  padding: var(--sp-md);
+  background: rgba(217,34,39,0.12); border: 1px solid rgba(217,34,39,0.3);
+  border-radius: var(--r-md); text-decoration: none; transition: var(--t);
+  margin-bottom: var(--sp-sm);
+}
+.tt-faq__sidebar-phone:hover { background: rgba(217,34,39,0.22); transform: translateX(4px); }
+.tt-faq__sidebar-phone-icon {
+  width: 40px; height: 40px; background: var(--red); border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.tt-faq__sidebar-phone-icon img {
+    width: 20px;
+}
+.tt-faq__sidebar-phone-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.38); margin-bottom: 2px; }
+.tt-faq__sidebar-phone-num { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--white); }
+.tt-faq__sidebar-divider { height: 1px; background: rgba(255,255,255,0.08); margin: var(--sp-md) 0; }
+.tt-faq__sidebar-areas { font-size: 0.8rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
+.tt-faq__sidebar-areas strong { color: rgba(255,255,255,0.75); display: block; margin-bottom: 5px; font-family: var(--font-heading); letter-spacing: 0.05em; text-transform: uppercase; font-size: 0.75rem; }
+
+@media (max-width: 900px) {
+  .tt-faq__grid { grid-template-columns: 1fr; }
+  .tt-faq__sidebar-card { position: static; }
+}
+
+/* ================================================================
+   12. SERVICE AREAS STRIP
+   ================================================================ */
+.tt-areas {
+  background: var(--gray-lightest);
+  padding: var(--sp-3xl) 0;
+}
+.tt-areas__header { text-align: center; max-width: 560px; margin: 0 auto var(--sp-2xl); }
+.tt-areas__tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: var(--sp-xl); }
+.tt-areas__tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.8rem; font-weight: 600; color: var(--black);
+  background: var(--white); border: 1px solid var(--gray-border);
+  border-radius: var(--r-sm); padding: 7px 14px; transition: var(--t); cursor: default;
+}
+.tt-areas__tag:hover { background: var(--red); color: var(--white); border-color: var(--red); }
+.tt-areas__tag-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--red); flex-shrink: 0; }
+.tt-areas__tag:hover .tt-areas__tag-dot { background: var(--white); }
+
+/* ================================================================
+   13. FINAL CTA BANNER
+   ================================================================ */
+.tt-cta {
+  background: var(--red); padding: var(--sp-3xl) 0;
+  position: relative; overflow: hidden;
+}
+.tt-cta::before {
+  content: '';
+  position: absolute; top: 0; left: 0; bottom: 0;
+  width: 50%; background: rgba(0,0,0,0.1);
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+}
+.tt-cta__inner {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: 1fr auto;
+  align-items: center; gap: var(--sp-2xl);
+}
+.tt-cta__heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem); font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--white); line-height: 1.1; margin-bottom: 10px;
+}
+.tt-cta__sub { font-size: 1rem; color: rgba(255,255,255,0.85); }
+.tt-cta__btns { display: flex; flex-direction: column; gap: var(--sp-sm); align-items: stretch; flex-shrink: 0; }
+@media (max-width: 768px) {
+  .tt-cta__inner { grid-template-columns: 1fr; text-align: center; }
+  .tt-cta__btns { flex-direction: row; justify-content: center; flex-wrap: wrap; }
+}
+
+@media (max-width: 900px) {
+.tt-hero {
+    padding: 8rem 0px 4rem 0px;
+    min-height: auto;
+}
+
+.tt-intro, .tt-services, .tt-why, .tt-signs, .tt-process, .tt-social-proof, .tt-experts, .tt-pricing, .tt-faq, .tt-areas {
+    padding: var(--sp-5xl) 0;
+}
+
+.tt-intro__grid, .tt-why__grid, .tt-signs__grid, .tt-process__grid, .tt-pricing__grid {
+    gap: 3rem;
+}
+
+.tt-intro__img-wrap {
+    order: -1;
+}
+
+.tt-services__header, .tt-process__header, .tt-reviews-heading, .tt-experts-heading, .tt-faq-heading {
+    margin-bottom: 3rem;
+}
+
+.tt-services__cta {
+    margin-top: 3rem !important;
+    padding: 2rem !important;
+}
+
+.tt-why__img-main {
+    position: relative;
+}
+
+.tt-why__img-sec {
+    bottom: 10%;
+}
+
+.tt-why__badge {
+    top: 49%;
+}
+
+.tt-signs__img-wrap {
+            aspect-ratio: unset !important;
+        max-width: unset;
+        order: -1;
+}
+
+.tt-process__img-wrap {
+    order: -1;
+}
+
+.tt-pricing__img-wrap {
+    order: -1;
+}
+
+}

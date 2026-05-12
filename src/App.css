@@ -90,6 +90,10 @@ ul, ol { list-style: none; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
 body.menu-open { overflow: hidden; }
 
+main {
+  overflow-x: hidden;
+}
+
 /* ── Container ── */
 .container {
   width: 100%;
