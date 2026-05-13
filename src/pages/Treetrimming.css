@@ -14,7 +14,7 @@
   background: var(--black);
   overflow: hidden;
   padding-top: calc(var(--header-h) + 37px);
-  /* background-image: url(/my-app/public/Tree-Removal-Transparent.jpg); */
+  /* background-image: url(/my-app/public/Firewood-Delivery-Process.jpg); */
 }
 .tt-hero__bg { position: absolute; inset: 0; z-index: 0; }
 .tt-hero__bg img {
@@ -473,6 +473,11 @@ box-shadow: var(--shadow-lg);
   background: var(--white);
   padding: var(--sp-4xl) 0;
 }
+
+.tt-experts-gray {
+  background: var(--gray-lightest);
+}
+
 .tt-experts__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -481,6 +486,11 @@ box-shadow: var(--shadow-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
 }
+
+.tt-experts__grid:has(> div:only-child) {
+      grid-template-columns: 1fr;
+}
+
 .tt-experts__panel {
   padding: var(--sp-2xl) var(--sp-2xl);
   display: flex; flex-direction: column; gap: var(--sp-md);
@@ -714,6 +724,10 @@ box-shadow: var(--shadow-lg);
 .tt-services__cta {
     margin-top: 3rem !important;
     padding: 2rem !important;
+}
+
+.tt-services__cta-mb {
+    margin-top: 0rem !important;
 }
 
 .tt-why__img-main {

@@ -9,6 +9,9 @@ import Services from './pages/Services';
 import TreeTrimming from './pages/Treetrimming';
 import Treeremoval from './pages/Treeremoval';
 import About from './pages/About';
+import Stumpgrinding from './pages/Stumpgrinding';
+import Firewood from './pages/Firewood';
+import Areas from './pages/Areas';
 
 
 export default function App() {
@@ -22,6 +25,9 @@ export default function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/tree-trimming-in-atlanta" element={<TreeTrimming />} />
         <Route path="/tree-removal-in-atlanta" element={<Treeremoval />} />
+        <Route path="/stump-grinding" element={<Stumpgrinding />} />
+        <Route path="/firewood-delivery" element={<Firewood />} />
+        <Route path="/areas-we-serve" element={<Areas />} />
       </Routes>
 
       <Footer />

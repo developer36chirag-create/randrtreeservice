@@ -14,10 +14,25 @@ const NAV = [
     sub: [
       { label: 'Tree Trimming', href: '/tree-trimming-in-atlanta' },
       { label: 'Tree Removal', href: '/tree-removal-in-atlanta' },
-      { label: 'Land Clearing', href: '/services' },
-      { label: 'Stump Grinding', href: '/services' },
+      // { label: 'Land Clearing', href: '/services' },
+      { label: 'Stump Grinding', href: '/stump-grinding' },
       { label: 'Crane Tree Removal', href: '/services' },
-      { label: 'Firewood Delivery', href: '/services' },
+      { label: 'Firewood Delivery', href: '/firewood-delivery' },
+      { label: 'Mulch Delivery', href: '/services' },
+      { label: 'Retention Pond Maintenance', href: '/services' },
+    ],
+  },
+
+  {
+    label: 'Areas We Serve',
+    href: '/areas-we-serve',
+    sub: [
+      { label: 'Tree Trimming', href: '/tree-trimming-in-atlanta' },
+      { label: 'Tree Removal', href: '/tree-removal-in-atlanta' },
+      // { label: 'Land Clearing', href: '/services' },
+      { label: 'Stump Grinding', href: '/stump-grinding' },
+      { label: 'Crane Tree Removal', href: '/services' },
+      { label: 'Firewood Delivery', href: '/firewood-delivery' },
       { label: 'Mulch Delivery', href: '/services' },
       { label: 'Retention Pond Maintenance', href: '/services' },
     ],
