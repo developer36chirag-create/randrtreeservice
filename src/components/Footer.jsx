@@ -16,14 +16,13 @@ export default function Footer() {
               <div className="footer__brand-name">R&amp;R Tree Service</div>
               <div className="footer__brand-tag">Est. 1986 · Buford, Georgia</div>
               <p className="footer__brand-desc">
-                North Georgia's trusted tree care specialists for over 39 years.
-                Licensed, bonded &amp; insured — serving Atlanta and surrounding
-                communities with ISA-certified arborist expertise.
+                North Georgia's trusted tree care specialists for over 40 years.
+                Licensed, bonded &amp; insured — serving North Georgia and surrounding
+                communities.
               </p>
               <div className="footer__badges">
-                <span className="footer__badge">✓ ISA Certified</span>
                 <span className="footer__badge">✓ Licensed &amp; Insured</span>
-                <span className="footer__badge">✓ 39 Yrs</span>
+                <span className="footer__badge">✓ 40 Yrs</span>
               </div>
               <div className="footer__social">
                 <a href="https://www.facebook.com/R-R-Tree-Service-136691577377"

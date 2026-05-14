@@ -85,27 +85,31 @@ const SERVICE_TYPES = [
   {
     num: '05',
     title: 'Hazardous Tree Assessment and Removal',
-    desc: 'Our certified experienced team of crew members identify trees with structural weaknesses or disease, offering expert assessments and safe solutions. From proactive pruning to full removal, we’ll protect your safety and property.',
+    desc: 'Our experienced team of crew members identify trees with structural weaknesses or disease, offering expert assessments and safe solutions. From proactive pruning to full removal, we’ll protect your safety and property.',
     img: '/Hazardous-Tree-Assessment-and-Removal.webp',
   },
 ];
 
 const WHY_POINTS = [
   {
-    title: 'Safe Handling of Dangerous Trees',
-    desc: 'Diseased, storm-damaged, or leaning trees pose a significant risk. We have the expertise to assess and remove these hazards without injury or damage to your home, powerlines, or neighboring properties.',
+    title: 'Clean Water, Healthy Ecosystem',
+    desc: 'Regular maintenance removes debris and pollutants, promoting a balanced aquatic ecosystem with thriving plant and animal life.',
   },
   {
-    title: 'Protecting Your Investment',
-    desc: 'Overgrown roots, falling branches, and unstable trees can cause costly problems. Proactive removal protects your home’s foundation, landscaping, and overall value.',
+    title: 'Flood Prevention, Property Protection',
+    desc: 'Properly maintained retention ponds effectively manage stormwater runoff, protecting your property and surrounding areas from costly flood damage.',
   },
   {
-    title: 'Navigating North Georgia’s Rules',
-    desc: "Tree removal in North Georgia often requires permits and adherence to regulations. We’ll handle all administrative steps, ensuring a smooth and legal process.",
+    title: 'Enhanced Beauty, Increased Value',
+    desc: "A well-maintained pond is a beautiful asset, enhancing your property’s curb appeal and increasing its overall value.",
   },
   {
-    title: 'Specialized Equipment and Expertise',
-    desc: "Felling trees safely takes the right gear and honed techniques. Our team uses professional-grade tools and follows best practices, minimizing the impact on your landscape and surrounding areas.",
+    title: 'Compliance Confidence, Peace of Mind',
+    desc: "Expert maintenance ensures your pond meets environmental regulations, avoiding potential fines and legal complications.",
+  },
+  {
+    title: 'Long-Term Savings, Sustainable Solution',
+    desc: "Preventative maintenance protects your investment, avoiding costly repairs and ensuring the long-term health and functionality of your pond.",
   },
 ];
 
@@ -132,7 +136,7 @@ const PROCESS_STEPS = [
   {
     num: '01',
     title: 'Initial On-Site Assessment and Consultation',
-    desc: 'One of our experience tree crew will visit your property to evaluate the tree(s) in question, discuss your concerns, and outline potential solutions. We’ll provide a clear explanation of the recommended work and answer all of your questions.',
+    desc: 'One of our experienced crew members will visit your property to evaluate the tree(s) in question, discuss your concerns, and outline potential solutions. We’ll provide a clear explanation of the recommended work and answer all of your questions.',
   },
   {
     num: '02',
@@ -171,20 +175,28 @@ const PRICING_POINTS = [
 
 const REVIEWS = [
   {
-    text: "We have used R&R Tree company twice in the past couple of years to remove trees from our property. They have done a fantastic job from start to finish. Communication throughout the entire process was very good and the tree removal process was quick. Their crew did an amazing job with the cleanup. Thank you!",
-    name: 'William C.',
+    text: "I highly recommend R&R. Randy came out to look at our 200 year old red oak. He recommended a great arborist to check the health of the tree before coming up with a solid plan on pruning. He and the arborist conferred  and came up with a plan to prune the tree with the benefit of our house as well as the beautiful old tree in mind. Randy’s brother Pat ran a very professional and skilled crew on the day of trimming. The tree looks amazing and we feel better about it being close to our house. Their clean up was spectacular and they left us some choice logs for our fire pit.  Randy, Pat, and the men they have in there crew exceeded any expectations we had. We had two other quotes from two other companies, both had plans of needlessly hacking more off than was safe for the tree and R&R beat them both in price. R&R’s knowledge, service and affordability is second to none.",
+    name: 'Caleb S.',
+    loc: 'North Georgia',
+  },
+  {
+    text: "5 stars for R & R Tree Service. This 2-man crew had amazing skills, not only climbing my 80’ tree with dexterity, but skills with saws, ropes, teamwork and backing heavy equipment up my steep curvy driveway first try. They dropped the tree down in steps and took measures to lower heavy branches with ropes and make logs fall flat to avoid creating divots in the yard. They took no breaks, stuck with it till the job was done and cleaned up afterward. The stump grinder came a couple days later. That, too, was a nifty piece of equipment. It looked like a small tank but completely operated by remote control.   Beginning to end, my experience with R&R has been favorable. Tree removal is not cheap, but their quote was very reasonable. Sally in the office was super nice and responsive to my calls and emails. Great job all around. Thanks!",
+    name: 'H.H.',
     loc: 'North Georgia',
   },
 ];
 
 const FAQS = [
-  { q: 'What is a professional tree removal service?', a: 'Professional tree removal service refers to the process of safely and efficiently removing a tree from a property, which may involve cutting down the tree, removing the stump, and disposing of the wood and debris.' },
-  { q: 'Why do I need professional tree removal services?', a: 'R&R’s professional tree removal services may be necessary for various reasons, such as to remove dead or diseased trees that pose a safety risk, to clear space for new construction, or to remove trees that have outgrown their location.' },
-  { q: 'What is the cost of professional tree removal services in North Georgia?', a: 'The cost of professional tree removal services in North Georgia can vary greatly depending on several factors, such as the size and type of tree, the location, and the difficulty of the removal process. You can request a free quote here.' },
-  { q: 'What should I look for in a professional tree removal service', a: 'When choosing a professional tree removal service, it is important to choose a company with certified insurance, licensing, a positive reputation, and access to appropriate equipment and techniques to remove trees with safety and efficiency. At R&R Tree Service, we ensure that all the necessary requirements are met, and our extensive experience serving the North Georgia community for over 30 years is a testament to our commitment.' },
-  { q: 'Can I remove a tree myself?', a: 'While it is possible to remove a tree yourself, it can be a dangerous and challenging task that requires specialized equipment and expertise. If you are unsure about your ability to safely remove a tree, contact R&R’s professional tree removal service experts to ensure the job is done safely and effectively.' },
-  { q: 'What tree services do you offer in the North Georgia area?', a: 'We take pride in offering a comprehensive range of tree services tailored to meet the unique needs of our North Georgia clients. Our services include tree removal, where our skilled crews safely and efficiently remove unwanted or hazardous trees, tree pruning to promote healthy growth and maintain aesthetics, tree trimming to shape and groom trees, stump grinding for seamless removal of tree stumps, and much more. With our expertise and state-of-the-art equipment, we can handle tree-related tasks of any scale, ensuring your property looks its best year-round.' },
-  { q: 'Is your tree removal service fully insured?', a: 'Yes, as a reputable tree removal company, we prioritize the safety of our team, your property, and our customers. That’s why we are fully insured, providing our clients with peace of mind during tree removal procedures. Our team of experienced crew members takes every precaution to prevent accidents and property damage, and our comprehensive insurance coverage safeguards against unforeseen events. You can trust our services to be professional, efficient, and safe.' },
+  { q: 'What is the importance of retention pond maintenance in North Georgia?', a: 'Retention pond maintenance in North Georgia is crucial for various reasons. These ponds help manage stormwater runoff, prevent flooding, and control erosion. Regular maintenance ensures their optimal functionality, compliance with regulations, and the overall health of the environment.' },
+  { q: 'How often should retention ponds be inspected and maintained?', a: 'The frequency of retention pond inspections and maintenance can vary based on factors like the size of the pond, local regulations, and weather conditions. Generally, ponds should be inspected at least annually and more frequently after heavy rain events to ensure they are operating effectively.' },
+  { q: 'What services does R&R Tree Service offer for retention pond maintenance?', a: 'At R&R Tree Service, we offer a comprehensive range of retention pond maintenance services in North Georgia. Our offerings include debris removal, sediment removal, vegetation management, erosion control, structural repairs, water quality testing, and more. Our experienced team ensures that your pond remains compliant and functional.' },
+  { q: 'How does proper retention pond maintenance contribute to environmental conservation?', a: 'Proper retention pond maintenance plays a significant role in environmental conservation. Well-maintained ponds help filter pollutants from stormwater, improve water quality, and create habitats for aquatic life. By managing stormwater runoff effectively, these ponds contribute to the overall health of local ecosystems.' },
+  { q: 'What are the potential consequences of neglecting retention pond maintenance?', a: 'Neglecting retention pond maintenance can lead to a range of issues. Accumulated debris, sediment, and vegetation can obstruct water flow, causing flooding and erosion. Additionally, poor water quality can harm aquatic ecosystems and violate environmental regulations, potentially resulting in fines.' },
+  { q: 'How does R&R Tree Service ensure compliance with v retention pond regulations?', a: 'R&R Tree Service is well-versed in North Georgia retention pond regulations. Our experienced team stays updated on local ordinances and requirements, ensuring that all maintenance work aligns with these regulations. We conduct thorough inspections, implement necessary repairs, and provide documentation for compliance purposes.' },
+  { q: 'What sets R&R Tree Service apart as a reliable choice for retention pond maintenance in North Georgia?', a: 'R&R Tree Service stands out for its commitment to excellence and extensive expertise in retention pond maintenance. With certified experienced team of crew members and a skilled team, we offer a holistic approach to pond care. Our dedication to environmental health, prompt response, and tailored solutions make us a trusted partner for maintaining your retention ponds.' },
+  { q: 'Can aquatic vegetation in a retention pond be used for any beneficial purposes?', a: 'Some retention ponds develop aquatic vegetation over time. A less common question may revolve around whether this vegetation can be repurposed for any beneficial use, such as composting, mulching, or even supporting local wildlife. Understanding how to manage and utilize the vegetation in an eco-friendly manner can be an interesting aspect of retention pond maintenance.' },
+  { q: 'What role do amphibians and reptiles play in retention pond ecosystems, and how can their presence be enhanced or managed?', a: 'Retention ponds often attract a variety of wildlife, including amphibians and reptiles. Uncommonly asked is how the presence of these creatures affects the overall ecosystem of the pond and whether there are ways to encourage their presence or manage it for ecological balance.' },
+  { q: 'Are there innovative technologies or approaches for minimizing sediment buildup in retention ponds?', a: 'While sediment buildup is a common concern in retention pond maintenance, less frequently asked is whether there are innovative technologies or alternative approaches beyond traditional dredging methods. Exploring new technologies or strategies for mitigating sediment accumulation can be an interesting aspect of retention pond management.' },
 ];
 
 const AREAS = ['Alpharetta','Atlanta','Avondale Estates','Buford','Cumming','Decatur','Duluth','Flowery Branch','Gainesville','Grayson','Lawrenceville','Lilburn','Norcross','Roswell','Snellville','Stone Mountain','Sugar Hill','Suwanee'];
@@ -202,7 +214,7 @@ export default function TreeTrimming() {
       <section className="tt-hero" aria-label="Tree Trimming hero">
         <div className="tt-hero__bg" aria-hidden="true">
           <img
-            src="/Crane-Tree-Service.jpg"
+            src="/Retention-Pond-bg.jpg"
             alt="Professional arborist trimming trees in North Georgia"
             loading="eager" fetchpriority="high"
           />
@@ -219,27 +231,28 @@ export default function TreeTrimming() {
               <span className="tt-hero__breadcrumb-sep">›</span>
               <a href="/services">Services</a>
               <span className="tt-hero__breadcrumb-sep">›</span>
-              <span className="tt-hero__breadcrumb-cur">Tree Removal</span>
+              <span className="tt-hero__breadcrumb-cur">Retention Pond Maintenance</span>
             </motion.div>
 
             <motion.div className="tt-hero__eyebrow"
               initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}>
               <span className="tt-hero__eyebrow-line" />
-              Experienced Tree Removal Crew in North Georgia
+              Buford, GA · Serving North Georgia Since 1986
             </motion.div>
 
             <motion.h1 className="tt-hero__title"
               initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.35 }}>
-              Tree Removal in{' '}
-              <span className="tt-hero__title-red">Buford, GA</span>
+              Retention Pond Maintenance in{' '}
+              <span className="tt-hero__title-red">North Georgia</span>
             </motion.h1>
 
             <motion.p className="tt-hero__subtitle"
               initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.5 }}>
-              For safe, expert tree removal in Buford, trust R&R. With deep roots in the community, our team understands the unique needs presented by Buford’s seasons and provides reliable service to homeowners, businesses, and municipalities.
+              Keep your retention pond compliant and functioning optimally with R&R’s experts.
+
             </motion.p>
 
             <motion.div className="tt-hero__ctas"
@@ -267,7 +280,7 @@ export default function TreeTrimming() {
               variants={stagger} initial="hidden"
               whileInView="visible" viewport={{ once: true, margin: '-60px' }}>
               {[
-                ['40+', 'Years Experience'],
+                ['40', 'Years Experience'],
                 // ['ISA', 'Certified Arborists'],
                 ['100%', 'Owner Operated'],
                 ['24/7', 'Emergency Service'],
@@ -287,22 +300,19 @@ export default function TreeTrimming() {
         <div className="container">
           <div className="tt-intro__grid">
             <div className="tt-intro__text">
-              <motion.span className="eyebrow" variants={fadeUp}>Expert tree Removal in Georgia</motion.span>
+              <motion.span className="eyebrow" variants={fadeUp}>Discover Why We’re North Georgia Top Choice!</motion.span>
               <motion.h2 className="section-title section-title--lg" variants={fadeUp}>
-                Expert tree care to detect hazards early and remove dangerous trees safely.
+                Need Retention Pond Maintenance?
               </motion.h2>
               <span className="red-bar" />
               <motion.p className="tt-intro__lead" variants={fadeUp}>
-                You might need to remove a tree from your property for many reasons. Maybe it’s dead and posing a safety hazard, or perhaps it’s simply in the way of your new home addition.
+                Staying in compliance with county regulations is no small task. Navigating through a maze of inspections, codes, and other intricate requirements demands a keen eye for detail.
               </motion.p>
               <motion.p className="tt-intro__lead" variants={fadeUp}>
-                Whatever the motive, removing a tree can be daunting. But don’t worry—with the help of R&R, the process can be quick and hassle-free!
+                Why worry about the possibility of fines when you can place your trust in R&R Tree Service for all your retention pond maintenance needs?
               </motion.p>
               <motion.p className="tt-intro__lead" variants={fadeUp}>
-                Our certified tree removal experts have the equipment and expertise to safely and efficiently remove the tree without damaging your property. We’ll also dispose of the tree properly, so you won’t have to worry about it ending up in a landfill.
-              </motion.p>
-              <motion.p className="tt-intro__lead" variants={fadeUp}>
-                Our team delivers tree removal services to keep your yard beautiful, healthy, and a source of pride. Our certified experienced team of crew members will carefully assess your trees and recommend the best course of action, whether it’s:
+                Our holistic range of services guarantees the seamless functionality of your pond while ensuring it remains well within the boundaries of the law.
               </motion.p>
               <motion.div className="tt-intro__ctas" variants={fadeUp}>
                 <motion.a href="tel:678-482-9994" className="btn btn-red"
@@ -319,7 +329,7 @@ export default function TreeTrimming() {
 
             <motion.div className="tt-intro__img-wrap" variants={fadeUp} custom={0.2}>
               <img
-                src="/Expert-tree-Removal.webp"
+                src="/Expert-Retention-Pond.jpg"
                 alt="Certified arborist trimming trees"
                 loading="lazy"
               />
@@ -332,44 +342,17 @@ export default function TreeTrimming() {
       {/* ── SERVICE TYPES GRID ── */}
       <InView className="tt-services" id="tt-services">
         <div className="container">
-          <motion.div className="tt-services__header" variants={stagger}>
-            <motion.span className="eyebrow" variants={fadeUp}>What We Offer</motion.span>
-            <motion.h2 className="section-title section-title--lg" variants={fadeUp}>
-              Our Tree Removal Services
-            </motion.h2>
-            <span className="red-bar red-bar--center" />
-            <motion.p className="tt-services__desc" variants={fadeUp}>
-              Our certified experienced team of crew members will carefully assess your trees and recommend the best
-              approach — whether it's Comprehensive Tree Removal Services, Emergency Tree Removal, Stump Grinding and Removal, Lot Clearing and Brush Removal, or Hazardous Tree Assessment and Removal.
-            </motion.p>
-          </motion.div>
-
-          <motion.div className="tt-services__grid" variants={stagger}>
-            {SERVICE_TYPES.map(svc => (
-              <motion.article key={svc.title} className="tt-svc-card" variants={fadeUp}>
-                <div className="tt-svc-card__img-wrap">
-                  <img className="tt-svc-card__img" src={svc.img} alt={svc.title} loading="lazy" />
-                  <div className="tt-svc-card__img-overlay" />
-                  <span className="tt-svc-card__num">{svc.num}</span>
-                </div>
-                <div className="tt-svc-card__body">
-                  <h3 className="tt-svc-card__title">{svc.title}</h3>
-                  <p className="tt-svc-card__desc">{svc.desc}</p>
-                </div>
-              </motion.article>
-            ))}
-          </motion.div>
+          
 
           {/* Mid-section CTA */}
-          <motion.div className="tt-services__cta"
-            style={{ marginTop: 'var(--sp-3xl)', textAlign: 'center', padding: 'var(--sp-2xl)', background: 'var(--black)', borderRadius: 'var(--r-lg)', position: 'relative', overflow: 'hidden' }}
+          <motion.div className="tt-services__cta tt-services__cta-mb"
+            style={{ marginTop: '0', textAlign: 'center', padding: 'var(--sp-2xl)', background: 'var(--black)', borderRadius: 'var(--r-lg)', position: 'relative', overflow: 'hidden' }}
             initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'var(--red)' }} />
             <p style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em', color: 'var(--white)', marginBottom: 'var(--sp-lg)' }}>
-              When it comes to tree removal, safety matters.{' '}
-              <span style={{ color: 'var(--red)' }}>Choose R&R tree trimming in North Georgia</span>{' '}
-              for quality work you can trust.
+              When it comes to retention pond maintenance, expertise matters.{' '}
+              <span style={{ color: 'var(--red)' }}>Choose R&R for quality work you can trust.</span>{' '}
             </p>
             <motion.a href="tel:678-482-9994" className="btn btn-red"
               whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
@@ -386,11 +369,11 @@ export default function TreeTrimming() {
             {/* Image stack */}
             <motion.div className="tt-why__img-stack" variants={fadeUp}>
               <div className="tt-why__img-main">
-                <img src="/tree-removal-Benefits1.jpg"
+                <img src="/Retention-Pond-Benefits1.jpg"
                      alt="Tree trimming work" loading="lazy" />
               </div>
               <div className="tt-why__img-sec">
-                <img src="/tree-removal-Benefits2.webp"
+                <img src="/Retention-Pond-Benefits2.jpg"
                      alt="Healthy trees" loading="lazy" />
               </div>
               <div className="tt-why__badge">
@@ -403,14 +386,11 @@ export default function TreeTrimming() {
             <div>
               <motion.span className="eyebrow" variants={fadeUp}>Benefits</motion.span>
               <motion.h2 className="section-title section-title--lg" variants={fadeUp}>
-                Why Choose Professional Tree Removal
+                Why Retention Pond Maintenance is Important
               </motion.h2>
               <span className="red-bar" />
               <motion.p variants={fadeUp} style={{ color: 'var(--gray-text)', lineHeight: '1.8', marginBottom: 'var(--sp-md)' }}>
-                Tree removal, especially large or complex jobs, isn’t a DIY project. Professional tree services ensure your safety, protect your property, and keep you on the right side of the law.
-              </motion.p>
-              <motion.p variants={fadeUp} style={{ color: 'var(--gray-text)', lineHeight: '1.8', marginBottom: 'var(--sp-md)' }}>
-                Here’s why it’s worth the investment:
+                Retention pond maintenance is about more than just aesthetics; it’s an essential practice that protects your property, the environment, and your wallet. Here’s why:
               </motion.p>
 
               <motion.div className="tt-why__points" variants={stagger}>
@@ -441,112 +421,6 @@ export default function TreeTrimming() {
         </div>
       </InView>
 
-      {/* ── SIGNS YOUR TREES NEED TRIMMING ── */}
-      <InView className="tt-signs" id="tt-signs">
-        <div className="container">
-          <div className="tt-signs__grid">
-            <div className="tt-signs__content">
-              <motion.span className="eyebrow" variants={fadeUp} style={{ color: 'var(--red-light)' }}>
-                Warning Signs
-              </motion.span>
-              <motion.h2 className="section-title section-title--lg section-title--white" variants={fadeUp}>
-                Safety Measures
-              </motion.h2>
-              <span className="red-bar" />
-              <motion.p className="tt-signs__intro" variants={fadeUp}>
-                Safety is non-negotiable in tree removal. We have rigorous safety protocols in place to protect your property, our team members, and anyone in the vicinity of the work site.
-              </motion.p>
-              
-              <motion.div className="tt-signs__list" variants={stagger}>
-                {SIGNS.map(s => (
-                  <motion.div key={s.title} className="tt-signs__item" variants={fadeUp}>
-                    {/* <div className="tt-signs__item-icon">{s.icon}</div> */}
-                    <div>
-                      <div className="tt-signs__item-title">{s.title}</div>
-                      <div className="tt-signs__item-desc">{s.desc}</div>
-                    </div>
-                  </motion.div>
-                ))}
-              </motion.div>
-
-              <motion.div className="tt-signs__ctas" variants={fadeUp}>
-                <motion.a href="tel:678-482-9994" className="btn btn-red"
-                  whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                  Get a Free Quote
-                </motion.a>
-                <motion.a href="#tt-faq" className="btn btn-outline-white"
-                  onClick={e => { e.preventDefault(); goto('#tt-faq'); }}
-                  whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                  Learn More
-                </motion.a>
-              </motion.div>
-            </div>
-
-            <motion.div className="tt-signs__img-wrap" variants={fadeUp} custom={0.2}>
-              <img
-                src="/tree-removal-Safety-Measures.jpg"
-                alt="Tree needing trimming" loading="lazy"
-              />
-              <div className="tt-signs__img-overlay" />
-              <div className="tt-signs__img-label">
-                Spot the Signs Early — Call R&amp;R Today
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </InView>
-
-      {/* ── PROCESS ── */}
-      <InView className="tt-process" id="tt-process">
-        <div className="container">
-          <motion.div className="tt-process__header" variants={stagger}>
-            <motion.span className="eyebrow" variants={fadeUp}>How We Work</motion.span>
-            <motion.h2 className="section-title section-title--lg" variants={fadeUp}>
-              Our Tree Removal Process
-            </motion.h2>
-            <span className="red-bar red-bar--center" />
-            <motion.p variants={fadeUp} style={{ color: 'var(--gray-text)', fontSize: '1rem', lineHeight: '1.75' }}>
-              We understand that tree removal can be a significant decision for your property. Our process is designed to be thorough, communicative, and focused on achieving the results you want, safely and efficiently.
-              <br /><br />Here’s what you can expect:
-            </motion.p>
-          </motion.div>
-
-          <div className="tt-process__grid">
-            <motion.div className="tt-process__steps"
-              variants={stagger} initial="hidden"
-              whileInView="visible" viewport={{ once: true }}>
-              {PROCESS_STEPS.map(step => (
-                <motion.div key={step.num} className="tt-process__step" variants={fadeUp}>
-                  <div className="tt-process__step-num">{step.num}</div>
-                  <div>
-                    <div className="tt-process__step-title">{step.title}</div>
-                    <div className="tt-process__step-desc">{step.desc}</div>
-                  </div>
-                </motion.div>
-              ))}
-              <motion.div variants={fadeUp} style={{ display: 'flex', gap: 'var(--sp-sm)', flexWrap: 'wrap', marginTop: 'var(--sp-md)' }}>
-                <motion.a href="tel:678-482-9994" className="btn btn-red"
-                  whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                  Get Your Free Consultation
-                </motion.a>
-              </motion.div>
-            </motion.div>
-
-            <motion.div className="tt-process__img-wrap"
-              initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }} transition={{ duration: 0.7 }}>
-              <img
-                src="/Tree-Removal-Process.jpg"
-                alt="R&R Tree Service crew at work" loading="lazy"
-              />
-              <div className="tt-process__img-overlay" />
-              <div className="tt-process__img-tag">
-                {/* <span>Years of Experience</span> */}
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </InView>
 
       {/* ── SOCIAL PROOF / REVIEWS ── */}
       <InView className="tt-social-proof" id="tt-reviews">
@@ -582,133 +456,41 @@ export default function TreeTrimming() {
       </InView>
 
       {/* ── CERTIFIED ARBORISTS + EQUIPMENT ── */}
-      <InView className="tt-experts" id="tt-experts">
+      <InView className="tt-experts tt-experts-gray" id="tt-experts ">
         <div className="container">
           <motion.div className="tt-experts-heading" style={{ textAlign: 'center', maxWidth: '580px', margin: '0 auto var(--sp-3xl)' }} variants={stagger}>
             <motion.span className="eyebrow" variants={fadeUp}>Our Team</motion.span>
             <motion.h2 className="section-title section-title--lg" variants={fadeUp}>
-              Certified crew members &amp; Professional Equipment
+              Expertise Matters
             </motion.h2>
             <span className="red-bar red-bar--center" />
           </motion.div>
 
           <motion.div className="tt-experts__grid" variants={stagger}>
             {/* Arborists — dark */}
-            <motion.div className="tt-experts__panel tt-experts__panel--dark" variants={fadeUp}>
-              <h3 className="tt-experts__panel-title">Certified Experienced Crew</h3>
+            <motion.div className="tt-experts__panel tt-experts__panel--dark" variants={fadeUp} style={{ textAlign: 'center' }}>
+              {/* <h3 className="tt-experts__panel-title">Certified Arborists and Experienced Crew</h3> */}
               <p style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.55)', lineHeight: '1.75', marginBottom: 'var(--sp-md)' }}>
-                At R&R Tree Service, we don’t just cut down trees – we invest in expertise. Our team is the backbone of our commitment to safe, reliable tree removal services.
+                Worried about flooding, erosion, or keeping your retention pond in compliance?
               </p>
-              <div className="tt-experts__panel-points">
-                {ARBORIST_POINTS.map(p => (
-                  <div key={p.title} className="tt-experts__panel-point">
-                    <div className="tt-experts__check">✓</div>
-                    <div>
-                      <strong>{p.title}</strong>
-                      {p.desc}
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <p style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.55)', lineHeight: '1.75', marginBottom: 'var(--sp-md)' }}>
+               R&R Tree Service takes the hassle out of pond maintenance. Our experienced team handles everything from inspections and cleaning to erosion control, ensuring your pond is a valuable asset, not a liability.
+              </p>
+              <p style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.55)', lineHeight: '1.75', marginBottom: 'var(--sp-md)' }}>
+               Call us today at 678-482-9994 and let us take care of your pond, so you can enjoy peace of mind.
+              </p>
               <motion.a href="tel:678-482-9994" className="btn btn-red"
-                style={{ marginTop: 'var(--sp-lg)', alignSelf: 'flex-start' }}
+                style={{ marginTop: 'var(--sp-lg)', alignSelf: 'center' }}
                 whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                 Contact Us Today
               </motion.a>
             </motion.div>
 
-            {/* Equipment — light */}
-            <motion.div className="tt-experts__panel tt-experts__panel--light" variants={fadeUp}>
-              <h3 className="tt-experts__panel-title">Equipment and Technology</h3>
-              <p style={{ fontSize: '0.88rem', color: 'var(--gray-text)', lineHeight: '1.75', marginBottom: 'var(--sp-md)' }}>
-                We invest in state-of-the-art equipment to ensure safe, efficient, and environmentally-conscious tree removal services. This translates into faster project completion, minimal impact on your property, and responsible handling of resources.
-              </p>
-              <div className="tt-experts__panel-points">
-                {EQUIPMENT_POINTS.map(p => (
-                  <div key={p.title} className="tt-experts__panel-point">
-                    <div className="tt-experts__check">✓</div>
-                    <div>
-                      <strong>{p.title}</strong>
-                      {p.desc}
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <p style={{ fontSize: '0.88rem', color: 'var(--gray-text)', lineHeight: '1.75', marginBottom: 'var(--sp-md)' }}>
-                Our commitment to modern equipment and sustainable practices shows our respect for both our clients and the environment.
-              </p>
-              <motion.a href="/about" className="btn btn-black"
-                style={{ marginTop: 'var(--sp-lg)', alignSelf: 'flex-start' }}
-                whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                About Us
-              </motion.a>
-            </motion.div>
+            
           </motion.div>
         </div>
       </InView>
 
-      {/* ── TRANSPARENT PRICING ── */}
-      <InView className="tt-pricing" id="tt-pricing">
-        <div className="container">
-          <div className="tt-pricing__grid">
-            <div className="tt-pricing__content">
-              <motion.span className="eyebrow" variants={fadeUp} style={{ color: 'var(--red-light)' }}>
-                Honest Pricing
-              </motion.span>
-              <motion.h2 className="section-title section-title--lg section-title--white" variants={fadeUp}>
-                Transparent Pricing and Free Estimates
-              </motion.h2>
-              <span className="red-bar" />
-              <motion.p className="tt-pricing__desc" variants={fadeUp}>
-                <strong style={{ color: 'var(--white)' }}>No Surprises, Just Great Value: Get Your Free Estimate Today</strong>{' '}
-                Ready to find out how we can help with your tree removal needs?
-              </motion.p>
-
-              <motion.div className="tt-pricing__points" variants={stagger}>
-                {PRICING_POINTS.map(p => (
-                  <motion.div key={p.title} className="tt-pricing__point" variants={fadeUp}>
-                    <div className="tt-pricing__point-icon">
-                        <img src={p.icon} alt={p.title} />
-                    </div>
-                    <div>
-                      <div className="tt-pricing__point-title">{p.title}</div>
-                      <div className="tt-pricing__point-desc">{p.desc}</div>
-                    </div>
-                  </motion.div>
-                ))}
-              </motion.div>
-
-              <motion.p className="tt-pricing__desc" variants={fadeUp}>
-                and we can discuss your tree concerns and schedule a consultation.
-                <br /><br />
-
-No obligation, just expert advice. Let’s create a safe and beautiful space on your property!
-              </motion.p>
-
-              <motion.div className="tt-pricing__ctas" variants={fadeUp}>
-                <motion.a href="tel:678-482-9994" className="btn btn-red"
-                  whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                  <img alt="" className='phone-icon' src="/phone-call.png" /> Get Your Free Estimate
-                </motion.a>
-                <motion.a href="mailto:sally@randrtreeservice.com" className="btn btn-outline-white"
-                  whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                  <img alt="" className='phone-icon' src="/mail.png" /> Email Us
-                </motion.a>
-              </motion.div>
-            </div>
-
-            <motion.div className="tt-pricing__img-wrap"
-              initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }} transition={{ duration: 0.7 }}>
-              <img
-                src="/Tree-Removal-Transparent.jpg"
-                alt="Professional tree service" loading="lazy"
-              />
-              <div className="tt-pricing__img-overlay" />
-            </motion.div>
-          </div>
-        </div>
-      </InView>
 
       {/* ── FAQ ── */}
       <InView className="tt-faq" id="tt-faq">
@@ -716,7 +498,7 @@ No obligation, just expert advice. Let’s create a safe and beautiful space on 
           <motion.div className="tt-faq-heading" style={{ marginBottom: 'var(--sp-3xl)' }} variants={stagger}>
             <motion.span className="eyebrow" variants={fadeUp}>Knowledge Base</motion.span>
             <motion.h2 className="section-title section-title--lg" variants={fadeUp}>
-              Your Tree Removal Questions, Answered
+              Your Retention Pond Maintenance Questions, Answered
             </motion.h2>
             <span className="red-bar" />
           </motion.div>
@@ -810,7 +592,7 @@ No obligation, just expert advice. Let’s create a safe and beautiful space on 
               whileInView="visible" viewport={{ once: true, margin: '-80px' }}>
               <div>
                 <motion.h2 className="tt-cta__heading" variants={fadeUp}>
-                  Ready for Expert Tree Removal<br />in Buford?
+                  Ready for Expert Retention Pond Maintenance<br />in Buford?
                 </motion.h2>
                 <motion.p className="tt-cta__sub" variants={fadeUp}>
                   Licensed &amp; Insured · Free Estimates · 40 Years Experience

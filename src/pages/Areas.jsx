@@ -212,7 +212,7 @@ const WHY_CARDS = [
   { icon: '🌳', title: 'Local Experts', desc: 'We know North Georgia — its soil, tree species, climate challenges, and community character.' },
   { icon: '🛡️', title: 'Licensed & Insured', desc: 'Full liability coverage on every job. Your property and our crew are protected.' },
   { icon: '🏗️', title: 'Full Equipment', desc: 'From hand tools to full cranes — we own our machinery and never outsource.' },
-  { icon: '⭐', title: '39+ Years', desc: 'Trusted by North Georgia homeowners since 1986. Our reputation is our greatest asset.' },
+  { icon: '⭐', title: '40 Years', desc: 'Trusted by North Georgia homeowners since 1986. Our reputation is our greatest asset.' },
 ];
 
 const SERVICES_LIST = [
@@ -232,7 +232,7 @@ const REVIEWS = [
     name: 'Lawanna B. St Clair', loc: 'Lilburn, Georgia', wide: true,
   },
   {
-    text: 'We have used R and R Tree Service since we moved to the Atlanta area over 16 years ago. They are professional, dependable, and do an excellent job. Their crane service is a definite advantage — there is never any damage to surrounding trees.',
+    text: 'We have used R and R Tree Service since we moved to the North Georgia area over 16 years ago. They are professional, dependable, and do an excellent job. Their crane service is a definite advantage — there is never any damage to surrounding trees.',
     name: 'John & Carol H.', loc: 'Alpharetta, GA', wide: false,
   },
   {
@@ -365,7 +365,7 @@ export default function Areas() {
             <motion.div className="stats-bar__grid"
               variants={stagger} initial="hidden"
               whileInView="visible" viewport={{ once: true, margin: '-60px' }}>
-              {[['18+','Communities Served'],['39+','Years Serving GA'],['100%','Owner Operated'],['24/7','Emergency Service']].map(([n, l]) => (
+              {[['18+','Communities Served'],['40','Years Serving GA'],['100%','Owner Operated'],['24/7','Emergency Service']].map(([n, l]) => (
                 <motion.div key={l} className="stats-bar__item" variants={fadeUp}>
                   <span className="stats-bar__num">{n}</span>
                   <span className="stats-bar__lbl">{l}</span>
@@ -409,7 +409,7 @@ export default function Areas() {
           <span className="red-bar red-bar--center" />
           <motion.p className="ar-intro__desc" variants={fadeUp}>
             We proudly serve homeowners and businesses in the following communities across
-            North Atlanta and surrounding Georgia counties. Click any city to learn more
+            North Georgia and surrounding Georgia counties. Click any city to learn more
             about our services in that area.
           </motion.p>
         </div>
@@ -548,7 +548,7 @@ export default function Areas() {
             </motion.h2>
             <span className="red-bar red-bar--center" />
             <motion.p variants={fadeUp} style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.95rem' }}>
-              39 years of 5-star service — hear directly from homeowners across our service area.
+              40 years of 5-star service — hear directly from homeowners across our service area.
             </motion.p>
           </motion.div>
           <motion.div className="ar-reviews__grid" variants={stagger}>
@@ -633,7 +633,7 @@ export default function Areas() {
                   Ready for Expert Tree Care<br />in Your Neighborhood?
                 </motion.h2>
                 <motion.p className="ar-cta__sub" variants={fadeUp}>
-                  Licensed · Insured · ISA Certified · Serving North Georgia Since 1986
+                  Licensed · Insured · Serving North Georgia Since 1986
                 </motion.p>
               </div>
               <motion.div className="ar-cta__btns" variants={fadeUp}>

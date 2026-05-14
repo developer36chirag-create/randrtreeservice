@@ -107,14 +107,14 @@ const SERVICES = [
   },
   {
     id: 'crane-service',
-    title: 'Crane Tree Services (Removal & Rentals)',
+    title: 'Crane Rental Services (Removal & Rentals)',
     tag: 'Specialty Service',
     badge: 'Specialty',
     wide: true,
     img: '/Crane-Tree-Service.jpg',
     desc: 'For challenging projects, we offer crane-assisted tree services using specialized equipment operated by expert crews.',
     bullets: [
-      'Crane tree removal for oversized or hazardous trees',
+      'Crane Rental Services for oversized or hazardous trees',
       'Crane rental services for other tree companies — large and small projects',
       'Expert operators to ensure safety and precision',
       'Perfect for properties with limited access or exceptionally tall trees',
@@ -206,27 +206,27 @@ const SERVICES = [
 
 const PROCESS_STEPS = [
   { num: '01',  title: 'Free Consultation', desc: 'Call or message us and describe your tree care needs. We respond promptly.' },
-  { num: '02',  title: 'On-Site Estimate', desc: 'Our certified arborist visits your property to assess the job and provide a free quote.' },
+  { num: '02',  title: 'On-Site Estimate', desc: 'Our visits your property to assess the job and provide a free quote.' },
   { num: '03',  title: 'Expert Execution', desc: 'Our fully insured crew arrives on time with the right equipment and completes the job safely.' },
   { num: '04',  title: 'Full Clean-Up', desc: "We remove all debris, clean your property, and ensure you're 100% satisfied before leaving." },
 ];
 
 const WHY_POINTS = [
-  { icon: '🏆', title: 'ISA Board-Certified Arborists', desc: 'Our certified arborists bring scientific expertise to every project for healthier trees and safer outcomes.' },
+  // { icon: '🏆', title: 'ISA Board-Certified Arborists', desc: 'Our certified arborists bring scientific expertise to every project for healthier trees and safer outcomes.' },
   { icon: '🛡️', title: 'Fully Licensed & Insured', desc: 'Complete peace of mind — we carry full liability insurance and all required licenses to protect you and your property.' },
   { icon: '🏗️', title: 'Crane-Assisted Removal', desc: 'Specialized crane equipment for large, difficult-to-reach, or hazardous trees that standard methods cannot safely handle.' },
   { icon: '🚫', title: 'No Subcontracting', desc: 'We never hire third parties. Our own trained crew handles your job from start to finish on every single project.' },
   { icon: '📋', title: 'Comprehensive Services', desc: 'From trimming to crane removal, stump grinding, firewood delivery, mulch, and retention pond maintenance — one call covers it all.' },
-  { icon: '⭐', title: 'Customer Satisfaction', desc: 'Over 39 years of 5-star service in the Atlanta area with thousands of satisfied homeowners and businesses served.' },
+  { icon: '⭐', title: 'Customer Satisfaction', desc: 'Over 40 years of 5-star service in the North Georgia area with thousands of satisfied homeowners and businesses served.' },
 ];
 
 const FAQS = [
   {
     q: 'What services do you offer?',
-    a: 'We offer the following tree services and landscaping services in Atlanta, Georgia: Tree Trimming, Tree Removal, Land Clearing, Stump Grinding, Firewood, Mulch Delivery, Retention Pond Maintenance',
+    a: 'We offer the following tree services and landscaping services in North Georgia: Tree Trimming, Tree Removal, Land Clearing, Stump Grinding, Firewood, Mulch Delivery, Retention Pond Maintenance',
   },
   {
-    q: 'What areas of Atlanta, Georgia do you serve?',
+    q: 'What areas of North Georgia do you serve?',
     a: 'Alpharetta, Atlanta, Avondale Estates, Buford, Cumming, Decatur, Duluth, Flowery Branch, Gainesville, Grayson, Lawrenceville, Lilburn, Norcross, Roswell, Snellville, Stone Mountain, Sugar Hill and Suwanee.',
   },
   {
@@ -235,7 +235,7 @@ const FAQS = [
   },
   {
     q: 'Can you provide references and/or previous customer reviews?',
-    a: 'R&R Tree Service has been serving the community of Atlanta, Georgia for over 30 years. Our clients have great things to say about our service – read our testimonials here.',
+    a: 'R&R Tree Service has been serving the community of North Georgia for over 30 years. Our clients have great things to say about our service – read our testimonials here.',
   },
   {
     q: 'Will you provide a detailed, free estimate?',
@@ -243,15 +243,15 @@ const FAQS = [
   },
   {
     q: 'Will you remove all debris from my property?',
-    a: "R&R Tree Service is a family-owned business that has been providing quality tree care in Atlanta for over 30 years. We pride ourselves on being a full-service tree company, so you can be assured that we will be on-site from start to finish to complete your job. We do not subcontract any work and own all of our machinery, which allows us to provide you with the best possible service at a competitive price. When we leave your job, we want you to be completely satisfied with our work. We’ll clean up all debris, and if you like, we can turn the shavings into mulch for your home or donate it to someone in the Atlanta community who can use it. We’re always happy to answer any questions you may have about our services, so please don’t hesitate to call us today.",
+    a: "R&R Tree Service is a family-owned business that has been providing quality tree care in North Georgia for over 30 years. We pride ourselves on being a full-service tree company, so you can be assured that we will be on-site from start to finish to complete your job. We do not subcontract any work and own all of our machinery, which allows us to provide you with the best possible service at a competitive price. When we leave your job, we want you to be completely satisfied with our work. We’ll clean up all debris, and if you like, we can turn the shavings into mulch for your home or donate it to someone in the North Georgia community who can use it. We’re always happy to answer any questions you may have about our services, so please don’t hesitate to call us today.",
   },
 ];
 
 const TRUST_BADGES = [
-  { icon: '🏆', label: 'ISA Certified' },
+  // { icon: '🏆', label: 'ISA Certified' },
   { icon: '🛡️', label: 'Licensed & Insured' },
   { icon: '👨‍👩‍👧', label: 'Family Owned' },
-  { icon: '⭐', label: '39 Yrs Experience' },
+  { icon: '⭐', label: '40 Years of Experience' },
   { icon: '🚨', label: '24/7 Emergency' },
 ];
 
@@ -299,7 +299,7 @@ export default function Services() {
             <motion.h1 className="svc-hero__title"
               initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.35 }}>
-              R&amp;R Tree Service Atlanta |<br />
+              R&amp;R Tree Service North Georgia<br />
               Tree Trimming, Removal,{' '}
               <span className="svc-hero__title-red">Stump Grinding &amp; More</span>
             </motion.h1>
@@ -307,9 +307,9 @@ export default function Services() {
             <motion.p className="svc-hero__subtitle"
               initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.5 }}>
-              R&amp;R Tree Service in Atlanta, GA offers professional tree trimming, tree removal,
+              R&amp;R Tree Service in North Georgia offers professional tree trimming, tree removal,
               stump grinding, land clearing, firewood &amp; mulch delivery, retention pond
-              maintenance, and crane tree services.
+              maintenance, and Crane Rental Services.
             </motion.p>
 
             <motion.div className="svc-hero__ctas"
@@ -342,7 +342,7 @@ export default function Services() {
               variants={stagger} initial="hidden"
               whileInView="visible" viewport={{ once: true, margin: '-60px' }}>
               {[
-                ['39+', 'Years of Experience'],
+                ['40', 'Years of Experience'],
                 ['8', 'Service Types'],
                 ['100%', 'Owner Operated'],
                 ['24/7', 'Emergency Service'],
@@ -382,13 +382,12 @@ export default function Services() {
         <div className="container">
           <motion.h2 className="svc-intro__title" variants={fadeUp}>
             R&amp;R Tree Service – Professional Tree &amp;{' '}
-            <span>Land Services in Atlanta, GA</span>
+            <span>Land Services in Buford, GA</span>
           </motion.h2>
           <span className="red-bar red-bar--center" />
           <motion.p className="svc-intro__desc" variants={fadeUp}>
             R&amp;R Tree Service provides top-quality tree care and land management for residential
-            and commercial properties throughout <strong>Atlanta, GA</strong>. Our certified arborists
-            and experienced crews specialize in a wide range of services, ensuring safety, efficiency,
+            and commercial properties throughout <strong>Buford</strong>. Our experienced crews specialize in a wide range of services, ensuring safety, efficiency,
             and exceptional results for every project.
           </motion.p>
         </div>
@@ -501,7 +500,7 @@ export default function Services() {
             <div className="svc-why__left">
               <motion.span className="eyebrow" variants={fadeUp}>Why Choose Us</motion.span>
               <motion.h2 className="section-title section-title--lg" variants={fadeUp}>
-                Why Choose R&amp;R Tree Service in Atlanta, GA?
+                Why Choose R&amp;R Tree Service in Buford, GA?
               </motion.h2>
               <span className="red-bar" />
 
@@ -555,7 +554,7 @@ export default function Services() {
                   Ready to Get Started?<br />Call for a Free Quote Today.
                 </motion.h2>
                 <motion.p className="svc-cta__sub" variants={fadeUp}>
-                  Licensed · Insured · ISA Certified · Serving North Georgia Since 1986
+                  Licensed · Insured · Serving North Georgia Since 1986
                 </motion.p>
               </div>
               <motion.div className="svc-cta__btns" variants={fadeUp}>

@@ -12,6 +12,8 @@ import About from './pages/About';
 import Stumpgrinding from './pages/Stumpgrinding';
 import Firewood from './pages/Firewood';
 import Areas from './pages/Areas';
+import Retentionpond from './pages/Retentionpond';
+import Testimonials from './pages/Testimonials';
 
 
 export default function App() {
@@ -28,6 +30,8 @@ export default function App() {
         <Route path="/stump-grinding" element={<Stumpgrinding />} />
         <Route path="/firewood-delivery" element={<Firewood />} />
         <Route path="/areas-we-serve" element={<Areas />} />
+        <Route path="/retention-pond-maintenance" element={<Retentionpond />} />
+        <Route path="/testimonials" element={<Testimonials />} />
       </Routes>
 
       <Footer />

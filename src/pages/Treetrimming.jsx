@@ -155,7 +155,7 @@ const PROCESS_STEPS = [
   {
     num: '02',
     title: 'Your Customized Plan',
-    desc: "Our certified arborists don't use a cookie-cutter approach. They'll create a detailed trimming plan designed specifically for your trees' health and your goals.",
+    desc: "Our certified experienced team of crew members don't use a cookie-cutter approach. They'll create a detailed trimming plan designed specifically for your trees' health and your goals.",
   },
   {
     num: '03',
@@ -170,7 +170,7 @@ const PROCESS_STEPS = [
 ];
 
 const ARBORIST_POINTS = [
-  { title: 'Preserving Tree Health', desc: 'Our arborists identify potential problems early, recommending proactive solutions to prevent disease, decay, and structural weaknesses.' },
+  { title: 'Preserving Tree Health', desc: 'Our experienced team of crew members identify potential problems early, recommending proactive solutions to prevent disease, decay, and structural weaknesses.' },
   { title: 'Promoting Safety', desc: 'Trees add beauty, but they also need to be safe. We expertly assess potential risks and eliminate hazards to protect your property and family.' },
   { title: 'Enhancing Aesthetics', desc: 'We know how to carefully shape and prune trees to bring out their natural beauty and complement your landscape design.' },
   { title: 'Increasing Property Value', desc: "Well-maintained trees boost your home's curb appeal and overall value — a real return on investment." },
@@ -194,7 +194,7 @@ const REVIEWS = [
   {
     text: "I highly recommend R&R. Randy came out to look at our 200 year old red oak. He recommended a great arborist to check the health of the tree before coming up with a solid plan on pruning. He and the arborist conferred and came up with a plan to prune the tree with the benefit of our house as well as the beautiful old tree in mind. Randy's brother Pat ran a very professional and skilled crew on the day of trimming. The tree looks amazing and we feel better about it being close to our house. Their clean up was spectacular and they left us some choice logs for our fire pit. R&R's knowledge, service and affordability is second to none.",
     name: 'Caleb S.',
-    loc: 'Atlanta, GA',
+    loc: 'North Georgia',
   },
   {
     text: "5 stars for R & R Tree Service. This 2-man crew had amazing skills, not only climbing my 80' tree with dexterity, but skills with saws, ropes, teamwork and backing heavy equipment up my steep curvy driveway first try. They dropped the tree down in steps and took measures to lower heavy branches with ropes to avoid creating divots in the yard. They took no breaks, stuck with it till the job was done and cleaned up afterward. Beginning to end, my experience with R&R has been favorable. Tree removal is not cheap, but their quote was very reasonable. Sally in the office was super nice and responsive to my calls and emails. Great job all around!",
@@ -206,16 +206,16 @@ const REVIEWS = [
 const FAQS = [
   { q: 'What is professional tree trimming?', a: 'Professional tree trimming refers to removing dead, diseased, or overgrown branches from trees to promote their health and improve their appearance.' },
   { q: 'Why is tree trimming important?', a: 'Tree trimming is important to promote the health and growth of trees, reduce the risk of tree damage and property damage caused by falling branches, and maintain the aesthetic appeal of landscapes.' },
-  { q: 'What is the cost of professional tree trimming services in Atlanta?', a: 'The cost of professional tree trimming services in Atlanta can vary greatly depending on several factors, such as the size and type of tree, the location, and the extent of the trimming required. You can request a free quote here.' },
-  { q: 'What should I look for in a professional tree trimming service?', a: 'When selecting a professional tree trimming service, look for a company that has certified arborists, is insured and licensed, has a good reputation, and uses proper equipment and techniques to trim trees safely and effectively. R&R Tree Service has got you covered in all of these areas, plus we’ve been serving the Atlanta community for over 30 years!' },
-  { q: 'How often should I have my trees trimmed by a professional?', a: 'The frequency of professional tree trimming in Atlanta can vary depending on the type of tree, its location, and the amount of growth it experiences. As a general rule, most deciduous trees should be trimmed every 2-3 years and conifers every 5-7 years. However, it’s best to consult with R&R’s professional arborist team to determine the best schedule for your trees.' },
-  { q: 'Can tree trimming affect the direction of tree growth?', a: 'Tree trimming can influence the direction of growth by strategically pruning certain branches. By removing specific limbs or encouraging growth in certain areas, arborists can guide the tree’s growth pattern to some extent.' },
+  { q: 'What is the cost of professional tree trimming services in North Georgia?', a: 'The cost of professional tree trimming services in North Georgia can vary greatly depending on several factors, such as the size and type of tree, the location, and the extent of the trimming required. You can request a free quote here.' },
+  { q: 'What should I look for in a professional tree trimming service?', a: 'When selecting a professional tree trimming service, look for a company that has certified crew members, is insured and licensed, has a good reputation, and uses proper equipment and techniques to trim trees safely and effectively. R&R Tree Service has got you covered in all of these areas, plus we’ve been serving the North Georgia community for over 30 years!' },
+  { q: 'How often should I have my trees trimmed by a professional?', a: 'The frequency of professional tree trimming in North Georgia can vary depending on the type of tree, its location, and the amount of growth it experiences. As a general rule, most deciduous trees should be trimmed every 2-3 years and conifers every 5-7 years. However, it’s best to consult with R&R’s professional team to determine the best schedule for your trees.' },
+  { q: 'Can tree trimming affect the direction of tree growth?', a: 'Tree trimming can influence the direction of growth by strategically pruning certain branches. By removing specific limbs or encouraging growth in certain areas, crew members can guide the tree’s growth pattern to some extent.' },
   { q: 'How does tree trimming impact tree communication and signaling?', a: 'Trees communicate and share resources through underground networks of fungi called mycorrhizae. Trimming certain branches can disrupt these networks and affect how trees share nutrients and information, potentially altering their overall health and response to environmental changes.' },
   { q: 'Are there optimal times for trimming different species of trees?', a: 'Yes, different tree species have varying optimal trimming times based on their growth patterns and responses to pruning. Understanding the specific species and their growth cycles helps in determining the best time to trim for minimal stress and optimal growth.' },
-  { q: 'How often do my trees truly need trimming?', a: 'Every tree has unique needs. Factors like species, age, and overall health all play a role. Here’s a general guideline: Young, fast-growing trees: May need trimming every 2-3 years for healthy development. Mature trees: Typically need trimming every 3-5 years to maintain safety and beauty. Problem trees: Trees with disease or damage might need more frequent attention. Want a personalized assessment? Our certified arborists offer free consultations!' },
+  { q: 'How often do my trees truly need trimming?', a: 'Every tree has unique needs. Factors like species, age, and overall health all play a role. Here’s a general guideline: Young, fast-growing trees: May need trimming every 2-3 years for healthy development. Mature trees: Typically need trimming every 3-5 years to maintain safety and beauty. Problem trees: Trees with disease or damage might need more frequent attention. Want a personalized assessment? Our certified experienced team of crew members offer free consultations!' },
   { q: 'Should I tackle tree trimming myself, or call a professional?', a: 'Small, young trees can sometimes be trimmed with basic tools and knowledge. However, for the safety of you and your property, it’s generally best to call professionals for: Large trees: These require specialized equipment and expertise for safe, precise work. Trees near hazards: Branches close to power lines or structures pose risks best handled by trained crews. Peace of mind: Pros ensure your trees get the expert care they deserve.' },
   { q: "Are there any tree trimming regulations I need to worry about?", a: 'It depends on your location. Some cities have ordinances regarding the trimming or removal of trees. To avoid potential fines or complications, it’s wise to: Check your city/HOA website: They often list any tree-related regulations. Call your local officials: They can answer specific questions about your property.' },
-    { q: "When's the ideal time for tree trimming?", a: 'For most trees, the dormant season (late fall or winter) is best.  This minimizes stress on the tree. However, there are a few exceptions: Emergency situations: Safety hazards like broken branches need immediate attention, regardless of season. Spring-flowering trees: These often benefit from trimming right after they bloom. Not sure about your trees? Our arborists can recommend the perfect schedule for tree trimming in Atlanta.' },
+    { q: "When's the ideal time for tree trimming?", a: 'For most trees, the dormant season (late fall or winter) is best.  This minimizes stress on the tree. However, there are a few exceptions: Emergency situations: Safety hazards like broken branches need immediate attention, regardless of season. Spring-flowering trees: These often benefit from trimming right after they bloom. Not sure about your trees? Our experienced team of crew members can recommend the perfect schedule for tree trimming in North Georgia.' },
 ];
 
 const AREAS = ['Alpharetta','Atlanta','Avondale Estates','Buford','Cumming','Decatur','Duluth','Flowery Branch','Gainesville','Grayson','Lawrenceville','Lilburn','Norcross','Roswell','Snellville','Stone Mountain','Sugar Hill','Suwanee'];
@@ -234,7 +234,7 @@ export default function TreeTrimming() {
         <div className="tt-hero__bg" aria-hidden="true">
           <img
             src="/tree-trimming-bg.jpg"
-            alt="Professional arborist trimming trees in Atlanta"
+            alt="Professional arborist trimming trees in North Georgia"
             loading="eager" fetchpriority="high"
           />
           <div className="tt-hero__overlay" />
@@ -257,14 +257,14 @@ export default function TreeTrimming() {
               initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}>
               <span className="tt-hero__eyebrow-line" />
-              ISA Certified Arborists · North Georgia
+               Buford, GA Experienced Tree Company
             </motion.div>
 
             <motion.h1 className="tt-hero__title"
               initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.35 }}>
               Tree Trimming &amp; Pruning in{' '}
-              <span className="tt-hero__title-red">Atlanta, GA</span>
+              <span className="tt-hero__title-red">North Georgia</span>
             </motion.h1>
 
             <motion.p className="tt-hero__subtitle"
@@ -296,12 +296,12 @@ export default function TreeTrimming() {
       <section>
         <div className="stats-bar">
           <div className="container">
-            <motion.div className="stats-bar__grid"
+            <motion.div className="stats-bar__grid stats-bar__grid-3"
               variants={stagger} initial="hidden"
               whileInView="visible" viewport={{ once: true, margin: '-60px' }}>
               {[
-                ['39+', 'Years Experience'],
-                ['ISA', 'Certified Arborists'],
+                ['40', 'Years Experience'],
+                // ['ISA', 'Certified Arborists'],
                 ['100%', 'Owner Operated'],
                 ['24/7', 'Emergency Service'],
               ].map(([n, l]) => (
@@ -320,7 +320,7 @@ export default function TreeTrimming() {
         <div className="container">
           <div className="tt-intro__grid">
             <div className="tt-intro__text">
-              <motion.span className="eyebrow" variants={fadeUp}>Expert Tree Trimming Services in Atlanta</motion.span>
+              <motion.span className="eyebrow" variants={fadeUp}>Expert Tree Trimming Services in North Georgia</motion.span>
               <motion.h2 className="section-title section-title--lg" variants={fadeUp}>
                 Healthy, Beautiful Trees Start With R&amp;R
               </motion.h2>
@@ -332,7 +332,7 @@ export default function TreeTrimming() {
               </motion.p>
               <motion.p className="tt-intro__lead" variants={fadeUp}>
                 Our team delivers tree services to keep your trees beautiful, healthy, and a source of pride,
-                not worry. Our <strong>certified arborists</strong> will carefully assess your trees and
+                not worry. Our <strong>certified experienced team of crew members</strong> will carefully assess your trees and
                 recommend the best course of action.
               </motion.p>
               <motion.div className="tt-intro__ctas" variants={fadeUp}>
@@ -370,7 +370,7 @@ export default function TreeTrimming() {
             </motion.h2>
             <span className="red-bar red-bar--center" />
             <motion.p className="tt-services__desc" variants={fadeUp}>
-              Our certified arborists will carefully assess your trees and recommend the best
+              Our certified experienced team of crew members will carefully assess your trees and recommend the best
               approach — whether it's crown thinning, deadwood removal, shaping, or emergency trimming.
             </motion.p>
           </motion.div>
@@ -399,7 +399,7 @@ export default function TreeTrimming() {
             <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'var(--red)' }} />
             <p style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em', color: 'var(--white)', marginBottom: 'var(--sp-lg)' }}>
               When it comes to tree care, safety matters.{' '}
-              <span style={{ color: 'var(--red)' }}>Choose R&amp;R tree trimming in Atlanta</span>{' '}
+              <span style={{ color: 'var(--red)' }}>Choose R&amp;R tree trimming in North Georgia</span>{' '}
               for quality work you can trust.
             </p>
             <motion.a href="tel:678-482-9994" className="btn btn-red"
@@ -425,7 +425,7 @@ export default function TreeTrimming() {
                      alt="Healthy trees" loading="lazy" />
               </div>
               <div className="tt-why__badge">
-                <span className="tt-why__badge-num">39+</span>
+                <span className="tt-why__badge-num">40</span>
                 <span className="tt-why__badge-lbl">Years of<br />Service</span>
               </div>
             </motion.div>
@@ -618,7 +618,7 @@ export default function TreeTrimming() {
           <motion.div className="tt-experts-heading" style={{ textAlign: 'center', maxWidth: '580px', margin: '0 auto var(--sp-3xl)' }} variants={stagger}>
             <motion.span className="eyebrow" variants={fadeUp}>Our Team</motion.span>
             <motion.h2 className="section-title section-title--lg" variants={fadeUp}>
-              Certified Arborists &amp; Professional Equipment
+              Certified crew members &amp; Professional Equipment
             </motion.h2>
             <span className="red-bar red-bar--center" />
           </motion.div>
@@ -626,9 +626,9 @@ export default function TreeTrimming() {
           <motion.div className="tt-experts__grid" variants={stagger}>
             {/* Arborists — dark */}
             <motion.div className="tt-experts__panel tt-experts__panel--dark" variants={fadeUp}>
-              <h3 className="tt-experts__panel-title">Certified Arborists on Your Side</h3>
+              <h3 className="tt-experts__panel-title">Certified experienced team of crew members on Your Side</h3>
               <p style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.55)', lineHeight: '1.75', marginBottom: 'var(--sp-md)' }}>
-                Our team of certified arborists possesses a deep understanding of tree biology,
+                Our team of certified crew members possesses a deep understanding of tree biology,
                 health, and proper maintenance techniques. They are passionate about trees and
                 dedicated to exceptional results.
               </p>
@@ -805,7 +805,7 @@ export default function TreeTrimming() {
           <motion.div className="tt-areas__header" variants={stagger}>
             <motion.span className="eyebrow" variants={fadeUp}>Where We Work</motion.span>
             <motion.h2 className="section-title section-title--lg" variants={fadeUp}>
-              Service Areas in Atlanta, Georgia
+              Service Areas in North Georgia
             </motion.h2>
             <span className="red-bar red-bar--center" />
           </motion.div>
@@ -837,10 +837,10 @@ export default function TreeTrimming() {
               whileInView="visible" viewport={{ once: true, margin: '-80px' }}>
               <div>
                 <motion.h2 className="tt-cta__heading" variants={fadeUp}>
-                  Ready for Expert Tree Trimming<br />in Atlanta?
+                  Ready for Expert Tree Trimming<br />in Buford?
                 </motion.h2>
                 <motion.p className="tt-cta__sub" variants={fadeUp}>
-                  ISA Certified · Licensed &amp; Insured · Free Estimates · 39+ Years Experience
+                  Licensed &amp; Insured · Free Estimates · 40 Years Experience
                 </motion.p>
               </div>
               <motion.div className="tt-cta__btns" variants={fadeUp}>

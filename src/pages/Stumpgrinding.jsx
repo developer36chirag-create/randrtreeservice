@@ -87,7 +87,7 @@ const SIGNS = [
     desc: "Eliminate tripping hazards and improve the look of your property.",
   },
   {
-    title: 'Ensure Compliance with Local Regulations and Permits in Atlanta',
+    title: 'Ensure Compliance with Local Regulations and Permits in Buford',
     desc: "Avoid fines and legal issues by trusting professionals who understand local ordinances.",
   },
   {
@@ -120,8 +120,8 @@ const PROCESS_STEPS = [
 ];
 
 const ARBORIST_POINTS = [
-  { title: 'Local Expertise', desc: 'We understand the unique challenges and regulations of stump removal in the Atlanta area.' },
-  { title: 'Proven Track Record', desc: 'Our satisfied customers attest to our commitment to quality and service. As a locally owned business, R&R Tree & Landscaping has built a strong reputation in the stump grinding industry and the Atlanta community.' },
+  { title: 'Local Expertise', desc: 'We understand the unique challenges and regulations of stump removal in the Buford area.' },
+  { title: 'Proven Track Record', desc: 'Our satisfied customers attest to our commitment to quality and service. As a locally owned business, R&R Tree & Landscaping has built a strong reputation in the stump grinding industry and the Buford, GA community.' },
   { title: 'Licensed and Insured', desc: 'We are fully licensed and insured for your peace of mind.' },
   { title: 'Competitive Pricing', desc: "We offer fair and transparent pricing with no hidden fees." },
 ];
@@ -141,7 +141,7 @@ const REVIEWS = [
   {
     text: "We have used R&R Tree company twice in the past couple of years to remove trees from our property. They have done a fantastic job from start to finish. Communication throughout the entire process was very good and the tree removal process was quick. Their crew did an amazing job with the cleanup. Thank you!",
     name: 'William C.',
-    loc: 'Atlanta, GA',
+    loc: 'North Georgia',
   },
 ];
 
@@ -149,11 +149,11 @@ const FAQS = [
   { q: 'What is stump grinding service?', a: 'Stump grinding service is the process of using a machine to grind a tree stump and roots into small pieces.' },
   { q: 'How long does it take to grind a stump?', a: 'The time it takes to grind a stump depends on its size and location. However, most stumps can be ground in a few hours.' },
   { q: 'Is stump grinding service safe?', a: 'Yes, stump grinding service is safe when done by a professional. We take all necessary safety precautions to ensure that the surrounding area is clear and safe during the grinding process.' },
-  { q: 'Can I remove a stump myself?', a: 'We do not recommend removing a stump yourself, as it can be dangerous and time-consuming. It is best to leave the job to a professional stump grinding service like R&R Tree Service in Atlanta.' },
-  { q: 'How much does stump grinding service cost in Atlanta?', a: 'The cost of stump grinding service in Atlanta varies depending on the size and location of the stump. Contact us for a free estimate on our stump grinding service in Atlanta. Contact us today at R&R Tree Service in Atlanta to schedule your stump grinding service and remove any unwanted tree stumps from your property. We are committed to providing you with the highest quality service and satisfaction.' },
+  { q: 'Can I remove a stump myself?', a: 'We do not recommend removing a stump yourself, as it can be dangerous and time-consuming. It is best to leave the job to a professional stump grinding service like R&R Tree Service in North Georgia.' },
+  { q: 'How much does stump grinding service cost in North Georgia?', a: 'The cost of stump grinding service in North Georgia varies depending on the size and location of the stump. Contact us for a free estimate on our stump grinding service in North Georgia. Contact us today at R&R Tree Service in North Georgia to schedule your stump grinding service and remove any unwanted tree stumps from your property. We are committed to providing you with the highest quality service and satisfaction.' },
   { q: 'Can stump grinding affect the soil composition or pH levels?', a: 'Stump grinding involves breaking down the stump into wood chips, which are often left in the hole. Over time, these wood chips can alter the soil’s composition, affecting pH levels and nutrient availability. It’s essential to consider potential impacts on soil quality when opting for stump grinding.' },
   { q: 'Does stump grinding attract certain insects or pests?', a: 'The decomposition process of the wood chips left behind after stump grinding can attract specific insects and pests. Understanding which insects might be drawn to the area post-grinding can help in taking preventive measures if necessary.' },
-    { q: 'Are there regulations or environmental considerations regarding stump grinding residue?', a: 'With R&R Tree Service, you can be confident that your trees are in good hands. We’re committed to providing expert tree trimming services in Atlanta that enhance the health, safety, and beauty of your property. Additionally, R&R Tree Service complies with all Georgia regulations regarding stump grinding residue. Contact us today for a free quote!' },
+    { q: 'Are there regulations or environmental considerations regarding stump grinding residue?', a: 'With R&R Tree Service, you can be confident that your trees are in good hands. We’re committed to providing expert tree trimming services in North Georgia that enhance the health, safety, and beauty of your property. Additionally, R&R Tree Service complies with all Georgia regulations regarding stump grinding residue. Contact us today for a free quote!' },
 
 ];
 
@@ -173,7 +173,7 @@ export default function TreeTrimming() {
         <div className="tt-hero__bg" aria-hidden="true">
           <img
             src="/Stump-Grinding-bg.jpg"
-            alt="Professional arborist trimming trees in Atlanta"
+            alt="Professional arborist trimming trees in North Georgia"
             loading="eager" fetchpriority="high"
           />
           <div className="tt-hero__overlay" />
@@ -196,20 +196,20 @@ export default function TreeTrimming() {
               initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}>
               <span className="tt-hero__eyebrow-line" />
-              ISA Certified Arborists · North Georgia
+              License, Insured, and Experience Team
             </motion.div>
 
             <motion.h1 className="tt-hero__title"
               initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.35 }}>
               Stump Grinding & Removal in{' '}
-              <span className="tt-hero__title-red">Atlanta, GA</span>
+              <span className="tt-hero__title-red">North Georgia</span>
             </motion.h1>
 
             <motion.p className="tt-hero__subtitle"
               initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.5 }}>
-              R&R has been grinding stumps safely & efficiently in the greater Atlanta area for over 30 years.
+              R&R has been grinding stumps safely & efficiently in the greater North Georgia area for over 30 years.
             </motion.p>
 
             <motion.div className="tt-hero__ctas"
@@ -233,12 +233,12 @@ export default function TreeTrimming() {
       <section>
         <div className="stats-bar">
           <div className="container">
-            <motion.div className="stats-bar__grid"
+            <motion.div className="stats-bar__grid stats-bar__grid-3"
               variants={stagger} initial="hidden"
               whileInView="visible" viewport={{ once: true, margin: '-60px' }}>
               {[
-                ['39+', 'Years Experience'],
-                ['ISA', 'Certified Arborists'],
+                ['40', 'Years Experience'],
+                // ['ISA', 'Certified Arborists'],
                 ['100%', 'Owner Operated'],
                 ['24/7', 'Emergency Service'],
               ].map(([n, l]) => (
@@ -259,14 +259,14 @@ export default function TreeTrimming() {
             <div className="tt-intro__text">
               <motion.span className="eyebrow" variants={fadeUp}>Expert Stump Grinding</motion.span>
               <motion.h2 className="section-title section-title--lg" variants={fadeUp}>
-                Expert Stump Grinding Services in Atlanta
+                Expert Stump Grinding Services in North Georgia
               </motion.h2>
               <span className="red-bar" />
               <motion.p className="tt-intro__lead" variants={fadeUp}>
                 Unsightly tree stumps can be more than just an eyesore. They can attract pests, become tripping hazards, and make your property look unkempt.
               </motion.p>
               <motion.p className="tt-intro__lead" variants={fadeUp}>
-                At R&R Tree & Landscaping, we specialize in providing efficient and affordable stump grinding services in Atlanta, GA. Our professional team is equipped to handle stumps of all sizes, leaving your land smooth, safe, and ready for your next project. We are committed to serving both residential and commercial clients, ensuring reliability and trustworthiness that our clients can depend on.
+                At R&R Tree & Landscaping, we specialize in providing efficient and affordable stump grinding services in Buford, GA. Our professional team is equipped to handle stumps of all sizes, leaving your land smooth, safe, and ready for your next project. We are committed to serving both residential and commercial clients, ensuring reliability and trustworthiness that our clients can depend on.
               </motion.p>
               <motion.div className="tt-intro__ctas" variants={fadeUp}>
                 <motion.a href="tel:678-482-9994" className="btn btn-red"
@@ -301,7 +301,7 @@ export default function TreeTrimming() {
             <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'var(--red)' }} />
             <p style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em', color: 'var(--white)', marginBottom: 'var(--sp-lg)' }}>
               When it comes to stump grinding, safety matters.{' '}
-              <span style={{ color: 'var(--red)' }}>Choose R&R Tree Service in Atlanta</span>{' '}
+              <span style={{ color: 'var(--red)' }}>Choose R&R Tree Service in Buford, GA</span>{' '}
               for quality work you can trust.
             </p>
             <motion.a href="tel:678-482-9994" className="btn btn-red"
@@ -327,7 +327,7 @@ export default function TreeTrimming() {
                      alt="Healthy trees" loading="lazy" />
               </div>
               <div className="tt-why__badge">
-                <span className="tt-why__badge-num">39+</span>
+                <span className="tt-why__badge-num">40</span>
                 <span className="tt-why__badge-lbl">Years of<br />Service</span>
               </div>
             </motion.div>
@@ -340,7 +340,7 @@ export default function TreeTrimming() {
               </motion.h2>
               <span className="red-bar" />
               <motion.p variants={fadeUp} style={{ color: 'var(--gray-text)', lineHeight: '1.8', marginBottom: 'var(--sp-md)' }}>
-                Our comprehensive stump grinding and tree stump removal services in Atlanta go beyond just removing the visible stump:
+                Our comprehensive stump grinding and tree stump removal services in North Georgia go beyond just removing the visible stump:
               </motion.p>
 
               <motion.div className="tt-why__points" variants={stagger}>
@@ -380,7 +380,7 @@ export default function TreeTrimming() {
                 Why Us
               </motion.span>
               <motion.h2 className="section-title section-title--lg section-title--white" variants={fadeUp}>
-                Why Choose Professional Stump Grinding in Atlanta?
+                Why Choose Professional Stump Grinding in Buford, GA?
               </motion.h2>
               <span className="red-bar" />
               <motion.p className="tt-signs__intro" variants={fadeUp}>
@@ -478,7 +478,7 @@ export default function TreeTrimming() {
       </InView>
 
       {/* ── CERTIFIED ARBORISTS + EQUIPMENT ── */}
-      <InView className="tt-experts" id="tt-experts">
+      <InView className="tt-experts tt-experts-gray" id="tt-experts">
         <div className="container">
           <motion.div className="tt-experts-heading" style={{ textAlign: 'center', maxWidth: '580px', margin: '0 auto var(--sp-3xl)' }} variants={stagger}>
             <motion.span className="eyebrow" variants={fadeUp}>Our Team</motion.span>
@@ -650,7 +650,7 @@ export default function TreeTrimming() {
           <motion.div className="tt-areas__header" variants={stagger}>
             <motion.span className="eyebrow" variants={fadeUp}>Where We Work</motion.span>
             <motion.h2 className="section-title section-title--lg" variants={fadeUp}>
-              Service Areas in Atlanta, Georgia
+              Service Areas in North Georgia
             </motion.h2>
             <span className="red-bar red-bar--center" />
           </motion.div>
@@ -682,10 +682,10 @@ export default function TreeTrimming() {
               whileInView="visible" viewport={{ once: true, margin: '-80px' }}>
               <div>
                 <motion.h2 className="tt-cta__heading" variants={fadeUp}>
-                  Ready for Expert Stump Grinding<br />in Atlanta?
+                  Ready for Expert Stump Grinding<br />in Buford?
                 </motion.h2>
                 <motion.p className="tt-cta__sub" variants={fadeUp}>
-                  ISA Certified · Licensed &amp; Insured · Free Estimates · 39+ Years Experience
+                  Licensed &amp; Insured · Free Estimates · 40 Years Experience
                 </motion.p>
               </div>
               <motion.div className="tt-cta__btns" variants={fadeUp}>

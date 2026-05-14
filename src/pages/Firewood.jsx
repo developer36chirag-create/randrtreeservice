@@ -85,7 +85,7 @@ const SERVICE_TYPES = [
   {
     num: '05',
     title: 'Hazardous Tree Assessment and Removal',
-    desc: 'Our certified arborists identify trees with structural weaknesses or disease, offering expert assessments and safe solutions. From proactive pruning to full removal, we’ll protect your safety and property.',
+    desc: 'Our experienced team of crew members identify trees with structural weaknesses or disease, offering expert assessments and safe solutions. From proactive pruning to full removal, we’ll protect your safety and property.',
     img: '/Hazardous-Tree-Assessment-and-Removal.webp',
   },
 ];
@@ -172,7 +172,7 @@ const REVIEWS = [
   {
     text: "We have used R&R Tree company twice in the past couple of years to remove trees from our property. They have done a fantastic job from start to finish. Communication throughout the entire process was very good and the tree removal process was quick. Their crew did an amazing job with the cleanup. Thank you!",
     name: 'William C.',
-    loc: 'Atlanta, GA',
+    loc: 'North Georgia',
   },
 ];
 
@@ -205,7 +205,7 @@ export default function TreeTrimming() {
         <div className="tt-hero__bg" aria-hidden="true">
           <img
             src="/Firewood-Delivery-bg.jpg"
-            alt="Professional arborist trimming trees in Atlanta"
+            alt="Professional arborist trimming trees in North Georgia"
             loading="eager" fetchpriority="high"
           />
           <div className="tt-hero__overlay" />
@@ -228,20 +228,20 @@ export default function TreeTrimming() {
               initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}>
               <span className="tt-hero__eyebrow-line" />
-              ISA Certified Arborists · North Georgia
+              Buford, GA · Serving North Georgia Since 1986
             </motion.div>
 
             <motion.h1 className="tt-hero__title"
               initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.35 }}>
               Kiln-Dried Firewood Delivery in{' '}
-              <span className="tt-hero__title-red">Atlanta, GA</span>
+              <span className="tt-hero__title-red">North Georgia</span>
             </motion.h1>
 
             <motion.p className="tt-hero__subtitle"
               initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.5 }}>
-              R & R Tree Service is your trusted firewood delivery service and firewood supplier in Atlanta, GA. Whether you are looking for firewood for your home fireplace, outdoor fire pit, or commercial use, we provide high-quality, seasoned firewood delivered right to your doorstep — or available for pickup directly from our location.
+              R & R Tree Service is your trusted firewood delivery service and firewood supplier in North Georgia. Whether you are looking for firewood for your home fireplace, outdoor fire pit, or commercial use, we provide high-quality, seasoned firewood delivered right to your doorstep — or available for pickup directly from our location.
             </motion.p>
 
             <motion.div className="tt-hero__ctas"
@@ -265,12 +265,12 @@ export default function TreeTrimming() {
       <section>
         <div className="stats-bar">
           <div className="container">
-            <motion.div className="stats-bar__grid"
+            <motion.div className="stats-bar__grid stats-bar__grid-3"
               variants={stagger} initial="hidden"
               whileInView="visible" viewport={{ once: true, margin: '-60px' }}>
               {[
-                ['39+', 'Years Experience'],
-                ['ISA', 'Certified Arborists'],
+                ['40', 'Years Experience'],
+                // ['ISA', 'Certified Arborists'],
                 ['100%', 'Owner Operated'],
                 ['24/7', 'Emergency Service'],
               ].map(([n, l]) => (
@@ -298,7 +298,7 @@ export default function TreeTrimming() {
                 Our firewood delivery service is tailored for convenience and efficiency. We take the hassle out of transporting and storing wood so you can focus on enjoying your fire safely and comfortably.
               </motion.p>
               <motion.p className="tt-intro__lead" variants={fadeUp}>
-                • Direct delivery to your home or business in Atlanta and surrounding areas.
+                • Direct delivery to your home or business in North Georgia and surrounding areas.
                 <br /><br />
                 • Customizable orders: choose the type of wood, log size, and quantity.
                 <br /><br />
@@ -308,7 +308,7 @@ export default function TreeTrimming() {
               </motion.p>
 
               <motion.p className="tt-intro__lead" variants={fadeUp}>
-                As a dedicated firewood company in Atlanta, we ensure every delivery meets the highest standards. Our seasoned hardwood burns efficiently, producing more heat and less smoke than unseasoned wood. This makes it ideal for fireplaces, wood stoves, and outdoor fire pits.
+                As a dedicated firewood company in North Georgia, we ensure every delivery meets the highest standards. Our seasoned hardwood burns efficiently, producing more heat and less smoke than unseasoned wood. This makes it ideal for fireplaces, wood stoves, and outdoor fire pits.
               </motion.p>
               <motion.div className="tt-intro__ctas" variants={fadeUp}>
                 <motion.a href="tel:678-482-9994" className="btn btn-red"
@@ -372,7 +372,7 @@ export default function TreeTrimming() {
                      alt="Healthy trees" loading="lazy" />
               </div>
               <div className="tt-why__badge">
-                <span className="tt-why__badge-num">39+</span>
+                <span className="tt-why__badge-num">40</span>
                 <span className="tt-why__badge-lbl">Years of<br />Service</span>
               </div>
             </motion.div>
@@ -385,7 +385,7 @@ export default function TreeTrimming() {
               </motion.h2>
               <span className="red-bar" />
               <motion.p variants={fadeUp} style={{ color: 'var(--gray-text)', lineHeight: '1.8', marginBottom: 'var(--sp-md)' }}>
-                For customers who prefer to pick up their own firewood, R & R Tree Service now offers on-site firewood pickup at our Atlanta-area location.
+                For customers who prefer to pick up their own firewood, R & R Tree Service now offers on-site firewood pickup at our North Georgia-area location.
               </motion.p>
               <motion.p variants={fadeUp} style={{ color: 'var(--gray-text)', lineHeight: '1.8', marginBottom: 'var(--sp-md)' }}>
                 Whether you need a small load for your weekend fire pit or a truckload to stock up for the winter, our pickup option gives you flexibility, affordability, and convenience — perfect for those who want to skip delivery fees or get wood on short notice.
@@ -463,7 +463,7 @@ export default function TreeTrimming() {
                 <br />
                 • Loose bags for smaller fireplaces or fire pits
                 <br /><br />
-                Whether you need a one-time delivery, recurring supply, or on-site pickup, R & R Tree Service is the Atlanta firewood supplier you can trust.
+                Whether you need a one-time delivery, recurring supply, or on-site pickup, R & R Tree Service is the North Georgia firewood supplier you can trust.
               </motion.p>
 
               <motion.div className="tt-signs__ctas" variants={fadeUp}>
@@ -505,7 +505,7 @@ export default function TreeTrimming() {
             <motion.p variants={fadeUp} style={{ color: 'var(--gray-text)', fontSize: '1rem', lineHeight: '1.75' }}>
               Our stump grinding process is designed to be thorough, efficient, and tailored to your specific needs.
               <br /><br />
-              As a trusted firewood supplier in Atlanta, R & R Tree Service goes beyond simply delivering wood. Our team ensures you get the best value and service with every order.
+              As a trusted firewood supplier in North Georgia, R & R Tree Service goes beyond simply delivering wood. Our team ensures you get the best value and service with every order.
             </motion.p>
           </motion.div>
 
@@ -526,7 +526,7 @@ export default function TreeTrimming() {
 
               <motion.p variants={fadeUp} style={{ color: 'var(--gray-text)', fontSize: '1rem', lineHeight: '1.75' }}>
                 <br />
-              We are proud to serve as a reliable firewood supplier for homes, commercial properties, and outdoor venues throughout the Atlanta metro area.
+              We are proud to serve as a reliable firewood supplier for homes, commercial properties, and outdoor venues throughout the North Georgia metro area.
               </motion.p>
 
 
@@ -741,11 +741,11 @@ export default function TreeTrimming() {
           <motion.div className="tt-areas__header" variants={stagger}>
             <motion.span className="eyebrow" variants={fadeUp}>Where We Work</motion.span>
             <motion.h2 className="section-title section-title--lg" variants={fadeUp}>
-              Service Areas in Atlanta, Georgia
+              Service Areas in North Georgia
             </motion.h2>
             <span className="red-bar red-bar--center" />
             <motion.p className="tt-pricing__desc" variants={fadeUp}>
-                <span style={{ color: 'var(--gray-text)' }}>Our firewood delivery and pickup services cover Atlanta and surrounding areas, including:</span>{' '}
+                <span style={{ color: 'var(--gray-text)' }}>Our firewood delivery and pickup services cover North Georgia and surrounding areas, including:</span>{' '}
               </motion.p>
           </motion.div>
           <motion.div className="tt-areas__tags"
@@ -780,11 +780,11 @@ export default function TreeTrimming() {
                 </motion.h2>
                 <motion.p className="tt-cta__sub" variants={fadeUp}>
                   <br />
-                  Whether you need firewood delivered to your doorstep or prefer to pick it up yourself, R & R Tree Service is Atlanta’s trusted choice.
+                  Whether you need firewood delivered to your doorstep or prefer to pick it up yourself, R & R Tree Service is North Georgia trusted choice.
                   <br /><br />
                   Call us today at 678-482-9994 or fill out our online quote form to schedule your firewood delivery or pickup.
                   <br /><br />
-                  Enjoy the warmth, convenience, and reliability of Atlanta’s premier firewood supplier — R & R Tree Service.
+                  Enjoy the warmth, convenience, and reliability of North Georgia premier firewood supplier — R & R Tree Service.
                 </motion.p>
               </div>
               <motion.div className="tt-cta__btns" variants={fadeUp}>

@@ -33,30 +33,30 @@ const SERVICES = [
   { title:'Firewood Delivery',    desc:'Enjoy hassle-free delivery and the cozy comfort of a crackling fire.',               img:'/Firewood-Delivery.jpg', layout:'short',  badge:null },
   { title:'Mulch Delivery',desc:'Improve soil health, suppress weeds, and beautify your garden beds with ease.',                               img:'/Mulch-Delivery.jpg', layout:'wide',  badge:null },
   { title:'Retention Pond Maintenance',   desc:'We ensure proper drainage, prevent erosion, and keep your pond functioning optimally.',                                          img:'/Retention-Pond-Maintenance.jpg', layout:'wide', badge:null },
-  { title:'Crane Tree Service', desc:'When a tree is too large or dangerous to be removed traditionally, our skilled operators and specialized cranes provide the perfect solution.',                        img:'/Crane-Tree-Service.jpg', layout:'short',  badge:null },
+  { title:'Crane Rental Services', desc:'When a tree is too large or dangerous to be removed traditionally, our skilled operators and specialized cranes provide the perfect solution.',                        img:'/Crane-Tree-Service.jpg', layout:'short',  badge:null },
 ];
 
 const ABOUT_FEATURES = [
-  { icon:'🏆', title:'ISA Board-Certified',    desc:'Arborist on staff for expert tree care' },
+  // { icon:'🏆', title:'ISA Board-Certified',    desc:'Arborist on staff for expert tree care' },
   { icon:'🛡️', title:'Licensed & Insured',     desc:'Fully bonded for your complete safety' },
   { icon:'🚫', title:'No Subcontracting',      desc:'Our own crew from start to finish' },
-  { icon:'🌳', title:'GAA Member',             desc:'Georgia Association of Arborists member' },
+  // { icon:'🌳', title:'GAA Member',             desc:'Georgia Association of Arborists member' },
 ];
 
 const FAQS = [
-  { q:'What services do you offer?', a:'We offer the following tree services and landscaping services in Atlanta, Georgia: Tree Trimming, Tree Removal, Land Cleaning, Stump Grinding, Firewood, Mulch Delivery, Retention Pond Maintenance' },
-  { q:'What areas of Atlanta, Georgia do you serve?', a:"Alpharetta, Atlanta, Avondale Estates, Buford, Cumming, Decatur, Duluth, Flowery Branch, Gainesville, Grayson, Lawrenceville, Lilburn, Norcross, Roswell, Snellville, Stone Mountain, Sugar Hill and Suwanee." },
+  { q:'What services do you offer?', a:'We offer the following tree services and landscaping services in North Georgia: Tree Trimming, Tree Removal, Land Cleaning, Stump Grinding, Firewood, Mulch Delivery, Retention Pond Maintenance' },
+  { q:'What areas of North Georgia do you serve?', a:"Alpharetta, Atlanta, Avondale Estates, Buford, Cumming, Decatur, Duluth, Flowery Branch, Gainesville, Grayson, Lawrenceville, Lilburn, Norcross, Roswell, Snellville, Stone Mountain, Sugar Hill and Suwanee." },
   { q:'What safety protocols do the crews adhere to?', a:'We develop, implement, and enforce a comprehensive health and safety program that includes written rules and safe work procedures for all tasks. We also provide safety training and instructions to employees that address the hazards associated with the tree work they perform. This includes ensuring the proper use and maintenance of all safety equipment, personal protection equipment, machinery, and tools. Additionally, our team conducts an initial job site inspection and performs daily hazard assessments before the start of each workday to identify all existing hazards and other potentially dangerous conditions.' },
-  { q:'Can you provide references and/or previous customer reviews?', a:'R&R Tree Service has been serving the community of Atlanta, Georgia for over 30 years. Our clients have great things to say about our service – read our testimonials here.' },
+  { q:'Can you provide references and/or previous customer reviews?', a:'R&R Tree Service has been serving the community of North Georgia for over 30 years. Our clients have great things to say about our service – read our testimonials here.' },
   { q:'Will you provide a detailed, free estimate?', a:'We offer competitive pricing and free estimates for all of our clients! Call us today at 678-482-9994 for a free quote.' },
-  { q:'Will you remove all debris from my property?', a:'R&R Tree Service is a family-owned business that has been providing quality tree care in Atlanta for over 30 years. We pride ourselves on being a full-service tree company, so you can be assured that we will be on-site from start to finish to complete your job. We do not subcontract any work and own all of our machinery, which allows us to provide you with the best possible service at a competitive price. When we leave your job, we want you to be completely satisfied with our work. We’ll clean up all debris, and if you like, we can turn the shavings into mulch for your home or donate it to someone in the Atlanta community who can use it. We’re always happy to answer any questions you may have about our services, so please don’t hesitate to call us today.' },
+  { q:'Will you remove all debris from my property?', a:'R&R Tree Service is a family-owned business that has been providing quality tree care in Buford for over 30 years. We pride ourselves on being a full-service tree company, so you can be assured that we will be on-site from start to finish to complete your job. We do not subcontract any work and own all of our machinery, which allows us to provide you with the best possible service at a competitive price. When we leave your job, we want you to be completely satisfied with our work. We’ll clean up all debris, and if you like, we can turn the shavings into mulch for your home or donate it to someone in the Buford community who can use it. We’re always happy to answer any questions you may have about our services, so please don’t hesitate to call us today.' },
 ];
 
 const TESTIMONIALS = [
     { text:"Because our home sits on a wooded five acre lot, I am constantly in need of tree care. For the past eight years, R and R Tree Service has meticulously tended to our landscape needs. From pine tree removal to diagnosing damaged or diseased trees, I fully and completely trust this honest and hard working crew. Showing up on time and prepared to work is important to me. Follow up and clean up is equally important and they do both with attention to detail that is unsurpassed. They know my lot. They watch for any potential issues. They make recommendations. They are experienced. They follow through. They estimate fairly and give competitive prices. What more could I ask? It’s reassuring to know they will ‘take care of business’ and it’s one less hassle for this homeowner to trust the folks at R and R.", name:'Lawanna B. St Clair', loc:'Lilburn, Georgia 30047', wide:true },
   { text:"R&R recently removed more than a dozen trees from our heavily wooded lot, including a number of dangerous poplars that required considerable care in removing. The team showed up on time and did an incredibly safe and thorough job. We were relieved to have the work done and to have it done in such a professional manner. We would not hesitate to call them back or refer their services to anyone we know. Thanks so much for a job well done!", name:'Michael & Jennifer L.', loc:'Lawrenceville, GA', wide:false },
   { text:"Within 24-hours of being contacted, Randy and his team gave me a quote and then removed two mature trees (Oak and Maple) which were uprooted during Hurricane Helene.  They arrived at the crack of dawn, addressed this very threatening situation where the trees were on top of wires and over the sidewalk and street, and finished before lunch.  They did all this without disturbing the surrounding mature plantings.  True pros.  I highly recommend them.", name:'Jane B.', loc:'Georgia', wide:false },
-  { text:"We have used R and R Tree Service since we moved to the Atlanta area over 16 years ago. They are professional, dependable, and do an excellent job of cutting trees and cleaning up before leaving. In addition, they offer a crane service which we find to be a definite advantage in that there is never any damage to surrounding trees and other plantings. We recommend them often to friends and neighbors. We are very particular in selecting vendors and we can sincerely recommend them without reservation. They are competitively priced, are honest and a pleasure to work with!", name:'John and Carol H.', loc:'Alpharetta, GA', wide:true },
+  { text:"We have used R and R Tree Service since we moved to the North Georgia area over 16 years ago. They are professional, dependable, and do an excellent job of cutting trees and cleaning up before leaving. In addition, they offer a crane service which we find to be a definite advantage in that there is never any damage to surrounding trees and other plantings. We recommend them often to friends and neighbors. We are very particular in selecting vendors and we can sincerely recommend them without reservation. They are competitively priced, are honest and a pleasure to work with!", name:'John and Carol H.', loc:'Alpharetta, GA', wide:true },
 ];
 
 const AREAS = ['Buford','Alpharetta','Atlanta','Avondale Estates','Cumming','Decatur','Duluth','Flowery Branch','Gainesville','Grayson','Lawrenceville','Lilburn','Norcross','Roswell','Snellville','Stone Mountain','Sugar Hill','Suwanee'];
@@ -121,7 +121,7 @@ function ContactForm() {
         <label className="form-label" htmlFor="f-svc">Service Needed</label>
         <select id="f-svc" className="form-select" value={form.service} onChange={ch('service')}>
           <option value="">Select a service…</option>
-          {['Tree Trimming','Tree Removal','Land Clearing','Stump Grinding','Crane Tree Service','Firewood Delivery','Mulch Delivery','Retention Pond Maintenance','Emergency Service','Other / Not Sure'].map(o => <option key={o}>{o}</option>)}
+          {['Tree Trimming','Tree Removal','Land Clearing','Stump Grinding','Crane Rental Services','Firewood Delivery','Mulch Delivery','Retention Pond Maintenance','Emergency Service','Other / Not Sure'].map(o => <option key={o}>{o}</option>)}
         </select>
       </div>
       <div className="form-group">
@@ -167,7 +167,7 @@ export default function Home() {
                 initial={{ opacity:0, y:40 }} animate={{ opacity:1, y:0 }}
                 transition={{ duration:0.75, delay:0.35 }}>
                 Tree Removal &amp;<br />Trimming in
-                <span className="hero__title-red">Atlanta, GA</span>
+                <span className="hero__title-red">North Georgia</span>
               </motion.h1>
 
               <motion.p className="hero__subtitle"
@@ -194,7 +194,7 @@ export default function Home() {
               <motion.div className="hero__trust"
                 initial={{ opacity:0 }} animate={{ opacity:1 }}
                 transition={{ duration:0.6, delay:0.8 }}>
-                {['ISA Certified Arborist','Licensed & Insured','39+ Yrs Experience','Free Estimates'].map(t => (
+                {['Licensed & Insured','40 Years Experience','Free Estimates'].map(t => (
                   <div key={t} className="hero__trust-item">
                     <span className="hero__trust-dot">✓</span>{t}
                   </div>
@@ -220,7 +220,7 @@ export default function Home() {
             <motion.div className="stats-bar__grid"
               variants={stagger} initial="hidden"
               whileInView="visible" viewport={{ once:true, margin:'-60px' }}>
-              {[['39+','Years of Experience'],['5,000+','Trees Removed'],['100%','Owner Operated'],['24/7','Emergency Service']].map(([n,l]) => (
+              {[['40','Years of Experience'],['5,000+','Trees Removed'],['100%','Owner Operated'],['24/7','Emergency Service']].map(([n,l]) => (
                 <motion.div key={l} className="stats-bar__item" variants={fadeUp}>
                   <span className="stats-bar__num">{n}</span>
                   <span className="stats-bar__lbl">{l}</span>
@@ -265,7 +265,7 @@ export default function Home() {
                      alt="Georgia trees" loading="lazy" />
               </div>
               <div className="about__badge">
-                <span className="about__badge-num">39</span>
+                <span className="about__badge-num">40</span>
                 <span className="about__badge-lbl">Years of<br />Service</span>
               </div>
             </motion.div>
@@ -273,7 +273,7 @@ export default function Home() {
             <div>
               <motion.span className="eyebrow" variants={fadeUp}>About R&R Tree Service</motion.span>
               <motion.h2 className="section-title section-title--lg" variants={fadeUp}>
-                Atlanta's Trusted Tree Care Experts Since 1986
+                Buford's Trusted Tree Care Experts Since 1986
               </motion.h2>
               <span className="red-bar" />
               <motion.p variants={fadeUp} style={{ color:'var(--gray-text)', lineHeight:'1.8', marginBottom:'var(--sp-sm)' }}>
@@ -282,8 +282,7 @@ export default function Home() {
                 beauty and safety of your property.
               </motion.p>
               <motion.p variants={fadeUp} style={{ color:'var(--gray-text)', lineHeight:'1.8', marginBottom:'var(--sp-md)' }}>
-                We do not subcontract any work, own all our machinery, and have our own ISA board-certified
-                arborist on staff. Every job is handled by our trained crew from start to complete cleanup.
+                We do not subcontract any work, own all our machinery, and have our own tree removal crew on staff. Every job is handled by our trained crew from start to complete cleanup.
               </motion.p>
               <motion.div className="about__features" variants={stagger}>
                 {ABOUT_FEATURES.map(f => (
@@ -322,11 +321,11 @@ export default function Home() {
         <div className="container">
           <motion.div className="services-section__hdr" variants={stagger}>
             <motion.span className="eyebrow" variants={fadeUp}>What We Do</motion.span>
-            <motion.h2 className="section-title section-title--lg" variants={fadeUp}>Our Services</motion.h2>
+            <motion.h2 className="section-title section-title--lg" variants={fadeUp}>Our Tree Services</motion.h2>
             <span className="red-bar red-bar--center" />
             <motion.p className="services-section__desc" variants={fadeUp}>
               R&amp;R Tree Service offers licensed, bonded, and insured tree removal, trimming,
-              stump grinding, mulching, and more across North Atlanta and surrounding areas.
+              stump grinding, mulching, and more across North Georgia and surrounding areas.
             </motion.p>
           </motion.div>
           <motion.div className="services-grid" variants={stagger}>
@@ -372,7 +371,7 @@ export default function Home() {
       {/* ── CTA STRIP ── */}
       <section>
         <div className="cta-strip">
-          <div className="cta-strip__bg"><img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1400&q=60" alt="" loading="lazy" /></div>
+          {/* <div className="cta-strip__bg"><img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1400&q=60" alt="" loading="lazy" /></div> */}
           <div className="cta-strip__overlay" />
           <div className="container">
             <motion.div className="cta-strip__inner"
@@ -380,7 +379,7 @@ export default function Home() {
               whileInView="visible" viewport={{ once:true, margin:'-80px' }}>
               <div>
                 <motion.h2 className="cta-strip__heading" variants={fadeUp}>
-                  Serving <span>North Atlanta</span> &amp;<br />Surrounding Areas
+                  Serving <span>North Georgia</span> &amp;<br />Surrounding Areas
                 </motion.h2>
                 <motion.p className="cta-strip__sub" variants={fadeUp}>
                   Alpharetta · Buford · Cumming · Duluth · Gainesville · Lawrenceville · Roswell · Suwanee and more
@@ -415,17 +414,13 @@ export default function Home() {
               <div className="trust__text">
                 <motion.p variants={fadeUp}>
                   When it comes to the trees on your property, R&amp;R is the name to trust. We are proud
-                  to be a locally owned and operated Atlanta tree service, committed to serving our
+                  to be a locally owned and operated Buford tree service, committed to serving our
                   community with the highest level of professionalism and care.
                 </motion.p>
-                <motion.p variants={fadeUp}>
-                  We do not subcontract any work — we have our own ISA board-certified arborist on staff
-                  and are also members of the Georgia Association of Arborists and the Tree Care Industry's
-                  Association.
-                </motion.p>
+                
               </div>
               <motion.div className="trust__pills" variants={stagger}>
-                {['ISA Board-Certified Arborist','Georgia Assoc. of Arborists','Tree Care Industry Assoc.','Fully Licensed & Bonded','No Subcontracting','Free Estimates','Full Clean-Up Included','24/7 Emergency Service'].map(p => (
+                {['Tree Care Industry Assoc.','Fully Licensed & Bonded','No Subcontracting','Free Estimates','Full Clean-Up Included','24/7 Emergency Service'].map(p => (
                   <motion.span key={p} className="trust__pill" variants={fadeUp}>
                     <span className="trust__pill-check">✓</span>{p}
                   </motion.span>
@@ -467,7 +462,7 @@ export default function Home() {
             </motion.h2>
             <span className="red-bar red-bar--center" />
             <motion.p variants={fadeUp} style={{ color:'rgba(255,255,255,0.5)', fontSize:'0.95rem' }}>
-              Over 39 years of exceptional service — hear directly from North Georgia homeowners.
+              Over 40 years of exceptional service — hear directly from North Georgia homeowners.
             </motion.p>
           </motion.div>
           <motion.div className="testimonials__grid" variants={stagger}>
@@ -497,16 +492,16 @@ export default function Home() {
               <img src="/Home-Coverage.jpg"
                    alt="North Georgia" loading="lazy" />
               <div className="areas__visual-overlay" />
-              <div className="areas__visual-label">Serving North Atlanta &amp; All Surrounding Communities</div>
+              <div className="areas__visual-label">Serving North Georgia &amp; All Surrounding Communities</div>
             </motion.div>
             <div>
               <motion.span className="eyebrow" variants={fadeUp}>Coverage</motion.span>
               <motion.h2 className="section-title section-title--lg" variants={fadeUp}>
-                Service Areas in Atlanta, Georgia
+                Service Areas in North Georgia
               </motion.h2>
               <span className="red-bar" />
               <motion.p className="areas__text" variants={fadeUp}>
-                R&amp;R Tree Service proudly serves homeowners and businesses across North Atlanta
+                R&amp;R Tree Service proudly serves homeowners and businesses across North Georgia
                 and surrounding Georgia communities. Wherever you are, we bring expert tree care right to you.
               </motion.p>
               <motion.div className="areas__tags" variants={stagger}>

@@ -6,6 +6,11 @@
 /* ================================================================
    1. PAGE HERO
    ================================================================ */
+
+.stats-bar__grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .tt-hero {
   position: relative;
   min-height: 62vh;
@@ -14,7 +19,7 @@
   background: var(--black);
   overflow: hidden;
   padding-top: calc(var(--header-h) + 37px);
-  /* background-image: url(/my-app/public/Firewood-Delivery-Process.jpg); */
+  /* background-image: url(/my-app/public/Retention-Pond-Benefits1.jpg); */
 }
 .tt-hero__bg { position: absolute; inset: 0; z-index: 0; }
 .tt-hero__bg img {
@@ -756,4 +761,10 @@ box-shadow: var(--shadow-lg);
     order: -1;
 }
 
+}
+
+@media (max-width: 640px) {
+  .stats-bar__grid-3 {
+            grid-template-columns: repeat(2, 1fr);
+  }
 }

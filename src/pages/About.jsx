@@ -86,16 +86,16 @@ function ContactForm() {
 const HERO_SERVICES = [
   { icon: '✂️', name: 'Tree Trimming & Removal', sub: 'Safe & Efficient' },
   { icon: '🌿', name: 'Land Clearing', sub: 'Thorough, Licensed, & Insured' },
-  { icon: '🏗️', name: 'Crane Tree Service', sub: 'Tackle hard-to-reach trees' },
+  { icon: '🏗️', name: 'Crane Rental Services', sub: 'Tackle hard-to-reach trees' },
   { icon: '🪵', name: 'Kiln-Dried Firewood & Mulch', sub: 'Upcycled by-products for your home' },
   { icon: '🚨', name: '24-Hour Emergency Service', sub: '24/7 assistance after severe storms' },
 ];
 
 const DIFFERENTIATORS = [
-  {
-    title: 'ISA Board-Certified Arborists',
-    desc: 'Our team includes ISA-certified arborists who bring deep scientific knowledge to every job — ensuring your trees receive expert care that goes beyond surface-level trimming.',
-  },
+  // {
+  //   title: 'ISA Board-Certified Arborists',
+  //   desc: 'Our team includes ISA-certified arborists who bring deep scientific knowledge to every job — ensuring your trees receive expert care that goes beyond surface-level trimming.',
+  // },
   {
     title: 'Family-Owned & Operated',
     desc: "R&R was founded on a single principle: exceptional service beyond the minimum requirement. As a family business, we treat your property exactly as we'd treat our own.",
@@ -110,7 +110,7 @@ const DIFFERENTIATORS = [
   },
   {
     title: 'Community-Rooted Since 1986',
-    desc: 'Weve been serving the Atlanta area for over 39 years. Our roots run deep in North Georgia communities, and our reputation is built on decades of trust and satisfied neighbors.',
+    desc: 'Weve been serving the Buford area for over 40 years. Our roots run deep in North Georgia communities, and our reputation is built on decades of trust and satisfied neighbors.',
   },
   {
     title: 'Unparalleled Customer Service',
@@ -138,10 +138,10 @@ const VALUES = [
 ];
 
 const CERTIFICATIONS = [
-  { icon: '✓', label: 'ISA Board-Certified Arborist' },
+  // { icon: '✓', label: 'ISA Board-Certified Arborist' },
   { icon: '✓', label: 'Licensed & Bonded' },
   { icon: '✓', label: 'Fully Insured' },
-  { icon: '✓', label: 'GA Assoc. of Arborists' },
+  // { icon: '✓', label: 'GA Assoc. of Arborists' },
   { icon: '✓', label: 'Tree Care Industry Assoc.' },
   { icon: '✓', label: 'No Subcontracting' },
 ];
@@ -150,7 +150,7 @@ const COMMITMENT_STEPS = [
   {
     num: '01',
     title: 'Free Consultation',
-    desc: 'We start with a detailed on-site assessment. Our certified arborist listens to your goals, evaluates your trees, and answers all your questions.',
+    desc: 'We start with a detailed on-site assessment. Our experienced team of crew members listens to your goals, evaluates your trees, and answers all your questions.',
   },
   {
     num: '02',
@@ -177,7 +177,7 @@ const REVIEWS = [
     wide: true,
   },
   {
-    text: 'We have used R and R Tree Service since we moved to the Atlanta area over 16 years ago. They are professional, dependable, and do an excellent job. Their crane service is a definite advantage — there is never any damage to surrounding trees. We recommend them often to friends and neighbors.',
+    text: 'We have used R and R Tree Service since we moved to the North Georgia area over 16 years ago. They are professional, dependable, and do an excellent job. Their crane service is a definite advantage — there is never any damage to surrounding trees. We recommend them often to friends and neighbors.',
     name: 'John & Carol H.',
     loc: 'Alpharetta, GA',
     wide: false,
@@ -204,7 +204,7 @@ export default function About() {
         <div className="ab-hero__bg" aria-hidden="true">
           <img
             src="/about-bg-2.jpg"
-            alt="R&R Tree Service professional crew in Atlanta, GA"
+            alt="R&R Tree Service professional crew in North Georgia"
             loading="eager" fetchpriority="high"
           />
           <div className="ab-hero__overlay" />
@@ -242,7 +242,7 @@ export default function About() {
                 initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.65, delay: 0.5 }}>
                 R&amp;R Tree Service sets a higher standard for tree removal and trimming in
-                Atlanta, Georgia — delivering expert, family-owned tree care for over 39 years.
+                North Georgia — delivering expert, family-owned tree care for over 40 years.
               </motion.p>
 
               <motion.div className="ab-hero__ctas"
@@ -262,7 +262,7 @@ export default function About() {
               <motion.div className="ab-hero__trust"
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.8 }}>
-                {['ISA Certified', 'Licensed & Insured', '39+ Yrs Experience', 'Family Owned'].map(t => (
+                {['Licensed & Insured', '40 Years Experience', 'Family Owned'].map(t => (
                   <div key={t} className="ab-hero__trust-item">
                     <span className="ab-hero__trust-dot">✓</span>{t}
                   </div>
@@ -309,7 +309,7 @@ export default function About() {
               whileInView="visible" viewport={{ once: true, margin: '-60px' }}>
               {[
                 ['1986', 'Est. in Buford, GA'],
-                ['39+', 'Years of Service'],
+                ['40', 'Years of Service'],
                 ['100%', 'Owner Operated'],
                 ['24/7', 'Emergency Ready'],
               ].map(([n, l]) => (
@@ -367,7 +367,7 @@ export default function About() {
                 />
               </div>
               <div className="ab-story__year-badge">
-                <span className="ab-story__year-num">39+</span>
+                <span className="ab-story__year-num">40</span>
                 <span className="ab-story__year-lbl">Years of<br />Service</span>
               </div>
             </motion.div>
@@ -389,7 +389,7 @@ export default function About() {
                 <motion.p variants={fadeUp}>
                   Our company was founded on the practice of providing exceptional service that is beyond
                   the minimum requirement. R&amp;R is a <strong>family-owned and-operated business</strong>{' '}
-                  that has been serving the <strong>Atlanta area</strong> since 1986.
+                  that has been serving the <strong>North Georgia area</strong> since 1986.
                 </motion.p>
                 <motion.p variants={fadeUp}>
                   We take pride in our work and go to great lengths to provide each client with an
@@ -531,7 +531,7 @@ export default function About() {
             <span className="red-bar red-bar--center" />
             <motion.p variants={fadeUp}
               style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.95rem' }}>
-              Over 39 years of 5-star service — hear directly from North Georgia homeowners.
+              Over 40 years of 5-star service — hear directly from North Georgia homeowners.
             </motion.p>
           </motion.div>
 
@@ -701,7 +701,7 @@ export default function About() {
                   Ready to Work With<br />North Georgia's Best?
                 </motion.h2>
                 <motion.p className="ab-cta__sub" variants={fadeUp}>
-                  Family-Owned · Licensed &amp; Insured · ISA Certified · Free Estimates · Since 1986
+                  Family-Owned · Licensed &amp; Insured · Free Estimates · Since 1986
                 </motion.p>
               </div>
               <motion.div className="ab-cta__btns" variants={fadeUp}>
