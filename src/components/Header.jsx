@@ -40,7 +40,7 @@ const NAV = [
 
   { label: 'Gallery', href: '/gallery' },
   { label: 'Testimonials', href: '/testimonials' },
-  { label: 'Contact Us', href: '#contact' },
+  { label: 'Contact Us', href: '/contact-us' },
 ];
 
 export default function Header() {

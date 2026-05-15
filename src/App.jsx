@@ -15,6 +15,7 @@ import Areas from './pages/Areas';
 import Retentionpond from './pages/Retentionpond';
 import Testimonials from './pages/Testimonials';
 import Gallery from './pages/Gallery';
+import Contact from './pages/Contact';
 
 
 
@@ -35,6 +36,7 @@ export default function App() {
         <Route path="/retention-pond-maintenance" element={<Retentionpond />} />
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/contact-us" element={<Contact />} />
       </Routes>
 
       <Footer />
