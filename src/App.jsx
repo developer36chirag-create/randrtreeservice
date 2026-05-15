@@ -14,6 +14,8 @@ import Firewood from './pages/Firewood';
 import Areas from './pages/Areas';
 import Retentionpond from './pages/Retentionpond';
 import Testimonials from './pages/Testimonials';
+import Gallery from './pages/Gallery';
+
 
 
 export default function App() {
@@ -32,6 +34,7 @@ export default function App() {
         <Route path="/areas-we-serve" element={<Areas />} />
         <Route path="/retention-pond-maintenance" element={<Retentionpond />} />
         <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
 
       <Footer />

@@ -81,9 +81,9 @@ const FEATURED_REVIEW = {
   text: "R & R tree services has been a mainstay with the Agnes Scott College community for well over 20 years. Their prompt service and attention to detail are second to none! Whether it is a seasonal request or an emergency they have always responded with the attitude that no job is too great for them to handle.",
   name: 'Tim B.',
   title: 'Director of Facilities, Agnes Scott College',
-  loc: 'Atlanta, GA',
+  loc: 'North Georgia',
   service: 'Commercial Tree Care',
-  img: 'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=800&q=80',
+  img: '/testimonials-1.jpg',
 };
 
 const ALL_REVIEWS = [
@@ -92,7 +92,7 @@ const ALL_REVIEWS = [
     text: "R & R tree services has been a mainstay with the Agnes Scott College community for well over 20 years. Their prompt service and attention to detail are second to none! Whether it is a seasonal request or an emergency they have always responded with the attitude that no job is too great for them to handle.",
     name: 'Tim B.',
     role: 'Director of Facilities, Agnes Scott College',
-    loc: 'Atlanta, GA',
+    loc: 'North Georgia',
     service: 'Commercial',
     tag: 'commercial',
     tall: false,
@@ -129,7 +129,7 @@ const ALL_REVIEWS = [
   },
   {
     id: 5,
-    text: "We have used R and R Tree Service since we moved to the Atlanta area over 16 years ago. They are professional, dependable, and do an excellent job of cutting trees and cleaning up before leaving. In addition, they offer a crane service which we find to be a definite advantage in that there is never any damage to surrounding trees and other plantings. We recommend them often to friends and neighbors. We are very particular in selecting vendors and we can sincerely recommend them without reservation. They are competitively priced, are honest and a pleasure to work with!",
+    text: "We have used R and R Tree Service since we moved to the North Georgia area over 16 years ago. They are professional, dependable, and do an excellent job of cutting trees and cleaning up before leaving. In addition, they offer a crane service which we find to be a definite advantage in that there is never any damage to surrounding trees and other plantings. We recommend them often to friends and neighbors. We are very particular in selecting vendors and we can sincerely recommend them without reservation. They are competitively priced, are honest and a pleasure to work with!",
     name: 'John and Carol H.',
     role: null,
     loc: 'Alpharetta, GA',
@@ -187,7 +187,6 @@ function ReviewCard({ review }) {
     <motion.article
       className={`tm-card ${review.tall ? 'tm-card--tall' : ''}`}
       variants={fadeUp}
-      layout
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
@@ -230,13 +229,13 @@ export default function Testimonials() {
       <section className="tm-hero" aria-label="Testimonials hero">
         <div className="tm-hero__bg" aria-hidden="true">
           <img
-            src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=1920&q=85"
+            src="/testimonials-bg.jpg"
             alt="R&R Tree Service crew at work in North Georgia"
             loading="eager" fetchpriority="high"
           />
           <div className="tm-hero__overlay" />
         </div>
-        <div className="tm-hero__red-strip" aria-hidden="true" />
+        {/* <div className="tm-hero__red-strip" aria-hidden="true" /> */}
 
         <div className="container">
           <div className="tm-hero__content">
@@ -252,20 +251,20 @@ export default function Testimonials() {
               initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}>
               <span className="tm-hero__eyebrow-line" />
-              39 Years of 5-Star Service · North Georgia
+              40 Years of 5-Star Service · North Georgia
             </motion.div>
 
             <motion.h1 className="tm-hero__title"
               initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.35 }}>
               Reviews from Our Clients
-              <span>in Atlanta</span>
+              <span> in North Georgia</span>
             </motion.h1>
 
             <motion.p className="tm-hero__subtitle"
               initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.5 }}>
-              R&amp;R Tree Service has been serving our Atlanta community for over 39 years. Read
+              R&amp;R Tree Service has been serving our North Georgia community for over 40 years. Read
               what North Georgia homeowners and businesses have to say about our work.
             </motion.p>
 
@@ -279,7 +278,7 @@ export default function Testimonials() {
               </motion.a>
               <motion.a href="tel:678-482-9994" className="btn btn-outline-white"
                 whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                📞 678-482-9994
+                <img alt="" className='phone-icon' src="/phone-call.png" /> 678-482-9994
               </motion.a>
             </motion.div>
 
@@ -292,7 +291,7 @@ export default function Testimonials() {
                 ))}
               </div>
               <span className="tm-hero__rating-text">
-                5.0 · 6 Verified Client Reviews · 39+ Years Serving North Georgia
+                5.0 · 6 Verified Client Reviews · 40 Years Serving North Georgia
               </span>
             </motion.div>
           </div>
@@ -306,7 +305,7 @@ export default function Testimonials() {
             <motion.div className="stats-bar__grid"
               variants={stagger} initial="hidden"
               whileInView="visible" viewport={{ once: true, margin: '-60px' }}>
-              {[['39+','Years of Service'],['5★','Client Ratings'],['100%','Owner Operated'],['24/7','Emergency Ready']].map(([n, l]) => (
+              {[['40','Years of Service'],['5★','Client Ratings'],['100%','Owner Operated'],['24/7','Emergency Ready']].map(([n, l]) => (
                 <motion.div key={l} className="stats-bar__item" variants={fadeUp}>
                   <span className="stats-bar__num">{n}</span>
                   <span className="stats-bar__lbl">{l}</span>
@@ -343,7 +342,7 @@ export default function Testimonials() {
       {/* ── FEATURED REVIEW ── */}
       <InView className="tm-featured" id="tm-featured">
         <div className="container">
-          <motion.div style={{ textAlign: 'center', maxWidth: '560px', margin: '0 auto var(--sp-2xl)' }} variants={stagger}>
+          <motion.div className='tm-featured-heading-box' style={{ textAlign: 'center', maxWidth: '560px', margin: '0 auto var(--sp-2xl)' }} variants={stagger}>
             <motion.span className="eyebrow" variants={fadeUp}>Featured Review</motion.span>
             <motion.h2 className="section-title section-title--lg" variants={fadeUp}>
               What Our Clients Say
@@ -419,7 +418,7 @@ export default function Testimonials() {
           </motion.div>
 
           {/* Reviews grid */}
-          <motion.div className="tm-reviews__grid" layout>
+          <motion.div className="tm-reviews__grid">
             <AnimatePresence mode="popLayout">
               {filteredReviews.map(review => (
                 <ReviewCard key={review.id} review={review} />
@@ -429,173 +428,50 @@ export default function Testimonials() {
         </div>
       </section>
 
-      {/* ── TRUST METRICS ── */}
-      <section>
-        <div className="tm-metrics">
-          <div className="container">
-            <motion.div className="tm-metrics__grid"
-              variants={stagger} initial="hidden"
-              whileInView="visible" viewport={{ once: true }}>
-              {[
-                ['39+', 'Years of Trusted Service'],
-                ['20+', 'Years – Longest Client'],
-                ['16+', 'Years – Repeat Clients'],
-                ['100%', 'Would Recommend Us'],
-              ].map(([n, l]) => (
-                <motion.div key={l} className="tm-metrics__item" variants={fadeUp}>
-                  <span className="tm-metrics__num">{n}</span>
-                  <span className="tm-metrics__lbl">{l}</span>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      
 
-      {/* ── VISUAL TESTIMONIALS ── */}
-      <InView className="tm-visual" id="tm-visual">
-        <div className="container">
-          <div className="tm-visual__grid">
-
-            {/* Stacked images */}
-            <motion.div className="tm-visual__image-stack" variants={fadeUp}>
-              <div className="tm-visual__img-main">
-                <img
-                  src="https://images.unsplash.com/photo-1609429019995-8c40f49535a5?w=700&q=80"
-                  alt="R&R Tree Service arborist working" loading="lazy"
-                />
-              </div>
-              <div className="tm-visual__img-sec">
-                <img
-                  src="https://images.unsplash.com/photo-1591088398332-8a7791972843?w=500&q=80"
-                  alt="Professional tree removal" loading="lazy"
-                />
-              </div>
-              <div className="tm-visual__badge">
-                <span className="tm-visual__badge-num">5★</span>
-                <span className="tm-visual__badge-lbl">Every<br />Review</span>
-              </div>
-            </motion.div>
-
-            {/* Content */}
-            <div>
-              <motion.span className="eyebrow" variants={fadeUp}>What Clients Say</motion.span>
-              <motion.h2 className="section-title section-title--lg" variants={fadeUp}>
-                Delivering Excellence Across North Georgia
-              </motion.h2>
-              <span className="red-bar" />
-
-              <motion.blockquote className="tm-visual__pull-quote" variants={fadeUp}>
-                "They are professional, dependable, and do an excellent job. We can sincerely
-                recommend them without reservation. They are competitively priced, are honest
-                and a pleasure to work with!"
-              </motion.blockquote>
-              <motion.div style={{ fontSize: '0.82rem', color: 'var(--gray-mid)', marginTop: '-var(--sp-md)', marginBottom: 'var(--sp-xl)' }} variants={fadeUp}>
-                — John and Carol H., Alpharetta, GA
-              </motion.div>
-
-              <motion.div className="tm-visual__mini-reviews" variants={stagger}>
-                {MINI_REVIEWS.map(r => (
-                  <motion.div key={r.name} className="tm-visual__mini" variants={fadeUp}>
-                    <div className="tm-visual__mini-avatar">{r.name.charAt(0)}</div>
-                    <div>
-                      <div className="tm-visual__mini-stars" aria-label="5 stars">
-                        {['★','★','★','★','★'].map((s, i) => (
-                          <span key={i} className="tm-visual__mini-star">{s}</span>
-                        ))}
-                      </div>
-                      <p className="tm-visual__mini-text">"{r.text}"</p>
-                      <div className="tm-visual__mini-name">{r.name}</div>
-                      <div className="tm-visual__mini-loc">📍 {r.loc}</div>
-                    </div>
+      {/* ── CONTACT ── */}
+            <InView className="contact-sec" id="contact">
+              <div className="container">
+                <div className="contact__grid">
+                  <div>
+                    <motion.span className="eyebrow" variants={fadeUp} style={{ color:'var(--red-light)' }}>Get In Touch</motion.span>
+                    <motion.h2 className="section-title section-title--lg section-title--white" variants={fadeUp}>
+                      We Can't Wait to Make Your Property Dreams a Reality
+                    </motion.h2>
+                    <span className="red-bar" />
+                    <motion.p className="contact__desc" variants={fadeUp}>
+                      Whether you need an emergency tree removal or a routine trimming, R&amp;R Tree Service
+                      is ready to help. Contact us for a free, no-obligation estimate.
+                    </motion.p>
+                    <motion.div className="contact__cards" variants={stagger}>
+                      {[
+                        { img:'/phone-call.png', label:'Phone',   val:'678-482-9994',              href:'tel:678-482-9994' },
+                        { img:'/printer.png', label:'Fax',     val:'678-482-9996',              href:'tel:678-482-9996' },
+                        { img:'/mail.png', label:'Email',   val:'sally@randrtreeservice.com', href:'mailto:sally@randrtreeservice.com' },
+                        { img:'/location-pin.png', label:'Address', val:'1381 Buford Hwy, Buford GA 30518', href:null },
+                      ].map(c => (
+                        <motion.a key={c.label} href={c.href||'#'} className="contact__card" variants={fadeUp}
+                          style={!c.href?{ cursor:'default', pointerEvents:'none' }:{}}
+                          onClick={c.href?undefined:e=>e.preventDefault()}>
+                          <div className="contact__card-icon">
+                            <img src={c.img} alt={c.label} />
+                          </div>
+                          <div>
+                            <div className="contact__card-label">{c.label}</div>
+                            <div className="contact__card-value">{c.val}</div>
+                          </div>
+                        </motion.a>
+                      ))}
+                    </motion.div>
+                  </div>
+                  <motion.div className="contact__form-box" variants={fadeUp}>
+                    <ContactForm />
                   </motion.div>
-                ))}
-              </motion.div>
-
-              <motion.div style={{ display: 'flex', gap: 'var(--sp-sm)', marginTop: 'var(--sp-xl)', flexWrap: 'wrap' }} variants={fadeUp}>
-                <motion.a href="#tm-contact" className="btn btn-red"
-                  onClick={e => { e.preventDefault(); goto('#tm-contact'); }}
-                  whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                  Get a Free Quote
-                </motion.a>
-                <motion.a href="tel:678-482-9994" className="btn btn-outline-black"
-                  whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
-                  📞 Call Today
-                </motion.a>
-              </motion.div>
-            </div>
-
-          </div>
-        </div>
-      </InView>
-
-      {/* ── LEAVE A REVIEW + CONTACT ── */}
-      <InView className="tm-leave-review" id="tm-contact">
-        <div className="container">
-          <div className="tm-leave-review__inner">
-
-            {/* Left — review platforms + CTA */}
-            <div className="tm-leave-review__text">
-              <motion.span className="eyebrow" variants={fadeUp} style={{ color: 'var(--red-light)' }}>
-                Share Your Experience
-              </motion.span>
-              <motion.h2 className="section-title section-title--lg section-title--white" variants={fadeUp}>
-                Satisfied with Our Work? Leave a Review!
-              </motion.h2>
-              <span className="red-bar" />
-              <motion.p className="tm-leave-review__body" variants={fadeUp}>
-                Your feedback means the world to us and helps other North Georgia homeowners
-                find trusted tree care. If R&amp;R has served you well, we'd love to hear about it.
-                And if there's anything we can improve, please reach out directly — we make it right.
-              </motion.p>
-
-              <motion.div className="tm-leave-review__platforms" variants={stagger}>
-                <motion.a
-                  href="https://www.facebook.com/R-R-Tree-Service-136691577377"
-                  target="_blank" rel="noopener noreferrer"
-                  className="tm-leave-review__platform" variants={fadeUp}>
-                  <div className="tm-leave-review__platform-icon">f</div>
-                  <div>
-                    <div className="tm-leave-review__platform-name">Facebook</div>
-                    <div className="tm-leave-review__platform-desc">Leave a review on our Facebook page</div>
-                  </div>
-                  <span style={{ marginLeft: 'auto', color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem' }}>→</span>
-                </motion.a>
-
-                <motion.a
-                  href="tel:678-482-9994"
-                  className="tm-leave-review__platform" variants={fadeUp}>
-                  <div className="tm-leave-review__platform-icon">📞</div>
-                  <div>
-                    <div className="tm-leave-review__platform-name">Call Us Directly</div>
-                    <div className="tm-leave-review__platform-desc">678-482-9994 — Speak with our team</div>
-                  </div>
-                  <span style={{ marginLeft: 'auto', color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem' }}>→</span>
-                </motion.a>
-
-                <motion.a
-                  href="mailto:sally@randrtreeservice.com"
-                  className="tm-leave-review__platform" variants={fadeUp}>
-                  <div className="tm-leave-review__platform-icon">✉</div>
-                  <div>
-                    <div className="tm-leave-review__platform-name">Email</div>
-                    <div className="tm-leave-review__platform-desc">sally@randrtreeservice.com</div>
-                  </div>
-                  <span style={{ marginLeft: 'auto', color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem' }}>→</span>
-                </motion.a>
-              </motion.div>
-            </div>
-
-            {/* Right — contact form */}
-            <motion.div className="tm-leave-review__form-box"
-              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }} transition={{ duration: 0.65, delay: 0.15 }}>
-              <ContactForm />
-            </motion.div>
-
-          </div>
-        </div>
-      </InView>
+                </div>
+              </div>
+            </InView>
+      
 
       {/* ── SERVICE AREAS ── */}
       <InView className="tm-areas" id="tm-areas">
@@ -642,13 +518,13 @@ export default function Testimonials() {
                   Join Thousands of Satisfied<br />North Georgia Homeowners
                 </motion.h2>
                 <motion.p className="tm-cta__sub" variants={fadeUp}>
-                  Licensed · Insured · ISA Certified · Free Estimates · Since 1986
+                  Licensed · Insured · Free Estimates · Since 1986
                 </motion.p>
               </div>
               <motion.div className="tm-cta__btns" variants={fadeUp}>
                 <motion.a href="tel:678-482-9994" className="btn btn-black"
                   whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
-                  📞 678-482-9994
+                  <img alt="" className='phone-icon' src="/phone-call.png" /> 678-482-9994
                 </motion.a>
                 <motion.a href="#tm-contact" className="btn btn-outline-white"
                   onClick={e => { e.preventDefault(); goto('#tm-contact'); }}

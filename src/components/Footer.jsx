@@ -1,7 +1,7 @@
 // Footer.jsx | R&R Tree Service
 import './Footer.css';
 
-const SERVICES = ['Tree Trimming','Tree Removal','Land Clearing','Stump Grinding','Crane Tree Removal','Firewood Delivery','Mulch Delivery','Retention Pond Maintenance'];
+const SERVICES = ['Tree Trimming','Tree Removal','Land Clearing','Stump Grinding','Crane Rental Services','Firewood Delivery','Mulch Delivery','Retention Pond Maintenance'];
 const AREAS = ['Alpharetta','Atlanta','Avondale Estates','Buford','Cumming','Decatur','Duluth','Flowery Branch','Gainesville','Grayson','Lawrenceville','Lilburn','Norcross','Roswell','Snellville','Stone Mountain','Sugar Hill','Suwanee'];
 const goto = href => document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
 

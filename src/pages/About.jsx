@@ -389,7 +389,7 @@ export default function About() {
                 <motion.p variants={fadeUp}>
                   Our company was founded on the practice of providing exceptional service that is beyond
                   the minimum requirement. R&amp;R is a <strong>family-owned and-operated business</strong>{' '}
-                  that has been serving the <strong>North Georgia area</strong> since 1986.
+                  that has been serving the <strong>Buford and surrounding areas</strong> since 1986.
                 </motion.p>
                 <motion.p variants={fadeUp}>
                   We take pride in our work and go to great lengths to provide each client with an

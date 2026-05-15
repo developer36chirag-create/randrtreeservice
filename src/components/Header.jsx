@@ -38,8 +38,8 @@ const NAV = [
     ],
   },
 
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Gallery', href: '/gallery' },
+  { label: 'Testimonials', href: '/testimonials' },
   { label: 'Contact Us', href: '#contact' },
 ];
 
