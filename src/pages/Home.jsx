@@ -28,7 +28,7 @@ const STRIPS = [
 const SERVICES = [
   { title:'Tree Trimming',    desc:'Improve tree health, promote growth, and enhance the beauty of your landscape with our precise trimming techniques.',              img:'/Tree-Trimming.jpg',  layout:'short',  badge:null },
   { title:'Tree Removal',     desc:'Protect your property from hazardous trees, enhance curb appeal, and prevent potential damage.',                                  img:'/Tree-Removal.jpg', layout:'wide',  badge:'Most Popular' },
-  { title:'Land Clearing',   desc:'land clearingPrepare your property for construction, landscaping, or other projects with our efficient land clearing services.',                                 img:'/Land-Clearing.jpg', layout:'wide', badge:null },
+  { title:'Land Clearing',   desc:'Prepare your property for construction, landscaping, or other projects with our efficient land clearing services.',                                 img:'/Land-Clearing.jpg', layout:'wide', badge:null },
   { title:'Stump Grinding',desc:'Reclaim your yard space and eliminate tripping hazards with our thorough stump removal services.',           img:'/Stump-Grinding.jpg', layout:'short', badge:'Specialty' },
   { title:'Firewood Delivery',    desc:'Enjoy hassle-free delivery and the cozy comfort of a crackling fire.',               img:'/Firewood-Delivery.jpg', layout:'short',  badge:null },
   { title:'Mulch Delivery',desc:'Improve soil health, suppress weeds, and beautify your garden beds with ease.',                               img:'/Mulch-Delivery.jpg', layout:'wide',  badge:null },
