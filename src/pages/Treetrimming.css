@@ -30,12 +30,7 @@
 @keyframes ttHeroZoom { from { transform: scale(1.07); } to { transform: scale(1); } }
 .tt-hero__overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(
-    105deg,
-    rgba(0,0,0,0.90) 0%,
-    rgba(0,0,0,0.75) 48%,
-    rgba(0,0,0,0.45) 100%
-  );
+  background: linear-gradient(105deg, rgb(0 0 0 / 98%) 0%, rgb(0 0 0 / 58%) 45%, rgb(0 0 0 / 59%) 100%);
 }
 .tt-hero__red-strip {
   position: absolute; top: 0; left: 0; bottom: 0;

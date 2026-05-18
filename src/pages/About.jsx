@@ -630,7 +630,7 @@ export default function About() {
                 style={{ color: 'var(--red-light)' }}>
                 Reach Out
               </motion.span>
-              <motion.h2 className="section-title section-title--lg section-title--white"
+              <motion.h2 className="section-title section-title--lg"
                 variants={fadeUp}>
                 We Can't Wait to Make Your Property Dreams a Reality
               </motion.h2>

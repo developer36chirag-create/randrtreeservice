@@ -1,0 +1,631 @@
+/* ============================================================
+   CITYPAGE.CSS | R&R Tree Service
+   Reusable city service page — #D92227 + #000000
+   Used by: Alpharetta, Atlanta, Buford, Suwanee, etc.
+   ============================================================ */
+
+/* ================================================================
+   1. HERO
+   ================================================================ */
+.city-hero {
+  position: relative;
+  min-height: 68vh;
+  display: flex;
+  align-items: center;
+  background: var(--black);
+  overflow: hidden;
+  padding-top: calc(var(--header-h) + 37px);
+  /* background-image: url(/my-app/public/Near-the-Mall-of-Georgia.webp); */
+}
+.city-hero__bg { position: absolute; inset: 0; z-index: 0; }
+.city-hero__bg img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 40%;
+  animation: cityHeroZoom 18s ease-out forwards;
+}
+@keyframes cityHeroZoom { from { transform: scale(1.07); } to { transform: scale(1); } }
+.city-hero__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(105deg, rgb(0 0 0 / 98%) 0%, rgb(0 0 0 / 58%) 45%, rgb(0 0 0 / 59%) 100%);
+}
+.city-hero__red-strip {
+  position: absolute; top: 0; left: 0; bottom: 0;
+  width: 5px; background: var(--red); z-index: 3;
+}
+
+.city-hero__grid {
+  position: relative; z-index: 2; width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: var(--sp-2xl);
+  align-items: center;
+  padding: var(--sp-2xl) 0;
+}
+
+/* Left copy */
+.city-hero__breadcrumb {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 0.7rem; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,0.4); margin-bottom: var(--sp-md);
+}
+.city-hero__breadcrumb a { color: rgba(255,255,255,0.4); text-decoration: none; transition: var(--t); }
+.city-hero__breadcrumb a:hover { color: var(--red-light); }
+.city-hero__breadcrumb-sep { color: var(--red); font-size: 0.65rem; }
+.city-hero__breadcrumb-cur { color: var(--red-light); }
+
+.city-hero__eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--red-light); margin-bottom: var(--sp-md);
+}
+.city-hero__eyebrow-line { display: inline-block; width: 28px; height: 2px; background: var(--red); }
+
+.city-hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 4.5vw, 4rem);
+  font-weight: 700; line-height: 1.05;
+  text-transform: uppercase; letter-spacing: 0.02em;
+  color: var(--white); margin-bottom: var(--sp-md);
+}
+.city-hero__title span { color: var(--red); display: block; }
+
+.city-hero__subtitle {
+  font-size: 1.05rem; font-weight: 300;
+  color: rgba(255,255,255,0.7);
+  max-width: 580px; line-height: 1.78;
+  margin-bottom: var(--sp-xl);
+}
+.city-hero__subtitle strong { color: var(--white); font-weight: 600; }
+
+.city-hero__ctas { display: flex; gap: var(--sp-sm); flex-wrap: wrap; margin-bottom: var(--sp-xl); }
+.city-hero__trust { display: flex; flex-wrap: wrap; gap: var(--sp-lg); }
+.city-hero__trust-item {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 0.76rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+}
+.city-hero__trust-dot {
+  width: 17px; height: 17px; border-radius: 50%;
+  background: var(--red);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.55rem; color: var(--white); flex-shrink: 0;
+}
+
+/* Right — quick contact card */
+.city-hero__card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--r-lg); overflow: hidden;
+}
+.city-hero__card-head { background: var(--red); padding: var(--sp-md) var(--sp-lg); }
+.city-hero__card-head-title {
+  font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em; color: var(--white);
+}
+.city-hero__card-head-sub { font-size: 0.76rem; color: rgba(255,255,255,0.82); margin-top: 2px; }
+.city-hero__card-body { padding: var(--sp-lg); display: flex; flex-direction: column; gap: var(--sp-sm); }
+.city-hero__card-phone {
+  display: flex; align-items: center; gap: 12px;
+  padding: var(--sp-md);
+  background: rgba(217,34,39,0.12); border: 1px solid rgba(217,34,39,0.3);
+  border-radius: var(--r-md); text-decoration: none; transition: var(--t);
+}
+.city-hero__card-phone:hover { background: rgba(217,34,39,0.22); transform: translateX(4px); }
+.city-hero__card-phone-icon {
+  width: 42px; height: 42px; background: var(--red); border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; flex-shrink: 0;
+}
+.city-hero__card-phone-lbl { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.38); margin-bottom: 2px; }
+.city-hero__card-phone-num { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--white); }
+.city-hero__card-divider { height: 1px; background: rgba(255,255,255,0.08); }
+.city-hero__card-row { display: flex; align-items: center; gap: 10px; font-size: 0.83rem; color: rgba(255,255,255,0.55); text-decoration: none; transition: var(--t); }
+.city-hero__card-row:hover { color: rgba(255,255,255,0.9); }
+.city-hero__card-cta { width: 100%; justify-content: center; margin-top: 4px; }
+
+@media (max-width: 960px) {
+  .city-hero__grid { grid-template-columns: 1fr; gap: var(--sp-xl); }
+  .city-hero__card { max-width: 440px; }
+}
+@media (max-width: 640px) {
+  .city-hero { padding-top: var(--header-h); min-height: 55vh; }
+  .city-hero__title { font-size: 2rem; }
+  .city-hero__ctas { flex-direction: column; }
+}
+
+/* ================================================================
+   2. INTRO SECTION
+   ================================================================ */
+.city-intro {
+  background: var(--white);
+  padding: var(--sp-3xl) 0 var(--sp-2xl);
+}
+.city-intro__grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3xl); align-items: center;
+}
+.city-intro__text {}
+.city-intro__lead {
+  font-size: 1.05rem; color: var(--gray-text);
+  line-height: 1.82; margin-bottom: var(--sp-md);
+}
+.city-intro__lead strong { color: var(--black); font-weight: 700; }
+
+/* Expert list */
+.city-intro__locals {
+  display: flex; flex-direction: column; gap: 8px;
+  margin: var(--sp-xl) 0;
+}
+.city-intro__local-item {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 0.9rem; font-weight: 600; color: var(--black-70);
+}
+.city-intro__local-check {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--red); color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.6rem; flex-shrink: 0;
+}
+
+.city-intro__ctas { display: flex; gap: var(--sp-sm); flex-wrap: wrap; }
+
+.city-intro__img-wrap {
+  position: relative; border-radius: var(--r-lg);
+  overflow: hidden; aspect-ratio: unset;
+  box-shadow: var(--shadow-lg);
+}
+.city-intro__img-wrap img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.8s var(--ease);
+}
+.city-intro__img-wrap:hover img { transform: scale(1.04); }
+.city-intro__img-badge {
+  position: absolute; bottom: var(--sp-lg); left: var(--sp-lg);
+  background: var(--red); color: var(--white);
+  font-family: var(--font-heading); font-size: 0.72rem;
+  font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 7px 14px; border-radius: var(--r-sm);
+}
+.city-intro__img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 55%);
+}
+
+@media (max-width: 900px) { .city-intro__grid { grid-template-columns: 1fr; } }
+
+/* ================================================================
+   3. SERVICES GRID
+   ================================================================ */
+.city-services {
+  background: var(--gray-lightest);
+  padding: var(--sp-4xl) 0;
+}
+.city-services__header { text-align: center; max-width: 640px; margin: 0 auto var(--sp-3xl); }
+.city-services__sub { font-size: 1rem; color: var(--gray-text); line-height: 1.75; }
+
+.city-svc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-lg);
+}
+
+.city-svc-card {
+  background: var(--white);
+  border-radius: var(--r-lg); overflow: hidden;
+  box-shadow: var(--shadow-sm); transition: var(--t-slow);
+  display: flex; flex-direction: column; position: relative;
+}
+.city-svc-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 3px; background: var(--red);
+  transform: scaleX(0); transition: transform var(--t-slow); transform-origin: left;
+}
+.city-svc-card:hover { transform: translateY(-7px); box-shadow: var(--shadow-lg); }
+.city-svc-card:hover::before { transform: scaleX(1); }
+
+.city-svc-card--wide {
+  grid-column: span 2;
+  flex-direction: row;
+}
+
+.city-svc-card__img-wrap {
+  position: relative; height: 220px; overflow: hidden; flex-shrink: 0;
+}
+.city-svc-card--wide .city-svc-card__img-wrap {
+  width: 42%; height: auto; min-height: 260px;
+}
+.city-svc-card__img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.65s var(--ease);
+}
+.city-svc-card:hover .city-svc-card__img { transform: scale(1.07); }
+.city-svc-card__img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 55%);
+}
+.city-svc-card__badge {
+  position: absolute; top: var(--sp-md); right: var(--sp-md);
+  background: var(--red); color: var(--white);
+  font-family: var(--font-heading); font-size: 0.65rem; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 4px 10px; border-radius: var(--r-sm);
+}
+.city-svc-card__icon-wrap {
+  position: absolute; bottom: var(--sp-md); right: var(--sp-md);
+  width: 42px; height: 42px; border-radius: 50%; background: var(--red);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; box-shadow: 0 4px 16px rgba(217,34,39,0.4);
+}
+.city-svc-card__body {
+  padding: var(--sp-xl); flex: 1;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.city-svc-card--wide .city-svc-card__body { padding: var(--sp-2xl); }
+.city-svc-card__title {
+  font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.04em; color: var(--black);
+}
+.city-svc-card--wide .city-svc-card__title { font-size: 1.3rem; }
+.city-svc-card__desc {
+  font-size: 0.88rem; color: var(--gray-text); line-height: 1.72; flex: 1;
+}
+.city-svc-card__link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--font-heading); font-size: 0.73rem; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--red);
+  text-decoration: none; margin-top: 4px; transition: var(--t);
+  width: fit-content;
+}
+.city-svc-card:hover .city-svc-card__link { gap: 10px; }
+
+@media (max-width: 768px) {
+  .city-svc-grid { grid-template-columns: 1fr; }
+  .city-svc-card--wide { grid-column: span 1; flex-direction: column; }
+  .city-svc-card--wide .city-svc-card__img-wrap { width: 100%; height: 220px; }
+  .city-svc-card--wide .city-svc-card__body { padding: var(--sp-xl); }
+}
+
+/* ================================================================
+   4. RED QUOTE BANNER
+   ================================================================ */
+.city-quote-banner {
+  background: var(--red); padding: var(--sp-xl) 0;
+  position: relative; overflow: hidden;
+}
+.city-quote-banner::before {
+  content: ''; position: absolute; top: 0; left: 0; bottom: 0;
+  width: 50%; background: rgba(0,0,0,0.1);
+  clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+}
+.city-quote-banner__inner {
+  position: relative; z-index: 1;
+  display: flex; align-items: center;
+  justify-content: space-between; gap: var(--sp-xl); flex-wrap: wrap;
+}
+.city-quote-banner__text {
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 2.2vw, 1.6rem); font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.04em; color: var(--white);
+  line-height: 1.2;
+}
+.city-quote-banner__sub { font-size: 0.85rem; color: rgba(255,255,255,0.8); margin-top: 5px; }
+@media (max-width: 640px) {
+  .city-quote-banner__inner { flex-direction: column; text-align: center; }
+}
+
+/* ================================================================
+   5. NEIGHBORHOODS SECTION
+   ================================================================ */
+.city-hoods {
+  background: var(--white);
+  padding: var(--sp-4xl) 0;
+}
+.city-hoods__header { text-align: center; max-width: 580px; margin: 0 auto var(--sp-3xl); }
+
+.city-hoods__grid {
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+  gap: var(--sp-md);
+  margin-bottom: var(--sp-2xl);
+}
+
+/* Even number of items */
+.city-hoods__grid:has(> :last-child:nth-child(even)) {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Odd number of items */
+.city-hoods__grid:has(> :last-child:nth-child(odd)) {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.city-hood-card {
+  position: relative; border-radius: var(--r-lg);
+  overflow: hidden; aspect-ratio: 3/4;
+  background: var(--black); cursor: default;
+}
+.city-hood-card__img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.65s var(--ease);
+}
+.city-hood-card:hover .city-hood-card__img { transform: scale(1.09); }
+.city-hood-card__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top,
+    rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.2) 55%, transparent 100%);
+  transition: var(--t);
+}
+.city-hood-card:hover .city-hood-card__overlay {
+  background: linear-gradient(to top,
+    rgba(0,0,0,0.92) 0%, rgba(217,34,39,0.25) 65%, transparent 100%);
+}
+.city-hood-card__content {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: var(--sp-lg);
+}
+.city-hood-card__pin {
+  font-size: 1.1rem; margin-bottom: 6px; display: block;
+  transition: transform var(--t);
+}
+.city-hood-card:hover .city-hood-card__pin { transform: translateY(-4px); }
+.city-hood-card__name {
+  font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.04em; color: var(--white);
+}
+
+.city-hoods__tagline {
+  text-align: center;
+  font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.04em; color: var(--black-70);
+  padding: var(--sp-lg); background: var(--gray-lightest);
+  border-radius: var(--r-lg); border-left: 4px solid var(--red);
+}
+
+@media (max-width: 900px) { .city-hoods__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .city-hoods__grid { grid-template-columns: 1fr; } .city-hood-card { aspect-ratio: 1/1; } }
+
+/* ================================================================
+   6. WHY CHOOSE US — Dark
+   ================================================================ */
+.city-why {
+  background: var(--black-90);
+  padding: var(--sp-4xl) 0;
+  position: relative;
+}
+.city-why::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 4px; background: var(--red);
+}
+.city-why__grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3xl); align-items: center;
+}
+.city-why__img-wrap {
+  position: relative; border-radius: var(--r-lg);
+  overflow: hidden; aspect-ratio: unset;
+  box-shadow: var(--shadow-lg);
+}
+.city-why__img-wrap img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.8s var(--ease);
+}
+.city-why__img-wrap:hover img { transform: scale(1.04); }
+.city-why__img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 55%);
+}
+.city-why__img-label {
+  position: absolute; bottom: var(--sp-lg); left: var(--sp-lg); right: var(--sp-lg);
+  font-family: var(--font-heading); font-size: 1rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.05em; color: var(--white);
+}
+.city-why__points {
+  display: flex; flex-direction: column; gap: var(--sp-md); margin: var(--sp-xl) 0;
+}
+.city-why__point {
+  display: flex; align-items: flex-start; gap: var(--sp-md);
+  padding: var(--sp-md);
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--r-md); border-left: 3px solid var(--red);
+  transition: var(--t);
+}
+.city-why__point:hover { background: rgba(217,34,39,0.08); transform: translateX(5px); }
+.city-why__point-icon {
+  width: 38px; height: 38px; background: var(--red); border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; flex-shrink: 0;
+}
+.city-why__point-title { font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 2px; }
+.city-why__point-desc { font-size: 0.8rem; color: rgba(255,255,255,0.55); line-height: 1.55; }
+.city-why__ctas { display: flex; gap: var(--sp-sm); flex-wrap: wrap; }
+@media (max-width: 900px) { .city-why__grid { grid-template-columns: 1fr; } }
+
+/* ================================================================
+   7. PROCESS — 4 Steps, White
+   ================================================================ */
+.city-process {
+  background: var(--white); padding: var(--sp-4xl) 0;
+}
+.city-process__header { text-align: center; max-width: 600px; margin: 0 auto var(--sp-3xl); }
+.city-process__steps {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-md); position: relative;
+}
+.city-process__steps::before {
+  content: ''; position: absolute;
+  top: 38px; left: calc(12.5% + 22px); right: calc(12.5% + 22px);
+  height: 2px;
+  background: linear-gradient(90deg, var(--red) 0%, rgba(217,34,39,0.25) 100%);
+  z-index: 0;
+}
+.city-process__step {
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; gap: var(--sp-md); position: relative; z-index: 1;
+}
+.city-process__step-num {
+  width: 76px; height: 76px; border-radius: 50%;
+  background: var(--red); color: var(--white);
+  font-family: var(--font-heading); font-size: 1.6rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 22px rgba(217,34,39,0.4);
+  transition: var(--t); flex-shrink: 0;
+}
+.city-process__step:hover .city-process__step-num { transform: scale(1.1); }
+.city-process__step-icon {
+  position: absolute; bottom: -2px; right: -2px;
+  width: 26px; height: 26px; background: var(--black);
+  border: 2px solid var(--red); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem;
+}
+.city-process__step-title {
+  font-family: var(--font-heading); font-size: 0.88rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.06em; color: var(--black);
+}
+.city-process__step-desc {
+  font-size: 0.82rem; color: var(--gray-text); line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .city-process__steps { grid-template-columns: repeat(2, 1fr); }
+  .city-process__steps::before { display: none; }
+}
+@media (max-width: 480px) { .city-process__steps { grid-template-columns: 1fr; } }
+
+/* ================================================================
+   8. TESTIMONIALS — Dark
+   ================================================================ */
+.city-reviews {
+  background: var(--black-90);
+  padding: var(--sp-4xl) 0;
+  position: relative; overflow: hidden;
+}
+.city-reviews::before {
+  content: '"'; position: absolute; top: -60px; right: 4%;
+  font-family: var(--font-heading); font-size: 22rem; font-weight: 700;
+  color: rgba(217,34,39,0.05); line-height: 1; pointer-events: none;
+}
+.city-reviews__header { text-align: center; max-width: 540px; margin: 0 auto var(--sp-3xl); }
+.city-reviews__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--sp-lg); }
+.city-rev-card {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--r-lg); padding: var(--sp-xl);
+  display: flex; flex-direction: column; gap: var(--sp-md); transition: var(--t); position: relative;
+}
+.city-rev-card:hover { background: rgba(255,255,255,0.07); border-color: rgba(217,34,39,0.35); transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.4); }
+.city-rev-card--wide { grid-column: span 2; border-color: rgba(217,34,39,0.2); background: rgba(217,34,39,0.04); }
+.city-rev-card__quote { position: absolute; top: var(--sp-md); right: var(--sp-md); font-family: var(--font-heading); font-size: 3.5rem; line-height: 1; color: rgba(217,34,39,0.18); font-weight: 700; }
+.city-rev-card__stars { display: flex; gap: 3px; color: var(--red); font-size: 0.9rem; }
+.city-rev-card__text { font-style: italic; font-size: 0.92rem; color: rgba(255,255,255,0.72); line-height: 1.8; flex: 1; }
+.city-rev-card--wide .city-rev-card__text { font-size: 1rem; }
+.city-rev-card__author { display: flex; align-items: center; gap: var(--sp-sm); padding-top: var(--sp-sm); border-top: 1px solid rgba(255,255,255,0.08); }
+.city-rev-card__avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--red); display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--white); flex-shrink: 0; }
+.city-rev-card__name { font-size: 0.88rem; font-weight: 700; color: var(--white); }
+.city-rev-card__loc { font-size: 0.75rem; color: rgba(255,255,255,0.38); }
+@media (max-width: 768px) { .city-reviews__grid { grid-template-columns: 1fr; } .city-rev-card--wide { grid-column: span 1; } }
+
+/* ================================================================
+   9. NEARBY AREAS
+   ================================================================ */
+.city-nearby {
+  background: var(--gray-lightest); padding: var(--sp-3xl) 0;
+}
+.city-nearby__tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: var(--sp-xl); }
+.city-nearby__tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.8rem; font-weight: 600; color: var(--black);
+  background: var(--white); border: 1px solid var(--gray-border);
+  border-radius: var(--r-sm); padding: 7px 14px; transition: var(--t);
+  text-decoration: none;
+}
+.city-nearby__tag:hover { background: var(--red); color: var(--white); border-color: var(--red); }
+.city-nearby__tag-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--red); flex-shrink: 0; }
+.city-nearby__tag:hover .city-nearby__tag-dot { background: var(--white); }
+
+/* ================================================================
+   10. CONTACT SECTION
+   ================================================================ */
+.city-contact {
+  background: var(--gray-lightest); padding: var(--sp-4xl) 0;
+  position: relative;
+}
+.city-contact::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 4px; background: var(--red);
+}
+.city-contact__grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: var(--sp-3xl); align-items: start; }
+.city-contact__desc { font-size: 0.95rem; color: var(--gray-text); line-height: 1.78; margin-bottom: var(--sp-xl); }
+.city-contact__info { display: flex; flex-direction: column; gap: var(--sp-sm); }
+.city-contact__row {
+  display: flex; align-items: center; gap: var(--sp-md);
+  padding: var(--sp-md); background: var(--black-90);
+  border: 1px solid rgba(255,255,255,0.07); border-radius: var(--r-md);
+  text-decoration: none; transition: var(--t);
+}
+.city-contact__row:hover { border-color: rgba(217,34,39,0.35); background: var(--black-90); transform: translateX(6px); }
+.city-contact__icon { width: 40px; height: 40px; background: rgba(217,34,39,0.15); border: 1px solid rgba(217,34,39,0.3); border-radius: var(--r-sm); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; transition: var(--t); }
+
+.city-contact__icon img {
+  width: 20px;
+}
+
+.city-contact__row:hover .city-contact__icon { background: var(--red); border-color: var(--red); }
+.city-contact__lbl { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 2px; }
+.city-contact__val { font-size: 0.9rem; font-weight: 600; color: rgba(255,255,255,0.82); }
+.city-contact__form-box { background: var(--black-90); border: 1px solid rgba(255,255,255,0.08); border-top: 3px solid var(--red); border-radius: var(--r-lg); padding: var(--sp-2xl); }
+@media (max-width: 900px) { .city-contact__grid { grid-template-columns: 1fr; } }
+
+/* ================================================================
+   11. FINAL CTA
+   ================================================================ */
+.city-cta {
+  background: var(--red); padding: var(--sp-3xl) 0;
+  position: relative; overflow: hidden;
+}
+.city-cta::before {
+  content: ''; position: absolute; top: 0; left: 0; bottom: 0;
+  width: 50%; background: rgba(0,0,0,0.1);
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+}
+.city-cta__inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: var(--sp-2xl); }
+.city-cta__heading { font-family: var(--font-heading); font-size: clamp(1.8rem, 3.2vw, 2.6rem); font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; color: var(--white); line-height: 1.1; margin-bottom: 10px; }
+.city-cta__sub { font-size: 1rem; color: rgba(255,255,255,0.85); }
+.city-cta__btns { display: flex; flex-direction: column; gap: var(--sp-sm); align-items: stretch; flex-shrink: 0; }
+@media (max-width: 768px) {
+  .city-cta__inner { grid-template-columns: 1fr; text-align: center; }
+  .city-cta__btns { flex-direction: row; justify-content: center; flex-wrap: wrap; }
+}
+
+
+@media (max-width: 900px) {
+  .city-hero {
+            padding: 8rem 0px 4rem 0px;
+        min-height: auto;
+  }
+
+  .city-intro, .city-services, .city-hoods, .city-why, .city-process, .city-reviews, .city-nearby, .city-contact {
+    padding: var(--sp-5xl) 0;
+  }
+
+  .city-intro__grid, .city-why__grid, .city-contact__grid {
+    gap: 3rem;
+  }
+
+  .city-intro__img-wrap {
+    order: -1;
+  }
+
+  .city-services__header, .city-process__header, .city-reviews__header {
+    margin-bottom: 3rem;
+  }
+
+}
+
+@media (max-width: 650px) {
+    .city-contact__form-box {
+        padding: 2rem;
+    }
+}

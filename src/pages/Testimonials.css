@@ -33,12 +33,7 @@
 @keyframes tmHeroZoom { from { transform: scale(1.07); } to { transform: scale(1); } }
 .tm-hero__overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(
-    110deg,
-    rgba(0,0,0,0.92) 0%,
-    rgba(0,0,0,0.76) 50%,
-    rgba(0,0,0,0.50) 100%
-  );
+  background: linear-gradient(105deg, rgb(0 0 0 / 98%) 0%, rgb(0 0 0 / 58%) 45%, rgb(0 0 0 / 59%) 100%);
 }
 .tm-hero__red-strip {
   position: absolute; top: 0; left: 0; bottom: 0;

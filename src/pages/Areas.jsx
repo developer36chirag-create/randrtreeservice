@@ -582,7 +582,7 @@ export default function Areas() {
               <motion.span className="eyebrow" variants={fadeUp} style={{ color: 'var(--red-light)' }}>
                 Get In Touch
               </motion.span>
-              <motion.h2 className="section-title section-title--lg section-title--white" variants={fadeUp}>
+              <motion.h2 className="section-title section-title--lg" variants={fadeUp}>
                 We Can't Wait to Serve Your Community
               </motion.h2>
               <span className="red-bar" />

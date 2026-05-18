@@ -24,7 +24,7 @@
 @keyframes hZoom { from { transform: scale(1.07); } to { transform: scale(1.0); } }
 .hero__overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(105deg, rgb(0 0 0) 0%, rgb(0 0 0 / 86%) 45%, rgb(0 0 0 / 59%) 100%);
+  background: linear-gradient(105deg, rgb(0 0 0 / 98%) 0%, rgb(0 0 0 / 58%) 45%, rgb(0 0 0 / 59%) 100%);
 }
 /* Red left strip accent */
 .hero__red-strip {
@@ -368,13 +368,13 @@
 /* ================================================================
    11. CONTACT FORM — Black bg
    ================================================================ */
-.contact-sec { background: var(--black); padding: var(--sp-4xl) 0; position: relative; overflow: hidden; }
+.contact-sec { background: var(--gray-lightest); padding: var(--sp-4xl) 0; position: relative; overflow: hidden; }
 .contact-sec::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--red); }
 .contact__grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: var(--sp-3xl); align-items: start; }
-.contact__desc { font-size: 0.95rem; color: rgba(255,255,255,0.55); line-height: 1.75; margin-bottom: var(--sp-xl); }
+.contact__desc { font-size: 0.95rem; color: var(--gray-text); line-height: 1.75; margin-bottom: var(--sp-xl); }
 .contact__cards { display: flex; flex-direction: column; gap: var(--sp-sm); }
-.contact__card { display: flex; align-items: center; gap: var(--sp-md); background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: var(--r-md); padding: var(--sp-md); text-decoration: none; transition: var(--t); }
-.contact__card:hover { border-color: rgba(217,34,39,0.4); background: rgba(217,34,39,0.06); transform: translateX(6px); }
+.contact__card { display: flex; align-items: center; gap: var(--sp-md); background: var(--black-90); border: 1px solid rgba(255,255,255,0.07); border-radius: var(--r-md); padding: var(--sp-md); text-decoration: none; transition: var(--t); }
+.contact__card:hover { border-color: rgba(217,34,39,0.4); background: var(--black-90); transform: translateX(6px); }
 .contact__card-icon { width: 40px; height: 40px; background: rgba(217,34,39,0.15); border: 1px solid rgba(217,34,39,0.3); border-radius: var(--r-sm); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; transition: var(--t); }
 .contact__card:hover .contact__card-icon { background: var(--red); border-color: var(--red); }
 .contact__card-icon img {
@@ -383,7 +383,7 @@
 .contact__card-label { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 2px; }
 .contact__card-value { font-size: 0.9rem; font-weight: 600; color: rgba(255,255,255,0.8); }
 
-.contact__form-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-top: 3px solid var(--red); border-radius: var(--r-lg); padding: var(--sp-2xl); }
+.contact__form-box { background: var(--black-90); border: 1px solid rgba(255,255,255,0.08); border-top: 3px solid var(--red); border-radius: var(--r-lg); padding: var(--sp-2xl); }
 .form-title { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--white); margin-bottom: 4px; }
 .form-sub { font-size: 0.83rem; color: rgba(255,255,255,0.4); margin-bottom: var(--sp-xl); }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-sm); }

@@ -25,12 +25,7 @@
 @keyframes abHeroZoom { from { transform: scale(1.07); } to { transform: scale(1); } }
 .ab-hero__overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(
-    110deg,
-    rgba(0,0,0,0.88) 0%,
-    rgba(0,0,0,0.70) 50%,
-    rgba(0,0,0,0.40) 100%
-  );
+  background: linear-gradient(105deg, rgb(0 0 0 / 98%) 0%, rgb(0 0 0 / 58%) 45%, rgb(0 0 0 / 59%) 100%);
 }
 .ab-hero__red-strip {
   position: absolute; top: 0; left: 0; bottom: 0;
@@ -552,7 +547,7 @@
    9. CONTACT FORM SECTION — Dark
    ================================================================ */
 .ab-contact {
-  background: var(--black);
+  background: var(--gray-lightest);
   padding: var(--sp-4xl) 0;
   position: relative; overflow: hidden;
 }
@@ -568,21 +563,21 @@
   align-items: start;
 }
 .ab-contact__desc {
-  font-size: 0.95rem; color: rgba(255,255,255,0.55);
+  font-size: 0.95rem; color: var(--gray-text);
   line-height: 1.78; margin-bottom: var(--sp-xl);
 }
 .ab-contact__info-list { display: flex; flex-direction: column; gap: var(--sp-sm); }
 .ab-contact__info-row {
   display: flex; align-items: center; gap: var(--sp-md);
   padding: var(--sp-md);
-  background: rgba(255,255,255,0.04);
+  background: var(--black-90);
   border: 1px solid rgba(255,255,255,0.07);
   border-radius: var(--r-md);
   text-decoration: none; transition: var(--t);
 }
 .ab-contact__info-row:hover {
   border-color: rgba(217,34,39,0.35);
-  background: rgba(217,34,39,0.06);
+  background: var(--black-90);
   transform: translateX(6px);
 }
 .ab-contact__info-icon {
@@ -609,7 +604,7 @@
 
 /* Form box */
 .ab-contact__form-box {
-  background: rgba(255,255,255,0.04);
+  background: var(--black-90);
   border: 1px solid rgba(255,255,255,0.08);
   border-top: 3px solid var(--red);
   border-radius: var(--r-lg);
