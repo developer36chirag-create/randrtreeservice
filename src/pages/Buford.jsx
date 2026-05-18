@@ -3,7 +3,7 @@
 // Content from: https://randrtreeservice.com/alpharetta/
 // Uses reusable CityPage template component
 
-import CityPage from './CityPage';
+import CityPage from './Citypage';
 
 /* ════════════════════════════════════════
    ALPHARETTA PAGE DATA
