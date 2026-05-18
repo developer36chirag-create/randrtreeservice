@@ -15,7 +15,7 @@
   background: var(--black);
   overflow: hidden;
   padding-top: calc(var(--header-h) + 37px);
-  /* background-image: url(/my-app/public/Near-the-Mall-of-Georgia.webp); */
+  /* background-image: url(/my-app/public/Near-Chattahoochee-River-trails.webp); */
 }
 .city-hero__bg { position: absolute; inset: 0; z-index: 0; }
 .city-hero__bg img {

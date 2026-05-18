@@ -19,7 +19,6 @@ import Contact from './pages/Contact';
 import Citypage from './pages/Citypage';
 import Alpharetta from './pages/Alpharetta';
 import Atlanta from './pages/Atlanta';
-import Avondaleestates from './pages/Avondaleestates';
 import Buford from './pages/Buford';
 import Cumming from './pages/Cumming';
 import Decatur from './pages/Decatur';
@@ -46,7 +45,6 @@ export default function App() {
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/alpharetta" element={<Alpharetta />} />
         <Route path="/atlanta" element={<Atlanta />} />
-        <Route path="/avondale-estates" element={<Avondaleestates />} />
         <Route path="/buford" element={<Buford />} />
         <Route path="/cumming" element={<Cumming />} />
         <Route path="/decatur" element={<Decatur />} />
