@@ -23,6 +23,7 @@ import Buford from './pages/Buford';
 import Cumming from './pages/Cumming';
 import Decatur from './pages/Decatur';
 import Duluth from './pages/Duluth';
+import Avondaleestates from './pages/Avondaleestates';
 
 
 export default function App() {
@@ -49,6 +50,7 @@ export default function App() {
         <Route path="/cumming" element={<Cumming />} />
         <Route path="/decatur" element={<Decatur />} />
         <Route path="/duluth" element={<Duluth />} />
+        <Route path="/avondale-estates" element={<Avondaleestates />} />
       </Routes>
 
       <Footer />
