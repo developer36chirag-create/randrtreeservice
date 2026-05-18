@@ -5,7 +5,7 @@
 
 import { useState, useRef } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
-import './CityPage.css';
+import './Citypage.css';
 
 /* ── Animation helpers ── */
 const fadeUp = {
